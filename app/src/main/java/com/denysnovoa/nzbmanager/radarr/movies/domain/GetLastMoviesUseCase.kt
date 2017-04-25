@@ -2,15 +2,16 @@ package com.denysnovoa.nzbmanager.radarr.movies.domain
 
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiClient
-import rx.Observable
+import io.reactivex.Flowable
 
 class GetLastMoviesUseCase(val radarrMoviesApiClient: RadarrMoviesApiClient) {
 
-    fun get(): Observable<List<MoviesView>> {
+    fun get(): Flowable<List<MoviesView>> {
         return radarrMoviesApiClient.getMovies()
-                .flatMap { movies -> Observable.from(movies) }
+                .flatMapIterable { moviesModel -> moviesModel }
                 .map { (tittle) -> MoviesView(tittle) }
                 .toList()
+                .toFlowable()
     }
 }
 
