@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">NZBManager</string>
+  <string name="error_load_movies">Error al obtener las películas</string>
 </resources>

@@ -7,6 +7,7 @@ import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.radarr.framework.ApiUrl
 import com.denysnovoa.nzbmanager.radarr.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.framework.api.ApiRestProvider
+import com.denysnovoa.nzbmanager.radarr.framework.toast
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
 import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiClient
@@ -30,10 +31,12 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
     }
 
     override fun showErrorLoadMovies() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast(getString(R.string.error_load_movies))
     }
 
     override fun showMovies(it: List<MovieView>?) {
+
+
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
