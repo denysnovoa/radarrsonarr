@@ -27,7 +27,6 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
                 GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl).get(RadarrMoviesApiRest::class.java))))
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
-
     }
 
     override fun showErrorLoadMovies() {
@@ -36,6 +35,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
 
     override fun showMovies(it: List<MovieView>?) {
 
+        recyclerMovies.adapter =
 
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
