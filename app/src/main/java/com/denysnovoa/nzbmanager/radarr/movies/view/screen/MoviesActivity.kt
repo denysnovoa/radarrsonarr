@@ -16,9 +16,9 @@ import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiCli
 import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiRest
 import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MovieImageMapper
 import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MoviesMapper
-import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesPresenter
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movies.view.adapter.MovieItemAdapter
+import com.denysnovoa.nzbmanager.radarr.movies.view.presenter.MoviesPresenter
 import kotlinx.android.synthetic.main.activity_movies.*
 
 class MoviesActivity : AppCompatActivity(), MoviesView {

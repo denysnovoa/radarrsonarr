@@ -12,6 +12,7 @@ class MovieItemAdapter(val items: List<MovieView>) : RecyclerView.Adapter<MovieI
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = with(holder.itemView) {
         val item = items[position]
         movie_title.text = item.title
+        movie_id.text = item.id.toString()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -4,5 +4,5 @@ import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
 
 interface MoviesView {
     fun showErrorLoadMovies()
-    fun showMovies(it: List<MovieView>)
+    fun showMovies(movies: List<MovieView>)
 }

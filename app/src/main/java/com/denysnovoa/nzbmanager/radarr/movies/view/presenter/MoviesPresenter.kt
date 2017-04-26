@@ -1,7 +1,10 @@
-package com.denysnovoa.nzbmanager.radarr.movies.view
+package com.denysnovoa.nzbmanager.radarr.movies.view.presenter
 
 import com.denysnovoa.nzbmanager.radarr.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
+import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
+import com.denysnovoa.nzbmanager.radarr.movies.repository.model.MovieModel
+import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -21,7 +24,21 @@ class MoviesPresenter(val moviesView: MoviesView, val errorLog: ErrorLog,
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .doOnError { errorLog.log(it) }
-                        .subscribe({ moviesView.showMovies(it) }, { moviesView.showErrorLoadMovies() })
+                        .flatMapIterable { it }
+                        .toList()
+                        .subscribe({
+                            moviesOnNext(it)
+                        }, { moviesView.showErrorLoadMovies() })
         )
+    }
+
+    private fun moviesOnNext(moviesModel: List<MovieModel>) {
+        moviesView.showMovies(moviesModel.mapNotNull { transform(it) })
+    }
+
+    private fun transform(movie: MovieModel) = movie.let {
+        with(movie) {
+            MovieView(id, title)
+        }
     }
 }

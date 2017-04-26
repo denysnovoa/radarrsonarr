@@ -13,6 +13,14 @@
       android:layout_height="200dp"
       android:scaleType="centerCrop"
       />
+  <TextView
+      android:id="@+id/movie_id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp"
+      android:background="@color/colorPrimary"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+      />
 
   <TextView
       android:id="@+id/movie_title"
