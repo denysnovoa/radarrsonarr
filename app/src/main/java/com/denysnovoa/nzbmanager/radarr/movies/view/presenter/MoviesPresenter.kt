@@ -36,9 +36,8 @@ class MoviesPresenter(val moviesView: MoviesView, val errorLog: ErrorLog,
         moviesView.showMovies(moviesModel.mapNotNull { transform(it) })
     }
 
-    private fun transform(movie: MovieModel) = movie.let {
-        with(movie) {
-            MovieView(id, title)
-        }
+    private fun transform(movie: MovieModel) = with(movie) {
+        MovieView(id, title)
     }
+
 }

@@ -5,5 +5,5 @@ import com.denysnovoa.nzbmanager.radarr.movies.repository.model.MovieImageModel
 
 class MovieImageMapper {
     fun transform(images: List<MovieImageEntity>) = images.mapNotNull { transform(it) }
-    fun transform(image: MovieImageEntity) = MovieImageModel(image.coverType, image.url)
+    fun transform(image: MovieImageEntity) = with(image) { MovieImageModel(coverType, url) }
 }
