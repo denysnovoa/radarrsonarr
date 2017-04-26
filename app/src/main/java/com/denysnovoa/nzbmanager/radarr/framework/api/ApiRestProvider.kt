@@ -4,6 +4,7 @@ import com.denysnovoa.nzbmanager.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiRestProvider(val apiUrl: String) : ApiRest {
@@ -12,6 +13,7 @@ class ApiRestProvider(val apiUrl: String) : ApiRest {
                 .client(getClient())
                 .baseUrl(apiUrl)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
 
         return builder.create(service)
