@@ -7,11 +7,12 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiRestProvider(val apiUrl: String) : ApiRest {
+class ApiRestProvider(val apiUrl: String, val authenticationInterceptor: AuthenticationInterceptor) : ApiRest {
+
     override fun <T> get(service: Class<T>): T {
         val builder = Retrofit.Builder()
-                .client(getClient())
                 .baseUrl(apiUrl)
+                .client(getClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
@@ -21,6 +22,7 @@ class ApiRestProvider(val apiUrl: String) : ApiRest {
 
     private fun getClient(): OkHttpClient {
         return OkHttpClient.Builder()
+                .addInterceptor(authenticationInterceptor)
                 .addInterceptor(
                         HttpLoggingInterceptor().apply {
                             level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE

@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import com.denysnovoa.nzbmanager.R
+import com.denysnovoa.nzbmanager.radarr.framework.ApiKey
 import com.denysnovoa.nzbmanager.radarr.framework.ApiUrl
 import com.denysnovoa.nzbmanager.radarr.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.framework.api.ApiRestProvider
+import com.denysnovoa.nzbmanager.radarr.framework.api.AuthenticationInterceptor
 import com.denysnovoa.nzbmanager.radarr.framework.toast
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
@@ -25,14 +27,19 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         setContentView(R.layout.activity_movies)
 
         moviesPresenter = MoviesPresenter(this, ErrorLog(),
-                GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl).get(RadarrMoviesApiRest::class.java))))
+                GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl, AuthenticationInterceptor(ApiKey)).get(RadarrMoviesApiRest::class.java))))
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
     }
 
     override fun onResume() {
         super.onResume()
-        moviesPresenter.getLastMovies();
+        moviesPresenter.getLastMovies()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        moviesPresenter.stop()
     }
 
     override fun showErrorLoadMovies() {
