@@ -11,4 +11,3 @@ data class MovieModel(
         val qualityProfileId: Int,
         val images: List<MovieImageModel>)
 
-data class MovieImageModel(val coverType: String, val url: String)

@@ -13,4 +13,3 @@ data class MovieEntity(
         val qualityProfileId: Int,
         @SerializedName("images") val images: List<MovieImageEntity>)
 
-data class MovieImageEntity(val coverType: String, val url: String)
