@@ -34,8 +34,7 @@ android {
   variantFilter { variant ->
     def names = variant.flavors*.name
 
-    if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains(
-        "pro") && variant.buildType.name == "debug")) {
+    if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains("pro") && variant.buildType.name == "debug")) {
       variant.ignore = true
     }
   }
@@ -88,6 +87,7 @@ dependencies {
   compile "io.reactivex.rxjava2:rxjava:2.0.9"
   compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
   compile 'nl.littlerobots.rxlint:rxlint:1.2'
+  compile "com.github.akarnokd:rxjava2-extensions:0.16.5"
 
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
