@@ -14,10 +14,11 @@ import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiCli
 import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiRest
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesPresenter
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
+import com.denysnovoa.nzbmanager.radarr.movies.view.adapter.MovieItemAdapter
 import kotlinx.android.synthetic.main.activity_movies.*
 
 class MoviesActivity : AppCompatActivity(), MoviesView {
-    var moviesPresenter: MoviesPresenter = null!!
+    lateinit var moviesPresenter: MoviesPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,14 +30,16 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
     }
 
+    override fun onResume() {
+        super.onResume()
+        moviesPresenter.getLastMovies();
+    }
+
     override fun showErrorLoadMovies() {
         toast(getString(R.string.error_load_movies))
     }
 
-    override fun showMovies(it: List<MovieView>?) {
-
-        recyclerMovies.adapter =
-
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun showMovies(it: List<MovieView>) {
+        recyclerMovies.adapter = MovieItemAdapter(it)
     }
 }
