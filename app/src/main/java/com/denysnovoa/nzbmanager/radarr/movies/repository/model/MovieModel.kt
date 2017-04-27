@@ -6,8 +6,8 @@ data class MovieModel(
         val status: String,
         val downloaded: Boolean,
         val monitored: Boolean,
-        val imdbId: String,
-        val tmdbId: String,
+        val imdbId: String?,
+        val tmdbId: String?,
         val qualityProfileId: Int,
         val images: List<MovieImageModel>)
 

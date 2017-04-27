@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.inflate
-import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
+import com.denysnovoa.nzbmanager.radarr.movies.view.modelView.MovieView
 import kotlinx.android.synthetic.main.movie_item.view.*
 
 class MovieItemAdapter(val items: List<MovieView>) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {

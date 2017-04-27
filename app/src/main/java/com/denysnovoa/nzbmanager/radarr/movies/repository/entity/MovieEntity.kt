@@ -8,8 +8,8 @@ data class MovieEntity(
         val status: String,
         val downloaded: Boolean,
         val monitored: Boolean,
-        val imdbId: String,
-        val tmdbId: String,
+        val imdbId: String?,
+        val tmdbId: String?,
         val qualityProfileId: Int,
         @SerializedName("images") val images: List<MovieImageEntity>)
 
