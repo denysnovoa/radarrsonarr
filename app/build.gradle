@@ -21,6 +21,10 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
+  repositories {
+    mavenCentral()
+  }
+
   productFlavors {
     dev {
       minSdkVersion 21
@@ -65,6 +69,7 @@ android {
 
 dependencies {
   def retrofit2 = '2.2.0'
+  def firebase = '10.2.1'
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
   compile 'com.android.support:appcompat-v7:25.3.1'
@@ -90,11 +95,13 @@ dependencies {
   compile 'nl.littlerobots.rxlint:rxlint:1.2'
   compile "com.github.akarnokd:rxjava2-extensions:0.16.5"
 
+  compile "com.google.firebase:firebase-core:$firebase"
+  compile "com.google.firebase:firebase-crash:$firebase"
+
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
   testCompile 'junit:junit:4.12'
 }
-repositories {
-  mavenCentral()
-}
+
+apply plugin: 'com.google.gms.google-services'

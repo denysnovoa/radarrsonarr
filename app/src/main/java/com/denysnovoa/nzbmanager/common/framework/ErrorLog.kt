@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.framework
+package com.denysnovoa.nzbmanager.common.framework
 
 class  ErrorLog {
     fun log(error: Throwable?) {

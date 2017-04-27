@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.radarr.framework.inflate
+import com.denysnovoa.nzbmanager.common.framework.inflate
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
 import kotlinx.android.synthetic.main.movie_item.view.*
 

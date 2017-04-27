@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.framework.api
+package com.denysnovoa.nzbmanager.common.framework.api
 
 import com.denysnovoa.nzbmanager.BuildConfig
 import okhttp3.OkHttpClient

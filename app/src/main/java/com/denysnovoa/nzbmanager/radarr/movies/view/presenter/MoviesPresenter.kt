@@ -1,6 +1,6 @@
 package com.denysnovoa.nzbmanager.radarr.movies.view.presenter
 
-import com.denysnovoa.nzbmanager.radarr.framework.ErrorLog
+import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
 import com.denysnovoa.nzbmanager.radarr.movies.repository.model.MovieModel

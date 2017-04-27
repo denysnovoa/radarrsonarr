@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.radarr.framework.ApiKey
-import com.denysnovoa.nzbmanager.radarr.framework.ApiUrl
-import com.denysnovoa.nzbmanager.radarr.framework.ErrorLog
-import com.denysnovoa.nzbmanager.radarr.framework.api.ApiRestProvider
-import com.denysnovoa.nzbmanager.radarr.framework.api.AuthenticationInterceptor
-import com.denysnovoa.nzbmanager.radarr.framework.toast
+import com.denysnovoa.nzbmanager.common.framework.ApiKey
+import com.denysnovoa.nzbmanager.common.framework.ApiUrl
+import com.denysnovoa.nzbmanager.common.framework.ErrorLog
+import com.denysnovoa.nzbmanager.common.framework.api.ApiRestProvider
+import com.denysnovoa.nzbmanager.common.framework.api.AuthenticationInterceptor
+import com.denysnovoa.nzbmanager.common.framework.toast
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.domain.modelView.MovieView
 import com.denysnovoa.nzbmanager.radarr.movies.repository.api.RadarrMoviesApiClient
@@ -52,7 +52,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         toast(getString(R.string.error_load_movies))
     }
 
-    override fun showMovies(it: List<MovieView>) {
-        recyclerMovies.adapter = MovieItemAdapter(it)
+    override fun showMovies(movies: List<MovieView>) {
+        recyclerMovies.adapter = MovieItemAdapter(movies)
     }
 }
