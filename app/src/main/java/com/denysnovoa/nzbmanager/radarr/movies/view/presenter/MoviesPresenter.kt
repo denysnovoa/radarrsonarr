@@ -4,7 +4,7 @@ import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.repository.model.MovieModel
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
-import com.denysnovoa.nzbmanager.radarr.movies.view.modelView.MovieView
+import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieModelView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -35,7 +35,7 @@ class MoviesPresenter(val moviesView: MoviesView, val errorLog: ErrorLog,
     }
 
     private fun transform(movie: MovieModel) = with(movie) {
-        MovieView(id, title)
+        MovieModelView(id, title)
     }
 
 }
