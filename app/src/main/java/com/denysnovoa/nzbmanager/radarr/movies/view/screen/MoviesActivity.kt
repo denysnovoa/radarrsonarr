@@ -19,7 +19,7 @@ import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MovieImageMappe
 import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MoviesMapper
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movies.view.adapter.MovieItemAdapter
-import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieModelView
+import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movies.view.presenter.MoviesPresenter
 import kotlinx.android.synthetic.main.activity_movies.*
 
@@ -57,7 +57,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         toast(getString(R.string.error_load_movies))
     }
 
-    override fun showMovies(movies: List<MovieModelView>) {
+    override fun showMovies(movies: List<MovieViewModel>) {
         recyclerMovies.adapter = MovieItemAdapter(movies)
     }
 }

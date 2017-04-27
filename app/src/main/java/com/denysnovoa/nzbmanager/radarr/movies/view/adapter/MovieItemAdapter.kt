@@ -5,10 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.inflate
-import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieModelView
+import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieViewModel
 import kotlinx.android.synthetic.main.movie_item.view.*
 
-class MovieItemAdapter(val items: List<MovieModelView>) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
+class MovieItemAdapter(val items: List<MovieViewModel>) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = with(holder.itemView) {
         val item = items[position]
         movie_title.text = item.title
