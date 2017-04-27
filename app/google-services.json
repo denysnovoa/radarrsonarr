@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "601060632606",
+    "firebase_url": "https://nzbmanager-3ad58.firebaseio.com",
+    "project_id": "nzbmanager-3ad58",
+    "storage_bucket": "nzbmanager-3ad58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601060632606:android:2a0745637aef633a",
+        "android_client_info": {
+          "package_name": "com.denysnovoa.nzbmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601060632606-ncrfo2ulgq6h2msserppboare7j0gged.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnRm4W7KYdif-76VzQxMxS2AiJFh0Fd5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601060632606:android:5b933745eaba77db",
+        "android_client_info": {
+          "package_name": "com.denysnovoa.nzbmanager.develop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601060632606-ncrfo2ulgq6h2msserppboare7j0gged.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnRm4W7KYdif-76VzQxMxS2AiJFh0Fd5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
