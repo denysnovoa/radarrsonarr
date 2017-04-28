@@ -4,13 +4,14 @@ import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movies.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movies.repository.model.MovieModel
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
-import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieViewModel
+import com.denysnovoa.nzbmanager.radarr.movies.view.mapper.MoviesViewMapper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class MoviesPresenter(val moviesView: MoviesView, val errorLog: ErrorLog,
-                      val getLastMoviesUseCase: GetLastMoviesUseCase) {
+                      val getLastMoviesUseCase: GetLastMoviesUseCase,
+                      val moviesViewMapper: MoviesViewMapper) {
 
     val compositeDisposable = CompositeDisposable()
 
@@ -31,11 +32,7 @@ class MoviesPresenter(val moviesView: MoviesView, val errorLog: ErrorLog,
     }
 
     private fun moviesOnNext(moviesModel: List<MovieModel>) {
-        moviesView.showMovies(moviesModel.mapNotNull { transform(it) })
-    }
-
-    private fun transform(movie: MovieModel) = with(movie) {
-        MovieViewModel(id, title)
+        moviesView.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
     }
 
 }

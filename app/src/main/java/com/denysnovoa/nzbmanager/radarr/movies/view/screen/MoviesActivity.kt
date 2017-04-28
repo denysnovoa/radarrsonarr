@@ -19,6 +19,8 @@ import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MovieImageMappe
 import com.denysnovoa.nzbmanager.radarr.movies.repository.mapper.MoviesMapper
 import com.denysnovoa.nzbmanager.radarr.movies.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movies.view.adapter.MovieItemAdapter
+import com.denysnovoa.nzbmanager.radarr.movies.view.mapper.MovieImageViewMapper
+import com.denysnovoa.nzbmanager.radarr.movies.view.mapper.MoviesViewMapper
 import com.denysnovoa.nzbmanager.radarr.movies.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movies.view.presenter.MoviesPresenter
 import kotlinx.android.synthetic.main.activity_movies.*
@@ -36,11 +38,11 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
                         ApiOkHttpClient(AuthenticationInterceptor(ApiKey),
                                 NetworkCacheInterceptor(),
                                 OfflineCacheInterceptor(NetworkConnection(baseContext)), ApiCacheProvider(ApiCacheKey, baseContext))
-                ).get(RadarrMoviesApiRest::class.java), MoviesMapper(MovieImageMapper()))
-                )
+                ).get(RadarrMoviesApiRest::class.java), MoviesMapper(MovieImageMapper()))),
+                MoviesViewMapper(MovieImageViewMapper())
         )
 
-        recyclerMovies.layoutManager = GridLayoutManager(this, 1)
+        recyclerMovies.layoutManager = GridLayoutManager(this, 2)
     }
 
     override fun onResume() {
@@ -59,5 +61,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
 
     override fun showMovies(movies: List<MovieViewModel>) {
         recyclerMovies.adapter = MovieItemAdapter(movies)
+        recyclerMovies.recycledViewPool.setMaxRecycledViews(0,0)
+
     }
 }
