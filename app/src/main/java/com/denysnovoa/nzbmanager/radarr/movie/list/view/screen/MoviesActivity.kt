@@ -16,8 +16,8 @@ import com.denysnovoa.nzbmanager.common.framework.api.provider.ApiRestProvider
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiClient
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiRest
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageMapper
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapper
+import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageMapperImpl
+import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMapper
@@ -39,7 +39,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
                         ApiOkHttpClient(AuthenticationInterceptor(ApiKey),
                                 NetworkCacheInterceptor(),
                                 OfflineCacheInterceptor(NetworkConnection(baseContext)), ApiCacheProvider(ApiCacheKey, baseContext))
-                ).get(RadarrMoviesApiRest::class.java), MoviesMapper(MovieImageMapper()))),
+                ).get(RadarrMoviesApiRest::class.java), MoviesMapperImpl(MovieImageMapperImpl()))),
                 MoviesViewMapper(MovieImageViewMapper())
         )
 
