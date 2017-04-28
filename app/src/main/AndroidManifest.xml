@@ -16,7 +16,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme"
       >
-    <activity android:name=".radarr.movies.view.screen.MoviesActivity">
+    <activity android:name="com.denysnovoa.nzbmanager.radarr.movie.list.view.screen.MoviesActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
