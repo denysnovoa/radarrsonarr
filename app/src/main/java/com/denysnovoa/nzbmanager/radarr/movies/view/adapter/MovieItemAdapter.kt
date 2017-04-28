@@ -15,12 +15,8 @@ class MovieItemAdapter(val items: List<MovieViewModel>) : RecyclerView.Adapter<M
         val item = items[position]
         with(item) {
             movie_title.text = title
-            movie_id.text = id.toString()
-
-            // val newUrl = URL(imagePoster)
-            //val mIcon_val = BitmapFactory.decodeStream(newUrl.openConnection().getInputStream())
-            //movie_image.setImageBitmap(mIcon_val)
-
+            movie_status.text = status
+            movie_downloaded.text = downloaded.toString()
             movie_image.loadUrl(imagePoster)
         }
     }
