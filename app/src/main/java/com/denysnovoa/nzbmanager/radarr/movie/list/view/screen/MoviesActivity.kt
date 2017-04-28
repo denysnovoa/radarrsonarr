@@ -20,8 +20,8 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageM
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
-import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMapper
-import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapper
+import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMapperImpl
+import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
 import kotlinx.android.synthetic.main.activity_movies.*
@@ -40,7 +40,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
                                 NetworkCacheInterceptor(),
                                 OfflineCacheInterceptor(NetworkConnection(baseContext)), ApiCacheProvider(ApiCacheKey, baseContext))
                 ).get(RadarrMoviesApiRest::class.java), MoviesMapperImpl(MovieImageMapperImpl()))),
-                MoviesViewMapper(MovieImageViewMapper())
+                MoviesViewMapperImpl(MovieImageViewMapperImpl())
         )
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
