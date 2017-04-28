@@ -34,7 +34,7 @@ fun ImageView.loadUrl(url: String) {
             .downloader(OkHttp3Downloader(client))
             .build()
             .load(url)
-            .resize(300, 300)
+            .resize(166, 250)
             .centerInside()
             .into(this)
 

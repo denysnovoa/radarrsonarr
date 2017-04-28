@@ -43,6 +43,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         )
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
+        recyclerMovies.setHasFixedSize(true)
     }
 
     override fun onResume() {
@@ -61,7 +62,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
 
     override fun showMovies(movies: List<MovieViewModel>) {
         recyclerMovies.adapter = MovieItemAdapter(movies)
-        recyclerMovies.recycledViewPool.setMaxRecycledViews(0,0)
+        recyclerMovies.recycledViewPool.setMaxRecycledViews(0, 0)
 
     }
 }

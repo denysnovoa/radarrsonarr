@@ -70,10 +70,12 @@ android {
 dependencies {
   def retrofit2 = '2.2.0'
   def firebase = '10.2.1'
+  def androidSupport = '25.3.1'
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:25.3.1'
-  compile 'com.android.support:recyclerview-v7:25.3.1'
+  compile "com.android.support:appcompat-v7:$androidSupport"
+  compile "com.android.support:cardview-v7:$androidSupport"
+  compile "com.android.support:recyclerview-v7:$androidSupport"
 
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
   compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
