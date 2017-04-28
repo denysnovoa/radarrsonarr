@@ -1,8 +1,8 @@
-package com.denysnovoa.nzbmanager.common.framework.di.submodules.movies
+package com.denysnovoa.nzbmanager.di.subcomponent.movies
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
-import com.denysnovoa.nzbmanager.common.framework.di.modules.ActivityModule
-import com.denysnovoa.nzbmanager.common.framework.di.scope.ActivityScope
+import com.denysnovoa.nzbmanager.di.modules.ActivityModule
+import com.denysnovoa.nzbmanager.di.scope.ActivityScope
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapperImpl

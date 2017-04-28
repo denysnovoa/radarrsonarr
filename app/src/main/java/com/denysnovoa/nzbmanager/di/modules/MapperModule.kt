@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.common.framework.di.modules
+package com.denysnovoa.nzbmanager.di.modules
 
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageMapperImpl

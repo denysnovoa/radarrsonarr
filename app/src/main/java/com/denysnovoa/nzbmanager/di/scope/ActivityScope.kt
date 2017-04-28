@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.common.framework.di.scope
+package com.denysnovoa.nzbmanager.di.scope
 
 import javax.inject.Scope
 

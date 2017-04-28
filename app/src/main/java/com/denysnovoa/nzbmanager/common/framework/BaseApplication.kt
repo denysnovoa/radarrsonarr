@@ -1,9 +1,9 @@
 package com.denysnovoa.nzbmanager.common.framework
 
 import android.app.Application
-import com.denysnovoa.nzbmanager.common.framework.di.ApplicationComponent
-import com.denysnovoa.nzbmanager.common.framework.di.ApplicationModule
-import com.denysnovoa.nzbmanager.common.framework.di.DaggerApplicationComponent
+import com.denysnovoa.nzbmanager.di.ApplicationComponent
+import com.denysnovoa.nzbmanager.di.ApplicationModule
+import com.denysnovoa.nzbmanager.di.DaggerApplicationComponent
 
 class BaseApplication : Application() {
 

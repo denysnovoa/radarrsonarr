@@ -1,8 +1,8 @@
-package com.denysnovoa.nzbmanager.common.framework.di.modules
+package com.denysnovoa.nzbmanager.di.modules
 
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
-import com.denysnovoa.nzbmanager.common.framework.di.scope.ActivityScope
+import com.denysnovoa.nzbmanager.di.scope.ActivityScope
 import dagger.Module
 import dagger.Provides
 
