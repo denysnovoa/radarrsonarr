@@ -7,15 +7,18 @@ import com.denysnovoa.nzbmanager.di.DaggerApplicationComponent
 
 class BaseApplication : Application() {
 
-    val component: ApplicationComponent by lazy {
-        DaggerApplicationComponent
-                .builder()
-                .applicationModule(ApplicationModule(this))
-                .build()
+    companion object {
+        lateinit var graph: ApplicationComponent
     }
 
     override fun onCreate() {
         super.onCreate()
-        component.inject(this)
+        initializeDagger()
+    }
+
+    fun initializeDagger() {
+        graph = DaggerApplicationComponent.builder()
+                .applicationModule(ApplicationModule(this))
+                .build()
     }
 }

@@ -1,8 +1,8 @@
 package com.denysnovoa.nzbmanager.common.framework.api.cache
 
-import okhttp3.CacheControl
+import okhttp3.Interceptor
 
-class NetworkCacheInterceptor : okhttp3.Interceptor {
+class NetworkCacheInterceptor : Interceptor {
     val CACHE_CONTROL = "Cache-Control"
 
     override fun intercept(chain: okhttp3.Interceptor.Chain): okhttp3.Response {

@@ -2,46 +2,44 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.common.framework.*
-import com.denysnovoa.nzbmanager.common.framework.api.ApiOkHttpClient
-import com.denysnovoa.nzbmanager.common.framework.api.AuthenticationInterceptor
-import com.denysnovoa.nzbmanager.common.framework.api.NetworkConnection
-import com.denysnovoa.nzbmanager.common.framework.api.cache.ApiCacheProvider
-import com.denysnovoa.nzbmanager.common.framework.api.cache.NetworkCacheInterceptor
-import com.denysnovoa.nzbmanager.common.framework.api.cache.OfflineCacheInterceptor
-import com.denysnovoa.nzbmanager.common.framework.api.provider.ApiRestProvider
-import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiClient
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiRest
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MovieImageMapperImpl
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapperImpl
+import com.denysnovoa.nzbmanager.common.framework.BaseActivity
+import com.denysnovoa.nzbmanager.common.framework.toast
+import com.denysnovoa.nzbmanager.di.ApplicationComponent
+import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
-import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMapperImpl
-import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
 import kotlinx.android.synthetic.main.activity_movies.*
+import javax.inject.Inject
 
-class MoviesActivity : AppCompatActivity(), MoviesView {
+class MoviesActivity : BaseActivity(), MoviesView {
+
+    @Inject
     lateinit var moviesPresenter: MoviesPresenter
+
+    override fun injectDependencies(applicationComponent: ApplicationComponent) {
+        applicationComponent.plus(MoviesActivityModule(this))
+                .injectTo(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-        moviesPresenter = MoviesPresenter(this,
-                ErrorLog(),
-                GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl,
-                        ApiOkHttpClient(AuthenticationInterceptor(ApiKey),
-                                NetworkCacheInterceptor(),
-                                OfflineCacheInterceptor(NetworkConnection(baseContext)), ApiCacheProvider(ApiCacheKey, baseContext))
-                ).get(RadarrMoviesApiRest::class.java), MoviesMapperImpl(MovieImageMapperImpl()))),
-                MoviesViewMapperImpl(MovieImageViewMapperImpl())
-        )
+//        moviesPresenter = MoviesPresenter(this,
+//                ErrorLog(),
+//                    GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl,
+//                        ApiOkHttpClient(AuthenticationInterceptor(ApiKey),
+//                                NetworkCacheInterceptor(),
+//                                OfflineCacheInterceptor(NetworkConnection(baseContext)),
+//                                ApiCacheProvider(ApiCacheKey, baseContext))
+//                ).get(RadarrMoviesApiRest::class.java)
+//                        , MoviesMapperImpl(MovieImageMapperImpl()))),
+//                    MoviesViewMapperImpl(MovieImageViewMapperImpl())
+//        )
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
         recyclerMovies.setHasFixedSize(true)
