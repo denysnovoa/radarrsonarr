@@ -10,15 +10,17 @@ android {
     debugconfig {}
   }
 
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion parent.ext.androidCompileSdkVersion
+  buildToolsVersion parent.ext.androidBuildToolsVersion
 
   defaultConfig {
-    applicationId "com.denysnovoa.nzbmanager"
-    minSdkVersion 17
-    targetSdkVersion 25
-    versionCode 1
-    versionName "1.0"
+    applicationId parent.ext.androidApplicationId
+
+    minSdkVersion parent.ext.androidMinSdkVersion
+    targetSdkVersion parent.ext.androidTargetSdkVersion
+    versionCode parent.ext.androidVersionCode
+    versionName parent.ext.androidVersionName
+
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
@@ -32,7 +34,7 @@ android {
       signingConfig signingConfigs.releaseconfig
     }
     pro {
-      minSdkVersion 17
+      minSdkVersion parent.ext.androidMinSdkVersion
       signingConfig signingConfigs.releaseconfig
     }
   }
@@ -73,41 +75,37 @@ kapt {
 }
 
 dependencies {
-  def retrofit2 = '2.2.0'
-  def firebase = '10.2.1'
-  def androidSupport = '25.3.1'
-  def dagger = '2.10'
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile "com.android.support:appcompat-v7:$androidSupport"
-  compile "com.android.support:cardview-v7:$androidSupport"
-  compile "com.android.support:recyclerview-v7:$androidSupport"
+  compile "com.android.support:appcompat-v7:$androidSupportVersion"
+  compile "com.android.support:cardview-v7:$androidSupportVersion"
+  compile "com.android.support:recyclerview-v7:$androidSupportVersion"
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
   compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-  compile("com.squareup.retrofit2:retrofit:$retrofit2") {
+  compile("com.squareup.retrofit2:retrofit:$retrofitVersion") {
     exclude module: 'okhttp'
   }
-  compile "com.squareup.retrofit2:adapter-rxjava2:$retrofit2"
-  compile "com.squareup.retrofit2:converter-gson:$retrofit2"
+  compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
-  compile 'com.squareup.okhttp3:okhttp:3.6.0'
-  compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+  compile "com.google.firebase:firebase-core:$fireBaseVersion"
+  compile "com.google.firebase:firebase-crash:$fireBaseVersion"
+
+  kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+  compile "com.google.dagger:dagger:$daggerVersion"
+
+  compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+  compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
 
   compile 'com.squareup.picasso:picasso:2.5.2'
   compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
-  compile "io.reactivex.rxjava2:rxjava:2.0.9"
+  compile 'io.reactivex.rxjava2:rxjava:2.0.9'
   compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
   compile 'nl.littlerobots.rxlint:rxlint:1.2'
-  compile "com.github.akarnokd:rxjava2-extensions:0.16.5"
-
-  compile "com.google.firebase:firebase-core:$firebase"
-  compile "com.google.firebase:firebase-crash:$firebase"
-
-  kapt "com.google.dagger:dagger-compiler:$dagger"
-  compile "com.google.dagger:dagger:$dagger"
+  compile 'com.github.akarnokd:rxjava2-extensions:0.16.5'
 
   compile 'org.greenrobot:eventbus:3.0.0'
 

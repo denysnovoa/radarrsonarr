@@ -19,6 +19,24 @@ allprojects {
   repositories {
     jcenter()
   }
+
+  ext {
+    androidBuildToolsVersion = "25.0.2"
+    androidMinSdkVersion = 17
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+    androidApplicationId = "com.denysnovoa.nzbmanager"
+    androidVersionCode = 1
+    androidVersionName = "0.1"
+
+    androidSupportVersion = '25.3.1'
+    androidBuildToolsVersion = "25.0.2"
+    fireBaseVersion = '10.2.1'
+
+    okhttpVersion = "3.6.0"
+    daggerVersion = "2.10"
+    retrofitVersion = "2.2.0"
+  }
 }
 
 task clean(type: Delete) {
