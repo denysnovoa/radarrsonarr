@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/tittle_pref_radarr"
+                  android:defaultValue="@string/tittle_pref_radarr"
+    >
+  <SwitchPreference
+      android:padding="@dimen/padding_8dp"
+      android:defaultValue="false"
+      android:title="@string/preference_radarr_enable"
+      android:key="switch_enable_radarr"
+      />
+  <EditTextPreference
+      android:padding="@dimen/padding_8dp"
+      android:selectAllOnFocus="true"
+      android:singleLine="true"
+      android:title="@string/tittle_pref_host_address"
+      android:key="pref_radarr_hots_address"
+      />
+  <EditTextPreference
+      android:title="@string/tittle_pref_host_port"
+      android:defaultValue="@string/default_pref_host_port"
+      android:selectAllOnFocus="true"
+      android:singleLine="true"
+      android:maxLines="1"
+      android:capitalize="characters"
+      android:key="pref_radarr_hots_port"
+      android:padding="@dimen/padding_24dp"
+      />
+
+  <EditTextPreference
+      android:padding="@dimen/padding_8dp"
+      android:selectAllOnFocus="true"
+      android:singleLine="true"
+      android:title="@string/tittle_pref_api_key"
+      android:key="pref_radarr_api_key"
+      />
+</PreferenceScreen>

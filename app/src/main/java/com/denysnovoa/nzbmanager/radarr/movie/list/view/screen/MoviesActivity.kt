@@ -3,7 +3,6 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
@@ -34,9 +33,6 @@ class MoviesActivity : BaseActivity(), MoviesView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
-
-        val myToolbar = findViewById(R.id.my_toolbar) as Toolbar
-        setSupportActionBar(myToolbar)
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
         recyclerMovies.setHasFixedSize(true)

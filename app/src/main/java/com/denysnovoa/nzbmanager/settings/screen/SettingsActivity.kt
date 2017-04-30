@@ -28,15 +28,15 @@ class SettingsActivity : AppCompatPreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setupActionBar()
     }
 
-    /**
-     * Set up the [android.app.ActionBar], if the API is available.
-     */
     private fun setupActionBar() {
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayShowHomeEnabled(true)
+        actionBar?.setTitle(R.string.action_settings)
     }
 
     /** {@inheritDoc}  */
@@ -50,21 +50,13 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         loadHeadersFromResource(R.xml.pref_headers, target)
     }
 
-    /**
-     * This method stops fragment injection in malicious applications.
-     * Make sure to deny any unknown fragments here.
-     */
     override fun isValidFragment(fragmentName: String): Boolean {
         return PreferenceFragment::class.java.name == fragmentName
                 || GeneralPreferenceFragment::class.java.name == fragmentName
-                || DataSyncPreferenceFragment::class.java.name == fragmentName
+                || RadarPreferenceFragment::class.java.name == fragmentName
                 || NotificationPreferenceFragment::class.java.name == fragmentName
     }
 
-    /**
-     * This fragment shows general preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     class GeneralPreferenceFragment : PreferenceFragment() {
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -90,10 +82,6 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         }
     }
 
-    /**
-     * This fragment shows notification preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     class NotificationPreferenceFragment : PreferenceFragment() {
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -118,22 +106,15 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         }
     }
 
-    /**
-     * This fragment shows data and sync preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    class DataSyncPreferenceFragment : PreferenceFragment() {
+    class RadarPreferenceFragment : PreferenceFragment() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            addPreferencesFromResource(R.xml.pref_data_sync)
+            addPreferencesFromResource(R.xml.pref_radarr)
             setHasOptionsMenu(true)
 
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("sync_frequency"))
+            bindPreferenceSummaryToValue(findPreference("pref_radarr_hots_address"))
+            bindPreferenceSummaryToValue(findPreference("pref_radarr_hots_port"))
+            bindPreferenceSummaryToValue(findPreference("pref_radarr_api_key"))
         }
 
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
