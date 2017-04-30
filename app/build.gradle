@@ -82,6 +82,12 @@ dependencies {
   compile "com.android.support:recyclerview-v7:$androidSupportVersion"
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
+  compile "org.jetbrains.anko:anko-common:$ankoSupportVersion"
+  compile "org.jetbrains.anko:anko-sdk15:$ankoSupportVersion"
+  compile "org.jetbrains.anko:anko-appcompat-v7:$ankoSupportVersion"
+  compile "org.jetbrains.anko:anko-cardview-v7:$ankoSupportVersion"
+  compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoSupportVersion"
+
   compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
   compile("com.squareup.retrofit2:retrofit:$retrofitVersion") {
