@@ -3,8 +3,12 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.BaseActivity
+import com.denysnovoa.nzbmanager.common.framework.startActivity
 import com.denysnovoa.nzbmanager.common.framework.toast
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
@@ -12,10 +16,12 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
+import com.denysnovoa.nzbmanager.settings.screen.SettingsActivity
 import kotlinx.android.synthetic.main.activity_movies.*
 import javax.inject.Inject
 
 class MoviesActivity : BaseActivity(), MoviesView {
+    val PARAMETER_MOVIE_ID: String = "PARAMETER_MOVIE_ID"
 
     @Inject
     lateinit var moviesPresenter: MoviesPresenter
@@ -29,20 +35,24 @@ class MoviesActivity : BaseActivity(), MoviesView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-//        moviesPresenter = MoviesPresenter(this,
-//                ErrorLog(),
-//                    GetLastMoviesUseCase(RadarrMoviesApiClient(ApiRestProvider(ApiUrl,
-//                        ApiOkHttpClient(AuthenticationInterceptor(ApiKey),
-//                                NetworkCacheInterceptor(),
-//                                OfflineCacheInterceptor(NetworkConnection(baseContext)),
-//                                ApiCacheProvider(ApiCacheKey, baseContext))
-//                ).get(RadarrMoviesApiRest::class.java)
-//                        , MoviesMapperImpl(MovieImageMapperImpl()))),
-//                    MoviesViewMapperImpl(MovieImageViewMapperImpl())
-//        )
+        val myToolbar = findViewById(R.id.my_toolbar) as Toolbar
+        setSupportActionBar(myToolbar)
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 2)
         recyclerMovies.setHasFixedSize(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.top_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.action_settings) {
+            startActivity<SettingsActivity>()
+        }
+
+        return true
     }
 
     override fun onResume() {
@@ -60,11 +70,12 @@ class MoviesActivity : BaseActivity(), MoviesView {
     }
 
     override fun showMovies(movies: List<MovieViewModel>) {
-        recyclerMovies.adapter = MovieItemAdapter(movies, { movie ->
+        recyclerMovies.adapter = MovieItemAdapter(movies, { (id) ->
             val intent = Intent(this, MoviesActivity::class.java)
-
+            intent.putExtra(PARAMETER_MOVIE_ID, id)
             startActivity(intent)
         })
+
         recyclerMovies.recycledViewPool.setMaxRecycledViews(0, 0)
 
     }

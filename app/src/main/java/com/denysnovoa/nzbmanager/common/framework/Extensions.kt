@@ -1,6 +1,8 @@
 package com.denysnovoa.nzbmanager.common.framework
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,4 +40,10 @@ fun ImageView.loadUrl(url: String) {
             .centerInside()
             .into(this)
 
+}
+
+inline fun <reified T : View> Activity.findView(id: Int) = findViewById(id) as T
+
+inline fun <reified T : Activity> Activity.startActivity() {
+    startActivity(Intent(this, T::class.java))
 }
