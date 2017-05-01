@@ -6,7 +6,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import java.util.concurrent.TimeUnit
 
-class OfflineCacheInterceptor(val networkConnection: NetworkConnection) : Interceptor {
+class OfflineCacheInterceptor (val networkConnection: NetworkConnection) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         var request = chain.request()
 

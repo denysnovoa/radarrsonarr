@@ -24,7 +24,9 @@ fun ViewGroup.inflate(layoutRes: Int): View {
 }
 
 fun ImageView.loadUrl(url: String) {
+
     val client = OkHttpClient().newBuilder()
+            .cache(OkHttp3Downloader.createDefaultCache(context))
             .addInterceptor(AuthenticationInterceptor(ApiKey))
             .addInterceptor(
                     HttpLoggingInterceptor().apply {
@@ -36,8 +38,8 @@ fun ImageView.loadUrl(url: String) {
             .downloader(OkHttp3Downloader(client))
             .build()
             .load(url)
-            .resize(166, 250)
-            .centerInside()
+            .centerCrop()
+            .fit()
             .into(this)
 
 }

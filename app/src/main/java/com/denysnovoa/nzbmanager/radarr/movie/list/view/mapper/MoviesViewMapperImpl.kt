@@ -13,6 +13,8 @@ class MoviesViewMapperImpl(val imageViewMapper: MovieImageViewMapper) : MoviesVi
                 imdbId,
                 tmdbId,
                 qualityProfileId,
-                imageViewMapper.transform(images))
+                imageViewMapper.getPoster(images),
+                imageViewMapper.getBanner(images)
+        )
     }
 }

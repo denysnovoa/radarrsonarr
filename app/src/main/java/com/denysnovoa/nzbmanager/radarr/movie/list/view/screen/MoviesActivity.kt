@@ -34,7 +34,7 @@ class MoviesActivity : BaseActivity(), MoviesView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-        recyclerMovies.layoutManager = GridLayoutManager(this, 2)
+        recyclerMovies.layoutManager = GridLayoutManager(this, 3)
         recyclerMovies.setHasFixedSize(true)
     }
 

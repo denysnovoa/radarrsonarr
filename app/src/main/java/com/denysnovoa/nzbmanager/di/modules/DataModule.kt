@@ -1,6 +1,7 @@
 package com.denysnovoa.nzbmanager.di.modules
 
 import android.content.Context
+import com.denysnovoa.nzbmanager.common.framework.ApiCacheKey
 import com.denysnovoa.nzbmanager.common.framework.ApiKey
 import com.denysnovoa.nzbmanager.common.framework.ApiUrl
 import com.denysnovoa.nzbmanager.common.framework.api.ApiOkHttpClient
@@ -10,6 +11,7 @@ import com.denysnovoa.nzbmanager.common.framework.api.cache.ApiCacheProvider
 import com.denysnovoa.nzbmanager.common.framework.api.cache.NetworkCacheInterceptor
 import com.denysnovoa.nzbmanager.common.framework.api.cache.OfflineCacheInterceptor
 import com.denysnovoa.nzbmanager.common.framework.api.provider.ApiRestProvider
+import com.denysnovoa.nzbmanager.di.qualifier.ApiCacheKey
 import com.denysnovoa.nzbmanager.di.qualifier.ApiKey
 import com.denysnovoa.nzbmanager.di.qualifier.ApiUrl
 import com.denysnovoa.nzbmanager.di.qualifier.ApplicationQualifier
@@ -28,7 +30,7 @@ class DataModule {
     fun provideApiRestProvider(@ApiUrl apiUrl: String, apiOkHttpClient: ApiOkHttpClient) = ApiRestProvider(apiUrl, apiOkHttpClient)
 
     @Provides @Singleton
-    fun provideApiCacheProvider(@ApplicationQualifier context: Context) = ApiCacheProvider(context)
+    fun provideApiCacheProvider(@ApplicationQualifier context: Context, @ApiCacheKey apiCacheKey: String) = ApiCacheProvider(context, apiCacheKey)
 
     @Provides @Singleton
     fun provideApiOkHttpClient(authenticatorInterceptor: AuthenticationInterceptor, networkCacheInterceptor: NetworkCacheInterceptor,
@@ -43,6 +45,9 @@ class DataModule {
 
     @Provides @Singleton @ApiUrl
     fun provideApiUrl(): String = ApiUrl
+
+    @Provides @Singleton @ApiCacheKey
+    fun provideApiCacheKey(): String = ApiCacheKey
 
     @Provides @Singleton
     fun provideNetworkCacheInterceptor() = NetworkCacheInterceptor()
