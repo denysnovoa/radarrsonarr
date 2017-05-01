@@ -5,18 +5,23 @@ import android.view.View
 import android.view.ViewGroup
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.inflate
-import com.denysnovoa.nzbmanager.common.framework.loadUrl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.movie_item.view.*
 
-class MovieItemAdapter(val items: List<MovieViewModel>, val listener: (MovieViewModel) -> Unit) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
+class MovieItemAdapter(val items: List<MovieViewModel>, val picasso: Picasso, val listener: (MovieViewModel) -> Unit) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = with(holder.itemView) {
         val item = items[position]
         with(item) {
             movie_title.text = title
             movie_status.text = status
             movie_downloaded.text = downloaded.toString()
-            movie_image.loadUrl(imagePoster)
+
+            picasso.load(imagePoster)
+                    .centerCrop()
+                    .fit()
+                    .into(movie_image)
 
             setOnClickListener { listener(item) }
         }
