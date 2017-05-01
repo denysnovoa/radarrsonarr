@@ -44,6 +44,13 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         return isXLargeTablet(this)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == android.R.id.home) {
+            finish()
+        }
+        return true
+    }
+
     /** {@inheritDoc}  */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     override fun onBuildHeaders(target: List<PreferenceActivity.Header>) {

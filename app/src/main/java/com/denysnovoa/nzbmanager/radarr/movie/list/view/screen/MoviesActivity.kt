@@ -10,6 +10,7 @@ import com.denysnovoa.nzbmanager.common.framework.BaseActivity
 import com.denysnovoa.nzbmanager.common.framework.startActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
+import com.denysnovoa.nzbmanager.radarr.movie.detail.screen.MovieDetailActivity
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -70,8 +71,8 @@ class MoviesActivity : BaseActivity(), MoviesView {
     }
 
     override fun showMovies(movies: List<MovieViewModel>) {
-        recyclerMovies.adapter = MovieItemAdapter(movies,picasso, { (id) ->
-            val intent = Intent(this, MoviesActivity::class.java)
+        recyclerMovies.adapter = MovieItemAdapter(movies, picasso, { (id) ->
+            val intent = Intent(this, MovieDetailActivity::class.java)
             intent.putExtra(PARAMETER_MOVIE_ID, id)
             startActivity(intent)
         })
