@@ -19,19 +19,20 @@
     <activity android:name=".radarr.movie.list.view.screen.MoviesActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
     <activity
         android:name=".settings.screen.SettingsActivity"
         android:label="@string/title_activity_settings"
+        android:parentActivityName=".radarr.movie.list.view.screen.MoviesActivity"
         >
     </activity>
     <activity
-        android:name="com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity"
+        android:name=".radarr.movie.detail.view.screen.MovieDetailActivity"
         android:label="@string/title_activity_movie_detail"
         android:theme="@style/AppTheme.NoActionBar"
+        android:parentActivityName=".radarr.movie.list.view.screen.MoviesActivity"
         >
     </activity>
   </application>
