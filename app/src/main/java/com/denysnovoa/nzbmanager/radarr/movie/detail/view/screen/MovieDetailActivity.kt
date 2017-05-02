@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.screen
+package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton

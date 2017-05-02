@@ -2,8 +2,7 @@
 <resources>
   <dimen name="padding_8dp">8dp</dimen>
   <dimen name="padding_24dp">24dp</dimen>
-  <dimen name="app_bar_height">180dp</dimen>
+  <dimen name="app_bar_height">240dp</dimen>
   <dimen name="fab_margin">16dp</dimen>
   <dimen name="text_margin">16dp</dimen>
-
 </resources>
