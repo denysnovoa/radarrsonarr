@@ -20,7 +20,10 @@ class MoviesPresenter(val moviesView: MoviesView,
         compositeDisposable.clear()
     }
 
-    fun getLastMovies() {
+    fun onResume() {
+
+        moviesView.showLoading()
+
         compositeDisposable.add(
                 getLastMoviesUseCase.get()
                         .subscribeOn(Schedulers.io())
@@ -28,12 +31,16 @@ class MoviesPresenter(val moviesView: MoviesView,
                         .doOnError { errorLog.log(it) }
                         .flatMapIterable { it }
                         .toList()
-                        .subscribe(this::moviesOnNext, { moviesView.showErrorLoadMovies() })
+                        .subscribe(this::moviesOnNext, {
+                            moviesView.hideLoading()
+                            moviesView.showErrorLoadMovies()
+                        })
         )
     }
 
     private fun moviesOnNext(moviesModel: List<MovieModel>) {
         moviesView.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
+        moviesView.hideLoading()
     }
 
 }

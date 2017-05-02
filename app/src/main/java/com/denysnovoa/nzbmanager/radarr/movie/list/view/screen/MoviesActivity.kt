@@ -41,6 +41,10 @@ class MoviesActivity : BaseActivity(), MoviesView {
 
         recyclerMovies.layoutManager = GridLayoutManager(this, 3)
         recyclerMovies.setHasFixedSize(true)
+
+        swipeMovies.setOnRefreshListener {
+            moviesPresenter.onResume()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -58,12 +62,20 @@ class MoviesActivity : BaseActivity(), MoviesView {
 
     override fun onResume() {
         super.onResume()
-        moviesPresenter.getLastMovies()
+        moviesPresenter.onResume()
     }
 
     override fun onStop() {
         super.onStop()
         moviesPresenter.stop()
+    }
+
+    override fun showLoading() {
+        swipeMovies.isRefreshing = true
+    }
+
+    override fun hideLoading() {
+        swipeMovies.isRefreshing = false
     }
 
     override fun showErrorLoadMovies() {
@@ -78,6 +90,6 @@ class MoviesActivity : BaseActivity(), MoviesView {
         })
 
         recyclerMovies.recycledViewPool.setMaxRecycledViews(0, 0)
-
+        swipeMovies.isRefreshing = false
     }
 }
