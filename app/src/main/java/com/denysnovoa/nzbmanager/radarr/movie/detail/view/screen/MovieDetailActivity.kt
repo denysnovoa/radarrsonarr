@@ -10,10 +10,12 @@ import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailA
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
 import org.jetbrains.anko.toast
 import javax.inject.Inject
+
 
 class MovieDetailActivity : BaseActivity(), MovieDetailView {
 
@@ -23,6 +25,10 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
 
     @Inject
     lateinit var presenter: MovieDetailPresenter
+
+    @Inject
+    lateinit var picasso: Picasso
+
     var movieId: Int = 0
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
@@ -69,10 +75,15 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     }
 
     override fun showDetail(movie: MovieViewModel) {
-        title = movie.title
         with(movie) {
+            toolbar_layout_movie.title = title
             movie_overview.text = overview
+            picasso.load(imageBanner)
+                    .centerCrop()
+                    .fit()
+                    .into(image_toolbar)
         }
+
     }
 
     override fun showErrorLoadMovie() {
