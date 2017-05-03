@@ -8,8 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MovieDetailPresenter(val id: Int,
-                           val view: MovieDetailView,
+class MovieDetailPresenter(val view: MovieDetailView,
                            val errorLog: ErrorLog,
                            val getMovieDetailUseCase: GetMovieDetailUseCase,
                            val moviesViewMapper: MoviesViewMapper) {
@@ -20,7 +19,7 @@ class MovieDetailPresenter(val id: Int,
         compositeDisposable.clear()
     }
 
-    fun onResume() {
+    fun onResume(id: Int) {
         compositeDisposable.add(
                 getMovieDetailUseCase.get(id)
                         .subscribeOn(Schedulers.io())

@@ -1,5 +1,6 @@
 package com.denysnovoa.nzbmanager.di.modules
 
+import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.GetMovieDetailUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.MoviesApiClient
 import dagger.Module
@@ -10,4 +11,7 @@ class DomainModule {
 
     @Provides
     fun provideGetLastMoviesUseCase(moviesApiClient: MoviesApiClient) = GetLastMoviesUseCase(moviesApiClient)
+
+    @Provides
+    fun provideGetMovieDetailUseCase(moviesApiClient: MoviesApiClient) = GetMovieDetailUseCase(moviesApiClient)
 }
