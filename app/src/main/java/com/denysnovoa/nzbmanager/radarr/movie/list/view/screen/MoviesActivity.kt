@@ -11,6 +11,7 @@ import com.denysnovoa.nzbmanager.common.framework.startActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity
+import com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity.Companion.PARAMETER_MOVIE_ID
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -22,7 +23,6 @@ import org.jetbrains.anko.toast
 import javax.inject.Inject
 
 class MoviesActivity : BaseActivity(), MoviesView {
-    val PARAMETER_MOVIE_ID: String = "PARAMETER_MOVIE_ID"
 
     @Inject
     lateinit var moviesPresenter: MoviesPresenter
