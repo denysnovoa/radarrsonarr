@@ -77,7 +77,21 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     override fun showDetail(movie: MovieViewModel) {
         with(movie) {
             toolbar_layout_movie.title = title
+            movie_status.text = when (status) {
+                "inCinemas" -> "in Cinemas"
+                "released" -> "released"
+                "announced" -> " announced"
+                else -> "default status"
+            }
             movie_overview.text = overview
+            movie_downloaded.text = when (downloaded) {
+                true -> getString(R.string.literal_download_movie).toUpperCase()
+                else -> getString(R.string.literal_no_download_movie).toUpperCase()
+            }
+            movie_monitored.text = when (monitored) {
+                true -> getString(R.string.literal_monitored_movie).toUpperCase()
+                else -> getString(R.string.literal_no_monitored_movie).toUpperCase()
+            }
             picasso.load(imageBanner)
                     .centerCrop()
                     .fit()

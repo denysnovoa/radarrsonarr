@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:expandedTitleTextAppearance="@android:color/black"
         app:contentScrim="?attr/colorPrimary"
         >
       <ImageView
@@ -51,7 +52,8 @@
       android:layout_margin="@dimen/fab_margin"
       app:layout_anchor="@id/app_bar"
       app:layout_anchorGravity="bottom|end"
-      app:srcCompat="@android:drawable/ic_dialog_email"
+      app:srcCompat="@drawable/ic_edit_black"
+      android:tint="@android:color/white"
       />
 
 </android.support.design.widget.CoordinatorLayout>
