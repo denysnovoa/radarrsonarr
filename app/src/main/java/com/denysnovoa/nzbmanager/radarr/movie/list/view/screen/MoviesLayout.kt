@@ -2,6 +2,8 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
+import android.support.v4.content.ContextCompat
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
@@ -13,11 +15,13 @@ import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.recyclerview.v7.recyclerView
+import org.jetbrains.anko.support.v4.swipeRefreshLayout
 
 
 class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
 
     lateinit var recycler: RecyclerView
+    lateinit var swipe: SwipeRefreshLayout
     override lateinit var toolbar: Toolbar
 
     override fun createView(ui: AnkoContext<MoviesActivity>) = with(ui) {
@@ -25,17 +29,18 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
             appBarLayout {
                 toolbar = toolbar(R.style.ThemeOverlay_AppCompat_ActionBar) {
                     backgroundResource = R.color.colorPrimary
+                    elevation = dip(4).toFloat()
+                    setTitleTextColor(ContextCompat.getColor(context, android.R.color.white))
+
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
                 }
             }.lparams(width = matchParent)
 
-//            recycler = recyclerViewAnko()
-//                    .apply(RecyclerViewAnko::style)
-//                    .lparams(matchParent, matchParent) {
-//                        behavior = AppBarLayout.ScrollingViewBehavior()
-//                    }
 
+            swipe = swipeRefreshLayout {
+
+            }
             recycler = recyclerView {
                 layoutManager = GridLayoutManager(context, 3)
                 clipToPadding = false
@@ -47,6 +52,7 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
             }.lparams(matchParent, matchParent) {
                 behavior = AppBarLayout.ScrollingViewBehavior()
             }
+
         }
     }
 

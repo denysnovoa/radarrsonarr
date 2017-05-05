@@ -40,9 +40,7 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
         super.onCreate(savedInstanceState)
         ui.recycler.adapter = adapter
 
-        // swipeMovies.setOnRefreshListener {
-        //    presenter.onResume()
-        //}
+        ui.swipe.setOnRefreshListener { presenter.onResume() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -69,11 +67,11 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     }
 
     override fun showLoading() {
-        //   swipeMovies.isRefreshing = true
+        ui.swipe.isRefreshing = true
     }
 
     override fun hideLoading() {
-        // swipeMovies.isRefreshing = false
+        ui.swipe.isRefreshing = false
     }
 
     override fun showErrorLoadMovies() {
