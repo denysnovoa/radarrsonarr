@@ -29,7 +29,6 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     @Inject
     lateinit var picasso: Picasso
 
-
     val adapter = MovieItemAdapterAnko { presenter.onMovieClicked(it) }
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
@@ -40,9 +39,6 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ui.recycler.adapter = adapter
-
-        // recyclerMovies.layoutManager = GridLayoutManager(this, 3)
-        //recyclerMovies.setHasFixedSize(true)
 
         // swipeMovies.setOnRefreshListener {
         //    presenter.onResume()
@@ -89,21 +85,8 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     }
 
     override fun showMovies(movies: List<MovieViewModel>) {
+        adapter.picasso = picasso
         adapter.items = movies
 
-        //  ui.recycler.adapter = MovieItemAdapter(movies, picasso, { (id) ->
-        //            val intent = Intent(this, MovieDetailActivity::class.java)
-//            intent.putExtra(PARAMETER_MOVIE_ID, id)
-//            startActivity(intent)
-        //})
-
-//        recyclerMovies.adapter = MovieItemAdapter(movies, picasso, { (id) ->
-//            val intent = Intent(this, MovieDetailActivity::class.java)
-//            intent.putExtra(PARAMETER_MOVIE_ID, id)
-//            startActivity(intent)
-//        })
-//
-//        recyclerMovies.recycledViewPool.setMaxRecycledViews(0, 0)
-//        swipeMovies.isRefreshing = false
     }
 }

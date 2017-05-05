@@ -25,7 +25,7 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
     override fun createView(ui: AnkoContext<MoviesActivity>) = with(ui) {
         coordinatorLayout {
             appBarLayout {
-                toolbar = toolbar(R.style.ThemeOverlay_AppCompat_Dark_ActionBar) {
+                toolbar = toolbar(R.style.ThemeOverlay_AppCompat_ActionBar) {
                     backgroundResource = R.color.colorPrimary
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
@@ -38,10 +38,12 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
                         behavior = AppBarLayout.ScrollingViewBehavior()
                     }
 
-
+//
 //            recycler = recyclerView {
 //                layoutManager = GridLayoutManager(context, 3)
-//            }.lparams(matchParent, wrapContent) {
+//
+//            }.lparams(matchParent, matchParent)
+//            {
 //                behavior = AppBarLayout.ScrollingViewBehavior()
 //            }
         }
