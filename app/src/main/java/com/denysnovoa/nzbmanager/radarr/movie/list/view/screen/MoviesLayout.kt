@@ -2,19 +2,17 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.ActivityAnkoComponent
-import com.denysnovoa.nzbmanager.common.framework.ui.custom.RecyclerViewAnko
-import com.denysnovoa.nzbmanager.common.framework.ui.custom.recyclerViewAnko
-import com.denysnovoa.nzbmanager.common.framework.ui.custom.style
-import org.jetbrains.anko.AnkoContext
+import com.denysnovoa.nzbmanager.common.framework.ui.custom.PaddingItemDecoration
+import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
-import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
-import org.jetbrains.anko.matchParent
+import org.jetbrains.anko.recyclerview.v7.recyclerView
 
 
 class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
@@ -32,20 +30,23 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
                 }
             }.lparams(width = matchParent)
 
-            recycler = recyclerViewAnko()
-                    .apply(RecyclerViewAnko::style)
-                    .lparams(matchParent, matchParent) {
-                        behavior = AppBarLayout.ScrollingViewBehavior()
-                    }
+//            recycler = recyclerViewAnko()
+//                    .apply(RecyclerViewAnko::style)
+//                    .lparams(matchParent, matchParent) {
+//                        behavior = AppBarLayout.ScrollingViewBehavior()
+//                    }
 
-//
-//            recycler = recyclerView {
-//                layoutManager = GridLayoutManager(context, 3)
-//
-//            }.lparams(matchParent, matchParent)
-//            {
-//                behavior = AppBarLayout.ScrollingViewBehavior()
-//            }
+            recycler = recyclerView {
+                layoutManager = GridLayoutManager(context, 3)
+                clipToPadding = false
+                scrollBarStyle = android.view.View.SCROLLBARS_OUTSIDE_OVERLAY
+                horizontalPadding = dimen(R.dimen.recycler_spacing)
+                verticalPadding = dip(2)
+                addItemDecoration(PaddingItemDecoration(dip(2)))
+
+            }.lparams(matchParent, matchParent) {
+                behavior = AppBarLayout.ScrollingViewBehavior()
+            }
         }
     }
 
