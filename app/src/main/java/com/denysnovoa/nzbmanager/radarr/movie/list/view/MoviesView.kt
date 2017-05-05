@@ -7,4 +7,5 @@ interface MoviesView {
     fun showMovies(movies: List<MovieViewModel>)
     fun showLoading()
     fun hideLoading()
+    fun goToMovieDetail(id: Int)
 }
