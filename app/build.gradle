@@ -5,121 +5,128 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-  signingConfigs {
-    releaseconfig {}
-    debugconfig {}
-  }
+    signingConfigs {
+        releaseconfig {
 
-  compileSdkVersion parent.ext.androidCompileSdkVersion
-  buildToolsVersion parent.ext.androidBuildToolsVersion
+        }
+        debugconfig {
 
-  defaultConfig {
-    applicationId parent.ext.androidApplicationId
-
-    minSdkVersion parent.ext.androidMinSdkVersion
-    targetSdkVersion parent.ext.androidTargetSdkVersion
-    versionCode parent.ext.androidVersionCode
-    versionName parent.ext.androidVersionName
-
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-  }
-
-  repositories {
-    mavenCentral()
-  }
-
-  productFlavors {
-    dev {
-      minSdkVersion 21
-      signingConfig signingConfigs.releaseconfig
-    }
-    pro {
-      minSdkVersion parent.ext.androidMinSdkVersion
-      signingConfig signingConfigs.releaseconfig
-    }
-  }
-
-  variantFilter { variant ->
-    def names = variant.flavors*.name
-
-    if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains("pro") && variant.buildType.name == "debug")) {
-      variant.ignore = true
-    }
-  }
-
-
-  buildTypes {
-    debug {
-      debuggable true
-      applicationIdSuffix(".develop")
+        }
     }
 
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
+    compileSdkVersion parent.ext.androidCompileSdkVersion
+    buildToolsVersion parent.ext.androidBuildToolsVersion
 
-  packagingOptions {
-    exclude 'META-INF/DEPENDENCIES'
-    exclude 'META-INF/NOTICE'
-    exclude 'META-INF/LICENSE'
-    exclude 'META-INF/LICENSE.txt'
-    exclude 'META-INF/NOTICE.txt'
-    exclude 'META-INF/rxjava.properties'
-  }
+    defaultConfig {
+        applicationId parent.ext.androidApplicationId
+
+        minSdkVersion parent.ext.androidMinSdkVersion
+        targetSdkVersion parent.ext.androidTargetSdkVersion
+        versionCode parent.ext.androidVersionCode
+        versionName parent.ext.androidVersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    productFlavors {
+        dev {
+            minSdkVersion 21
+            signingConfig signingConfigs.releaseconfig
+        }
+        pro {
+            minSdkVersion parent.ext.androidMinSdkVersion
+            signingConfig signingConfigs.releaseconfig
+        }
+    }
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+
+        if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains("pro") && variant.buildType.name == "debug")) {
+            variant.ignore = true
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            debuggable true
+            applicationIdSuffix(".develop")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
 }
 
 kapt {
-  generateStubs = true
+    generateStubs = true
 }
 
 dependencies {
 
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile "com.android.support:appcompat-v7:$androidSupportVersion"
-  compile "com.android.support:cardview-v7:$androidSupportVersion"
-  compile "com.android.support:recyclerview-v7:$androidSupportVersion"
-  compile "com.android.support:design:$androidSupportVersion"
-  compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$androidSupportVersion"
+    compile "com.android.support:cardview-v7:$androidSupportVersion"
+    compile "com.android.support:recyclerview-v7:$androidSupportVersion"
+    compile "com.android.support:design:$androidSupportVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-  compile "org.jetbrains.anko:anko-common:$ankoSupportVersion"
-  compile "org.jetbrains.anko:anko-sdk15:$ankoSupportVersion"
-  compile "org.jetbrains.anko:anko-appcompat-v7:$ankoSupportVersion"
-  compile "org.jetbrains.anko:anko-cardview-v7:$ankoSupportVersion"
-  compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-common:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-sdk15:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-appcompat-v7:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-cardview-v7:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-support-v4:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-appcompat-v7:$ankoSupportVersion"
+    compile "org.jetbrains.anko:anko-design:$ankoSupportVersion"
 
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-  compile("com.squareup.retrofit2:retrofit:$retrofitVersion") {
-    exclude module: 'okhttp'
-  }
-  compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile("com.squareup.retrofit2:retrofit:$retrofitVersion") {
+        exclude module: 'okhttp'
+    }
+    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
-  compile "com.google.firebase:firebase-core:$fireBaseVersion"
-  compile "com.google.firebase:firebase-crash:$fireBaseVersion"
+    compile "com.google.firebase:firebase-core:$fireBaseVersion"
+    compile "com.google.firebase:firebase-crash:$fireBaseVersion"
 
-  kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-  compile "com.google.dagger:dagger:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    compile "com.google.dagger:dagger:$daggerVersion"
 
-  compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
-  compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
 
-  compile 'com.squareup.picasso:picasso:2.5.2'
-  compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
-  compile 'io.reactivex.rxjava2:rxjava:2.0.9'
-  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-  compile 'nl.littlerobots.rxlint:rxlint:1.2'
-  compile 'com.github.akarnokd:rxjava2-extensions:0.16.5'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.9'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'nl.littlerobots.rxlint:rxlint:1.2'
+    compile 'com.github.akarnokd:rxjava2-extensions:0.16.5'
 
-  compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
 
-  testCompile 'junit:junit:4.12'
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
 }
 
 apply plugin: 'com.google.gms.google-services'

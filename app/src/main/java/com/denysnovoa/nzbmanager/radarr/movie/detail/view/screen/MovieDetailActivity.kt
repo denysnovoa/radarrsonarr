@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.common.framework.BaseActivity
+import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
