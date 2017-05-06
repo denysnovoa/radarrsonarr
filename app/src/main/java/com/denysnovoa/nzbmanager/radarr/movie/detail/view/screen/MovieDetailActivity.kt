@@ -32,7 +32,7 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     @Inject
     lateinit var picasso: Picasso
 
-    var movieId: Int = 0
+    var movieId = 0
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
         applicationComponent.plus(MovieDetailActivityModule(this))

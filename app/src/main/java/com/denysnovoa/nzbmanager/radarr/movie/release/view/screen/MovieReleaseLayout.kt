@@ -2,7 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
-import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import com.denysnovoa.nzbmanager.R
@@ -30,7 +30,7 @@ class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
             }.lparams(width = matchParent)
 
             recycler = recyclerView {
-                layoutManager = GridLayoutManager(context, 1)
+                layoutManager = LinearLayoutManager(context)
                 clipToPadding = false
                 scrollBarStyle = android.view.View.SCROLLBARS_OUTSIDE_OVERLAY
                 horizontalPadding = dimen(R.dimen.recycler_spacing)
