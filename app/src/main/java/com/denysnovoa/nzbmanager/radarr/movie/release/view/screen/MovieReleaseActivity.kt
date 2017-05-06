@@ -33,6 +33,8 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
         initializeToolbar()
 
         movieId = intent.extras.getInt(MovieDetailActivity.PARAMETER_MOVIE_ID)
+
+        ui.recycler.adapter = adapter
     }
 
     fun initializeToolbar() {

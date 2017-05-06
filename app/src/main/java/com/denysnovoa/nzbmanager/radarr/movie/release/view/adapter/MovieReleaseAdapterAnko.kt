@@ -22,9 +22,7 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         rejection.text = "rejection: $it.rejected"
     }
 
-    override fun onCreateComponent(recyclerView: RecyclerView): Component {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onCreateComponent(recyclerView: RecyclerView) = Component(recyclerView)
 
     class Component(override val view: RecyclerView) : ViewAnkoComponent<RecyclerView> {
 
