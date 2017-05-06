@@ -77,7 +77,7 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
         when (item?.itemId) {
-            R.id.action_movie_search_download -> startActivity<MovieSearchDownloadActivity>()
+            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>()
             else -> finish()
         }
 
