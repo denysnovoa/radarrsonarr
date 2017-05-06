@@ -2,7 +2,6 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
-import android.support.v4.content.ContextCompat
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -27,16 +26,12 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
     override fun createView(ui: AnkoContext<MoviesActivity>) = with(ui) {
         coordinatorLayout {
             appBarLayout {
-                toolbar = toolbar(R.style.ThemeOverlay_AppCompat_ActionBar) {
-                    backgroundResource = R.color.colorPrimary
+                toolbar = toolbar {
                     elevation = dip(4).toFloat()
-                    setTitleTextColor(ContextCompat.getColor(context, android.R.color.white))
-
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
                 }
             }.lparams(width = matchParent)
-
 
             swipe = swipeRefreshLayout {
 
