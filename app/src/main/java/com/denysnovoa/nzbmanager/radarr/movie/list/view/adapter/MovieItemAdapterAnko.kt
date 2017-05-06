@@ -42,7 +42,7 @@ class MovieItemAdapterAnko(listener: (MovieViewModel) -> Unit)
 
                     title = textView {
                         padding = dip(8)
-                        backgroundResource = R.color.cardview_light_background
+                        backgroundResource = R.color.cardview_shadow_start_color
                         setTextAppearanceCompatible(R.style.TextAppearance_AppCompat_Subhead)
                         maxLines = 1
                         ellipsize = TextUtils.TruncateAt.END
