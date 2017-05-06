@@ -5,7 +5,9 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.domain.GetMovieReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 
 class MovieReleasePresenter(val view: MovieReleaseView,
                             val errorLog: ErrorLog,
@@ -20,17 +22,17 @@ class MovieReleasePresenter(val view: MovieReleaseView,
     }
 
     fun onResume(id: Int) {
-//        compositeDisposable.add(
-//                getMovieReleaseUseCase
-//                        .get(id)
-//                        .doOnError { errorLog::log }
-//                        .subscribeOn(Schedulers.io())
-//                        .observeOn(AndroidSchedulers.mainThread())
-//                        .subscribe(
-//                                { movieReleases -> view.showMovieReleases(movieReleaseViewMapper.transform(movieReleases)) },
-//                                { view.showErrorSearchReleases() }
-//                        )
-//        )
+        compositeDisposable.add(
+                getMovieReleaseUseCase
+                        .get(id)
+                        .doOnError { errorLog::log }
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                { movieReleases -> view.showMovieReleases(movieReleaseViewMapper.transform(movieReleases)) },
+                                { view.showErrorSearchReleases() }
+                        )
+        )
     }
 
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {

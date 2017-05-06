@@ -24,6 +24,8 @@ class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
             appBarLayout {
                 toolbar = toolbar {
                     elevation = dip(4).toFloat()
+                    setTitleTextColor(R.color.colorTextWhite)
+                    title = context.getString(R.string.title_activity_movie_release)
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
                 }
