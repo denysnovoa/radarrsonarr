@@ -6,11 +6,15 @@ import com.denysnovoa.nzbmanager.common.framework.api.cache.NetworkCacheIntercep
 import com.denysnovoa.nzbmanager.common.framework.api.cache.OfflineCacheInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import java.util.concurrent.TimeUnit
 
 class ApiOkHttpClient(val authenticationInterceptor: AuthenticationInterceptor,
                       val networkInterceptor: NetworkCacheInterceptor,
                       val offlineCacheInterceptor: OfflineCacheInterceptor,
                       val apiCacheProvider: ApiCacheProvider) {
+
+
+    val connectionTimeOut = 360L
 
     fun getClient(): OkHttpClient = OkHttpClient.Builder()
             .addInterceptor(authenticationInterceptor)
@@ -22,6 +26,9 @@ class ApiOkHttpClient(val authenticationInterceptor: AuthenticationInterceptor,
                     }
             )
             .cache(apiCacheProvider.getCache())
+            .connectTimeout(connectionTimeOut, TimeUnit.SECONDS)
+            .readTimeout(connectionTimeOut, TimeUnit.SECONDS)
+            .writeTimeout(connectionTimeOut, TimeUnit.SECONDS)
             .build()
 }
 
