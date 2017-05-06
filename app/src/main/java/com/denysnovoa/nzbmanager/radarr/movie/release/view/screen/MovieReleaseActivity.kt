@@ -1,13 +1,16 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
+import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
+import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import org.jetbrains.anko.toast
 
-class MovieReleaseActivity : com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
+class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
 
-    override val ui = com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieReleaseLayout()
+    override val ui = MovieReleaseLayout()
 
-    override fun injectDependencies(applicationComponent: com.denysnovoa.nzbmanager.di.ApplicationComponent) {
+    override fun injectDependencies(applicationComponent: ApplicationComponent) {
     }
 
     override fun onCreate(savedInstanceState: android.os.Bundle?) {
@@ -28,7 +31,7 @@ class MovieReleaseActivity : com.denysnovoa.nzbmanager.common.framework.ui.BaseA
         return true
     }
 
-    override fun showMovieReleases(movieReleases: List<com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel>) {
+    override fun showMovieReleases(movieReleases: List<MovieReleaseViewModel>) {
 
     }
 
