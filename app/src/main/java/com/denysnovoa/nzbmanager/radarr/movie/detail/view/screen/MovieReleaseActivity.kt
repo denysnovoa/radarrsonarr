@@ -5,6 +5,7 @@ import android.view.MenuItem
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieReleaseView
+import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.model.MovieReleaseModel
 
 class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
 
@@ -29,5 +30,13 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         finish()
         return true
+    }
+
+    override fun showMovieReleases(movieReleases: List<MovieReleaseModel>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun showErrorSearchReleases() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
