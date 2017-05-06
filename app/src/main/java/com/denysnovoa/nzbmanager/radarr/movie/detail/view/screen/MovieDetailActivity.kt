@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
@@ -65,6 +66,11 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     override fun onResume() {
         super.onResume()
         presenter.onResume(movieId)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_movie_detail, menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
