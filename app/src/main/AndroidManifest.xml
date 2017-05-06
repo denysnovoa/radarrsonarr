@@ -35,7 +35,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         >
     </activity>
-    <activity android:name=".radarr.movie.detail.view.screen.MovieSearchDownloadActivity">
+    <activity android:name=".radarr.movie.detail.view.screen.MovieReleaseActivity">
     </activity>
   </application>
 

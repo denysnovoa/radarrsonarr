@@ -14,12 +14,12 @@ import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.recyclerview.v7.recyclerView
 
-class MovieSearchDownloadLayout : ActivityAnkoComponent<MovieSearchDownloadActivity> {
+class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
 
     lateinit var recycler: RecyclerView
     override lateinit var toolbar: Toolbar
 
-    override fun createView(ui: AnkoContext<MovieSearchDownloadActivity>) = with(ui) {
+    override fun createView(ui: AnkoContext<MovieReleaseActivity>) = with(ui) {
         coordinatorLayout {
             appBarLayout {
                 toolbar = toolbar {
