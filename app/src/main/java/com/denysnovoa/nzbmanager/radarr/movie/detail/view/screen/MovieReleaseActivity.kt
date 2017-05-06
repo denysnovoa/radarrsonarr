@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
-import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieSearchDownloadView
+import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieReleaseView
 
-class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieSearchDownloadView {
+class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
 
     override val ui = MovieReleaseLayout()
 
