@@ -1,6 +1,6 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.repository.api
+package com.denysnovoa.nzbmanager.radarr.movie.release.repository.api
 
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.MovieReleaseEntity
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.MovieReleaseEntity
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,9 +1,9 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter
+package com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
-import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieReleaseView
-import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.GetMovieReleaseUseCase
-import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseViewMapper
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.domain.GetMovieReleaseUseCase
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

@@ -11,6 +11,7 @@ import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailA
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.screen.MovieReleaseActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*

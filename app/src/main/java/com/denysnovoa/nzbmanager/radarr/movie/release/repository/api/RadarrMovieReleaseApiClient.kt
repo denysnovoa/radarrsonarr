@@ -1,7 +1,7 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.repository.api
+package com.denysnovoa.nzbmanager.radarr.movie.release.repository.api
 
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.mapper.MovieReleaseMapper
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.model.MovieReleaseModel
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapper
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.model.MovieReleaseModel
 import io.reactivex.Flowable
 
 

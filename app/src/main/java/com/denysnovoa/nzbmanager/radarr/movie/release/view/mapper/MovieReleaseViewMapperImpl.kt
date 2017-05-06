@@ -1,7 +1,7 @@
-package com.denysnovoa.nzbmanager.radarr.movie.release.view
+package com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper
 
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.model.MovieReleaseModel
-import com.denysnovoa.nzbmanager.radarr.movie.detail.view.model.MovieReleaseViewModel
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.model.MovieReleaseModel
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 
 class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
 

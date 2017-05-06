@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
+package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*

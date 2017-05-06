@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.view.model
+package com.denysnovoa.nzbmanager.radarr.movie.release.view.model
 
 data class MovieReleaseViewModel(val title: String,
                                  val size: Double,

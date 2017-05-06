@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.radarr.movie.detail.repository
+package com.denysnovoa.nzbmanager.radarr.movie.release.repository
 
 data class MovieReleaseEntity(val title: String,
                               val size: Double,
