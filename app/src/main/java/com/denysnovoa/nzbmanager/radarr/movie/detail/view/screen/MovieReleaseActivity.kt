@@ -2,10 +2,12 @@ package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
 
 import android.os.Bundle
 import android.view.MenuItem
+import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieReleaseView
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.model.MovieReleaseModel
+import com.denysnovoa.nzbmanager.radarr.movie.detail.view.model.MovieReleaseViewModel
+import org.jetbrains.anko.toast
 
 class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
 
@@ -32,11 +34,11 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
         return true
     }
 
-    override fun showMovieReleases(movieReleases: List<MovieReleaseModel>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun showMovieReleases(movieReleases: List<MovieReleaseViewModel>) {
+
     }
 
     override fun showErrorSearchReleases() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast(R.string.error_load_movie_release)
     }
 }

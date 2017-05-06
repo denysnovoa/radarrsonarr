@@ -1,8 +1,8 @@
 package com.denysnovoa.nzbmanager.radarr.movie.detail
 
-import com.denysnovoa.nzbmanager.radarr.movie.detail.repository.model.MovieReleaseModel
+import com.denysnovoa.nzbmanager.radarr.movie.detail.view.model.MovieReleaseViewModel
 
 interface MovieReleaseView {
-    fun showMovieReleases(movieReleases: List<MovieReleaseModel>)
+    fun showMovieReleases(movieReleases: List<MovieReleaseViewModel>)
     fun showErrorSearchReleases()
 }
