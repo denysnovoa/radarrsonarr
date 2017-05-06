@@ -2,17 +2,20 @@ package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
+import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter.MovieReleaseAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter.MovieReleasePresenter
 import org.jetbrains.anko.toast
+import javax.inject.Inject
 
 class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleaseView {
 
     override val ui = MovieReleaseLayout()
 
+    @Inject
     lateinit var presenter: MovieReleasePresenter
 
     val adapter = MovieReleaseAdapterAnko { presenter.onReleaseClicked(it) }
@@ -20,6 +23,8 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     var movieId = 0
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
+        applicationComponent.plus(MovieReleaseActivityModule(this))
+                .injectTo(this)
     }
 
     override fun onCreate(savedInstanceState: android.os.Bundle?) {
