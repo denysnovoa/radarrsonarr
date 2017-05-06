@@ -19,6 +19,7 @@
     <activity android:name=".radarr.movie.list.view.screen.MoviesActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
@@ -30,9 +31,11 @@
     </activity>
     <activity
         android:name=".radarr.movie.detail.view.screen.MovieDetailActivity"
-        android:theme="@style/AppTheme.NoActionBar"
         android:parentActivityName=".radarr.movie.list.view.screen.MoviesActivity"
+        android:theme="@style/AppTheme.NoActionBar"
         >
+    </activity>
+    <activity android:name=".radarr.movie.detail.view.screen.MovieSearchDownloadActivity">
     </activity>
   </application>
 

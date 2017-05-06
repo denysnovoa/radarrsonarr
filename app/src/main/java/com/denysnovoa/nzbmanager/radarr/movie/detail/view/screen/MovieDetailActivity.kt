@@ -14,6 +14,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -74,9 +75,12 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            finish()
+
+        when (item?.itemId) {
+            R.id.action_movie_search_download -> startActivity<MovieSearchDownloadActivity>()
+            else -> finish()
         }
+
         return true
     }
 
