@@ -19,10 +19,10 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
     override val bind: Component.(item: MovieReleaseViewModel) -> Unit = {
         title.text = it.title
-        age.text = it.age.toString()
+        age.text = "${it.age} days "
         indexer.text = it.indexer
-        size.text = it.size.toString()
-        peers.text = " ${it.seeders}/ ${it.leechers} "
+        size.text = " ${it.size} G "
+        peers.text = " ${it.seeders} / ${it.leechers} "
 
         if (!it.rejected) {
             iconDownload.visibility = View.GONE
@@ -71,19 +71,20 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
                                     textSizeDimen = R.dimen.text_secondary
                                 }
 
-                                indexer = textView {
-                                    padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
-                                }
                                 peers = textView {
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
                                 }
+
                                 quality = textView {
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
                                 }
 
+                                indexer = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
                             }
 
                         }

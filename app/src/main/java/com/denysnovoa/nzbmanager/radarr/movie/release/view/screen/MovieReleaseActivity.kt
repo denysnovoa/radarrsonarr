@@ -62,7 +62,6 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     override fun onResume() {
         super.onResume()
         progressDialog = indeterminateProgressDialog(R.string.search_movie_releases)
-
         presenter.onResume(movieId)
     }
 
