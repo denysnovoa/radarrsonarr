@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
@@ -14,10 +15,12 @@ import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.recyclerview.v7.recyclerView
+import org.jetbrains.anko.support.v4.swipeRefreshLayout
 
 class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
 
     lateinit var recycler: RecyclerView
+    lateinit var swipe: SwipeRefreshLayout
     override lateinit var toolbar: Toolbar
 
     override fun createView(ui: AnkoContext<MovieReleaseActivity>) = with(ui) {
@@ -33,6 +36,9 @@ class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
                 }
             }.lparams(width = matchParent)
 
+            swipe = swipeRefreshLayout {
+
+            }
             recycler = recyclerView {
                 layoutManager = LinearLayoutManager(context)
                 clipToPadding = false
@@ -43,6 +49,7 @@ class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
             }.lparams(matchParent, matchParent) {
                 behavior = AppBarLayout.ScrollingViewBehavior()
             }
+
 
         }
 

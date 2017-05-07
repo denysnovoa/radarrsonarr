@@ -1,5 +1,7 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.screen
 
+import android.app.ProgressDialog
+import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityModule
@@ -8,6 +10,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter.MovieReleaseAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter.MovieReleasePresenter
+import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -21,6 +24,8 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     val adapter = MovieReleaseAdapterAnko { presenter.onReleaseClicked(it) }
 
     var movieId = 0
+
+    lateinit var progressDialog: ProgressDialog
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
         applicationComponent.plus(MovieReleaseActivityModule(this))
@@ -56,6 +61,7 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
 
     override fun onResume() {
         super.onResume()
+        progressDialog = indeterminateProgressDialog(R.string.search_movie_releases)
 
         presenter.onResume(movieId)
     }
@@ -66,5 +72,13 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
 
     override fun showErrorSearchReleases() {
         toast(com.denysnovoa.nzbmanager.R.string.error_load_movie_release)
+    }
+
+    override fun showLoading() {
+        progressDialog.show()
+    }
+
+    override fun hideLoading() {
+        progressDialog.hide()
     }
 }
