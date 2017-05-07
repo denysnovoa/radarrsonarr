@@ -33,4 +33,7 @@
     <item name="colorControlNormal">@color/colorTextWhite</item>
   </style>
 
+  <style name="text_primary">16</style>
+  <style name="text_secundary">14</style>
+
 </resources>

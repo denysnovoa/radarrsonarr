@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import com.denysnovoa.nzbmanager.R
+import com.denysnovoa.nzbmanager.R.style.AppTheme
 import com.denysnovoa.nzbmanager.common.framework.ui.ActivityAnkoComponent
 import com.denysnovoa.nzbmanager.common.framework.ui.custom.PaddingItemDecoration
 import org.jetbrains.anko.*
@@ -22,9 +23,10 @@ class MovieReleaseLayout : ActivityAnkoComponent<MovieReleaseActivity> {
     override fun createView(ui: AnkoContext<MovieReleaseActivity>) = with(ui) {
         coordinatorLayout {
             appBarLayout {
-                toolbar = toolbar {
+                toolbar = toolbar(AppTheme) {
                     elevation = dip(4).toFloat()
                     setTitleTextColor(R.color.colorTextWhite)
+
                     title = context.getString(R.string.title_activity_movie_release)
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS

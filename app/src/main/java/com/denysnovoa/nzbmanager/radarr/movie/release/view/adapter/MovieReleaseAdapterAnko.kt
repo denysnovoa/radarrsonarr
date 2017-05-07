@@ -1,13 +1,17 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter
 
+import android.graphics.Typeface.DEFAULT_BOLD
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseAdapter
 import com.denysnovoa.nzbmanager.common.framework.ui.ViewAnkoComponent
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import org.jetbrains.anko.*
+import org.jetbrains.anko.cardview.v7.cardView
 
 
 class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
@@ -18,8 +22,13 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         age.text = it.age.toString()
         indexer.text = it.indexer
         size.text = it.size.toString()
-        peers.text = " $it.seeders/ $it.leechers "
-        rejection.text = "rejection: $it.rejected"
+        peers.text = " ${it.seeders}/ ${it.leechers} "
+
+        if (!it.rejected) {
+            iconDownload.visibility = View.GONE
+        } else {
+            iconDownload.setOnClickListener { listener }
+        }
     }
 
     override fun onCreateComponent(recyclerView: RecyclerView) = Component(recyclerView)
@@ -32,48 +41,65 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         lateinit var size: TextView
         lateinit var peers: TextView
         lateinit var quality: TextView
-        lateinit var rejection: TextView
         lateinit var iconDownload: ImageView
 
         override fun createView(ui: AnkoContext<RecyclerView>) = with(ui) {
-            relativeLayout {
-                linearLayout {
-                    age = textView {
-                        padding = dip(8)
-                    }
+            verticalLayout {
+                lparams(width = matchParent)
 
-                    title = textView {
-                        padding = dip(8)
-                    }
-                    indexer = textView {
-                        padding = dip(8)
-                    }
+                cardView {
+                    linearLayout {
+                        verticalLayout {
+                            linearLayout {
+                                padding = dip(8)
 
-                }.lparams(matchParent, wrapContent)
+                                title = textView {
+                                    textSizeDimen = R.dimen.text_primary
+                                    typeface = DEFAULT_BOLD
+                                }
+                            }
+                            linearLayout {
+                                lparams(width = matchParent, height = wrapContent)
+                                padding = dip(8)
+                                orientation = LinearLayout.HORIZONTAL
+                                size = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
+                                age = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
 
-                linearLayout {
+                                indexer = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
+                                peers = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
+                                quality = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
 
-                    size = textView {
-                        padding = dip(8)
-                    }
-                    peers = textView {
-                        padding = dip(8)
-                    }
-                    quality = textView {
-                        padding = dip(8)
-                    }
-                    rejection = textView {
-                        padding = dip(8)
-                    }
+                            }
 
-                    iconDownload = imageView(R.drawable.ic_arrow_downward_black_24dp) {
-                        scaleType = ImageView.ScaleType.CENTER
+                        }
+
+                        iconDownload = imageView(R.drawable.ic_arrow_downward_black_24dp) {
+                            backgroundColor = R.color.cardview_dark_background
+                            scaleType = ImageView.ScaleType.CENTER_CROP
+                        }.lparams(width = dimen(R.dimen.icon_download), height = dimen(R.dimen.icon_download)) {
+                            padding = dip(8)
+                            margin = dip(8)
+                        }
                     }
-
-                }.lparams(matchParent, wrapContent)
-
+                }
             }
         }
+
     }
 
 }
