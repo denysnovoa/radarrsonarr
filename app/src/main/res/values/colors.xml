@@ -3,4 +3,10 @@
   <color name="colorPrimary">#3F51B5</color>
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
+
+  <color name="colorTextWhite">#ffffffff</color>
+  <color name="colorTextBlack">#ff000000</color>
+
+  <color name="colorRowItemText">#bebebe</color>
+
 </resources>

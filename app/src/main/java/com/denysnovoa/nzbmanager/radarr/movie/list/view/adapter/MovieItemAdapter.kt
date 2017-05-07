@@ -9,7 +9,8 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.movie_item.view.*
 
-class MovieItemAdapter(val items: List<MovieViewModel>, val picasso: Picasso, val listener: (MovieViewModel) -> Unit) : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
+class MovieItemAdapter(val items: List<MovieViewModel>, val picasso: Picasso, val listener: (MovieViewModel) -> Unit)
+    : RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = with(holder.itemView) {
         val item = items[position]

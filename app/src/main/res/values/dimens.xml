@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <dimen name="padding_8dp">8dp</dimen>
+  <dimen name="padding_16dp">16dp</dimen>
   <dimen name="padding_24dp">24dp</dimen>
   <dimen name="app_bar_height">240dp</dimen>
   <dimen name="fab_margin">16dp</dimen>
   <dimen name="text_margin">16dp</dimen>
+  <dimen name="layout_margin">24dp</dimen>
+  <dimen name="column_width">180dp</dimen>
+  <dimen name="recycler_spacing">2dp</dimen>
+  <dimen name="image_row_item">180dp</dimen>
+  <dimen name="card_elevation">2dp</dimen>
+  <dimen name="text_size">4sp</dimen>
+
 </resources>

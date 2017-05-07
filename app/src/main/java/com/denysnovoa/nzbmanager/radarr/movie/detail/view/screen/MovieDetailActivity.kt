@@ -2,9 +2,10 @@ package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.common.framework.BaseActivity
+import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
@@ -13,6 +14,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -67,17 +69,39 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
         presenter.onResume(movieId)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_movie_detail, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            finish()
+
+        when (item?.itemId) {
+            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>()
+            else -> finish()
         }
+
         return true
     }
 
     override fun showDetail(movie: MovieViewModel) {
         with(movie) {
             toolbar_layout_movie.title = title
+            movie_status.text = when (status) {
+                "inCinemas" -> "in Cinemas"
+                "released" -> "released"
+                "announced" -> " announced"
+                else -> "default status"
+            }
             movie_overview.text = overview
+            movie_downloaded.text = when (downloaded) {
+                true -> getString(R.string.literal_download_movie).toUpperCase()
+                else -> getString(R.string.literal_no_download_movie).toUpperCase()
+            }
+            movie_monitored.text = when (monitored) {
+                true -> getString(R.string.literal_monitored_movie).toUpperCase()
+                else -> getString(R.string.literal_no_monitored_movie).toUpperCase()
+            }
             picasso.load(imageBanner)
                     .centerCrop()
                     .fit()
