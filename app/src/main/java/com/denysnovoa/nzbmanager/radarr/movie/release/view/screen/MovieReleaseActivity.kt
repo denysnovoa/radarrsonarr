@@ -91,4 +91,8 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     override fun showDownloadOk() {
         toast(R.string.ok_download_release)
     }
+
+    override fun showErrorDownload() {
+        toast(R.string.error_download_release)
+    }
 }

@@ -17,4 +17,5 @@ class RadarrMovieReleaseApiClient(val movieReleaseApi: RadarrMovieReleaseApiRest
 
     override fun download(movieReleaseModel: MovieReleaseModel) =
             movieReleaseApi.post(movieReleaseMapper.transform(movieReleaseModel))
+                    .map(movieReleaseMapper::transform)
 }

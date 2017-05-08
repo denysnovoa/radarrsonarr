@@ -34,7 +34,7 @@ class MovieReleasePresenter(val view: MovieReleaseView,
             compositeDisposable.add(
                     getMovieReleaseUseCase
                             .get(id)
-                            .doOnError { errorLog::log }
+                            .doOnError(errorLog::log)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .doOnNext {
@@ -56,9 +56,9 @@ class MovieReleasePresenter(val view: MovieReleaseView,
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {
         downloadReleaseUseCase
                 .download(movieReleaseViewMapper.transform(releaseViewModel))
-                .doOnError { errorLog::log }
+                .doOnError(errorLog::log)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { view.showDownloadOk() }
+                .subscribe( {view.showDownloadOk()}, {view.showErrorDownload()} )
     }
 }

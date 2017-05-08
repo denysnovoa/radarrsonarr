@@ -9,4 +9,5 @@ interface MovieReleaseView {
     fun hideLoading()
     fun showItemClicked()
     fun showDownloadOk()
+    fun showErrorDownload()
 }

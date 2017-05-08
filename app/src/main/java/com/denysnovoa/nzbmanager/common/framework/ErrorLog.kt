@@ -1,11 +1,12 @@
 package com.denysnovoa.nzbmanager.common.framework
 
-import android.util.Log
 import com.google.firebase.crash.FirebaseCrash
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.error
 
-class ErrorLog {
-    fun log(error: Throwable?) {
-        Log.e("ErrorLog", "Error", error)
+class ErrorLog : AnkoLogger {
+    fun log(error: Throwable) {
+        this.error { error }
         FirebaseCrash.report(error)
     }
 }
