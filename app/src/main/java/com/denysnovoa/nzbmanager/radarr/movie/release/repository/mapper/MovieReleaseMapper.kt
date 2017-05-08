@@ -5,4 +5,6 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.repository.model.MovieRele
 
 interface MovieReleaseMapper {
     fun transform(movie: MovieReleaseEntity): MovieReleaseModel
+    fun transform(movie: MovieReleaseModel): MovieReleaseEntity
+
 }

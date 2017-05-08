@@ -29,4 +29,19 @@ class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
 
         return rint(size.div(1048576.0).div(1024) * 100) / 100
     }
+
+    override fun transform(movieRelease: MovieReleaseViewModel) = with(movieRelease) {
+        MovieReleaseModel(title,
+                convertByteToGigabyte(size),
+                indexerId,
+                indexer,
+                rejected,
+                downloadAllowed,
+                age,
+                seeders,
+                leechers,
+                guid,
+                downloadUrl,
+                infoUrl)
+    }
 }

@@ -15,4 +15,6 @@ class RadarrMovieReleaseApiClient(val movieReleaseApi: RadarrMovieReleaseApiRest
             .toList()
             .toFlowable()
 
+    override fun download(movieReleaseModel: MovieReleaseModel) =
+            movieReleaseApi.post(movieReleaseMapper.transform(movieReleaseModel))
 }

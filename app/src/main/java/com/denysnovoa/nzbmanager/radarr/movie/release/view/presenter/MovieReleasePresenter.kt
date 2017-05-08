@@ -1,6 +1,7 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
+import com.denysnovoa.nzbmanager.radarr.movie.release.domain.DownloadReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.domain.GetMovieReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
@@ -12,6 +13,7 @@ import io.reactivex.schedulers.Schedulers
 class MovieReleasePresenter(val view: MovieReleaseView,
                             val errorLog: ErrorLog,
                             val getMovieReleaseUseCase: GetMovieReleaseUseCase,
+                            val downloadReleaseUseCase: DownloadReleaseUseCase,
                             val movieReleaseViewMapper: MovieReleaseViewMapper
 ) {
 
@@ -52,7 +54,11 @@ class MovieReleasePresenter(val view: MovieReleaseView,
     }
 
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {
-
-        view.showItemClicked()
+        downloadReleaseUseCase
+                .download(movieReleaseViewMapper.transform(releaseViewModel))
+                .doOnError { errorLog::log }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe { view.showDownloadOk() }
     }
 }

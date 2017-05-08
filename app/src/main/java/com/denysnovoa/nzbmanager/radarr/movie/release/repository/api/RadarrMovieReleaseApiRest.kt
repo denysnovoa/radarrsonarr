@@ -1,6 +1,7 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.repository.api
 
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.MovieReleaseEntity
+import io.reactivex.Completable
 import io.reactivex.Flowable
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -14,5 +15,5 @@ interface RadarrMovieReleaseApiRest {
             : Flowable<List<MovieReleaseEntity>>
 
     @POST("api/release")
-    fun post(@Body movieRelease: MovieReleaseEntity)
+    fun post(@Body movieRelease: MovieReleaseEntity): Completable
 }

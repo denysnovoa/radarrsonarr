@@ -3,6 +3,7 @@ package com.denysnovoa.nzbmanager.di.subcomponent.movieRelease
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.di.modules.ActivityModule
 import com.denysnovoa.nzbmanager.di.scope.ActivityScope
+import com.denysnovoa.nzbmanager.radarr.movie.release.domain.DownloadReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.domain.GetMovieReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
@@ -23,7 +24,8 @@ class MovieReleaseActivityModule(activity: MovieReleaseActivity) : ActivityModul
     fun provideMovieReleasePresenter(view: MovieReleaseView,
                                      errorLog: ErrorLog,
                                      getLastMovieReleaseUseCase: GetMovieReleaseUseCase,
+                                     downloadReleaseUseCase: DownloadReleaseUseCase,
                                      movieReleaseViewMapper: MovieReleaseViewMapper
     )
-            = MovieReleasePresenter(view, errorLog, getLastMovieReleaseUseCase, movieReleaseViewMapper)
+            = MovieReleasePresenter(view, errorLog, getLastMovieReleaseUseCase, downloadReleaseUseCase, movieReleaseViewMapper)
 }

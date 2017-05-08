@@ -10,7 +10,6 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter.MovieReleaseAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter.MovieReleasePresenter
-import org.jetbrains.anko.browse
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.toast
 import javax.inject.Inject
@@ -74,7 +73,7 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     }
 
     override fun showErrorSearchReleases() {
-        toast(com.denysnovoa.nzbmanager.R.string.error_load_movie_release)
+        toast(R.string.error_load_movie_release)
     }
 
     override fun showLoading() {
@@ -82,15 +81,14 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     }
 
     override fun showItemClicked() {
-        toast(com.denysnovoa.nzbmanager.R.string.error_load_movie_release)
+        toast(R.string.error_load_movie_release)
     }
 
     override fun hideLoading() {
         progressDialog.hide()
     }
 
-    fun openBrowse(movie: MovieReleaseViewModel) {
-        browse("http://google.es")
+    override fun showDownloadOk() {
+        toast(R.string.ok_download_release)
     }
-
 }

@@ -19,5 +19,18 @@ class MovieReleaseMapperImpl : MovieReleaseMapper {
                 infoUrl)
     }
 
-
+    override fun transform(movie: MovieReleaseModel) = with(movie) {
+        MovieReleaseEntity(title,
+                size,
+                indexerId,
+                indexer,
+                rejected,
+                downloadAllowed,
+                age,
+                seeders,
+                leechers,
+                guid,
+                downloadUrl,
+                infoUrl)
+    }
 }
