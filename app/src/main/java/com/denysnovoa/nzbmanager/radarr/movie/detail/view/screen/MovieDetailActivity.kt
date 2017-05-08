@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
@@ -13,6 +14,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -67,10 +69,18 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
         presenter.onResume(movieId)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_movie_detail, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            finish()
+
+        when (item?.itemId) {
+            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>()
+            else -> finish()
         }
+
         return true
     }
 

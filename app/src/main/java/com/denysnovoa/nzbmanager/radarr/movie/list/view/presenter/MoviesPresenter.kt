@@ -5,11 +5,12 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapper
+import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MoviesPresenter(val moviesView: MoviesView,
+class MoviesPresenter(val view: MoviesView,
                       val errorLog: ErrorLog,
                       val getLastMoviesUseCase: GetLastMoviesUseCase,
                       val moviesViewMapper: MoviesViewMapper) {
@@ -22,7 +23,7 @@ class MoviesPresenter(val moviesView: MoviesView,
 
     fun onResume() {
 
-        moviesView.showLoading()
+        view.showLoading()
 
         compositeDisposable.add(
                 getLastMoviesUseCase.get()
@@ -32,15 +33,19 @@ class MoviesPresenter(val moviesView: MoviesView,
                         .flatMapIterable { it }
                         .toList()
                         .subscribe(this::moviesOnNext, {
-                            moviesView.hideLoading()
-                            moviesView.showErrorLoadMovies()
+                            view.hideLoading()
+                            view.showErrorLoadMovies()
                         })
         )
     }
 
     private fun moviesOnNext(moviesModel: List<MovieModel>) {
-        moviesView.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
-        moviesView.hideLoading()
+        view.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
+        view.hideLoading()
+    }
+
+    fun onMovieClicked(movie: MovieViewModel) {
+        view.goToMovieDetail(movie.id)
     }
 
 }

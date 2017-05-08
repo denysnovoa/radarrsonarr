@@ -47,4 +47,6 @@
   <string name="literal_no_download_movie">no download</string>
   <string name="literal_monitored_movie">monitored</string>
   <string name="literal_no_monitored_movie">no monitored</string>
+  <string name="action_search_download">Buscar péliculas</string>
+  <string name="error_load_movie_release">\"Error al obtener las peliculas para descargar\"</string>
 </resources>

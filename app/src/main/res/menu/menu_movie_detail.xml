@@ -4,9 +4,10 @@
       tools:context=".radarr.movie.detail.view.screen.MovieDetailActivity"
     >
   <item
-      android:id="@+id/action_settings"
-      android:title="@string/action_settings"
+      android:id="@+id/action_movie_search_download"
+      android:title="@string/action_search_download"
+      android:icon="@drawable/ic_search_black_24dp"
       android:orderInCategory="100"
-      app:showAsAction="never"
+      app:showAsAction="always"
       />
 </menu>
