@@ -14,8 +14,7 @@ class MovieReleasePresenter(val view: MovieReleaseView,
                             val errorLog: ErrorLog,
                             val getMovieReleaseUseCase: GetMovieReleaseUseCase,
                             val downloadReleaseUseCase: DownloadReleaseUseCase,
-                            val movieReleaseViewMapper: MovieReleaseViewMapper
-) {
+                            val movieReleaseViewMapper: MovieReleaseViewMapper) {
 
     val compositeDisposable = CompositeDisposable()
     var callApi = false
@@ -27,7 +26,6 @@ class MovieReleasePresenter(val view: MovieReleaseView,
     fun onResume(id: Int) {
 
         view.showLoading()
-
         if (!callApi) {
 
             callApi = true
@@ -39,10 +37,10 @@ class MovieReleasePresenter(val view: MovieReleaseView,
                             .observeOn(AndroidSchedulers.mainThread())
                             .doOnNext {
                                 callApi = false
+                                view.hideLoading()
                             }
                             .subscribe(
                                     { movieReleases ->
-                                        view.hideLoading()
                                         view.showMovieReleases(movieReleaseViewMapper.transform(movieReleases))
                                     },
                                     {
@@ -54,11 +52,13 @@ class MovieReleasePresenter(val view: MovieReleaseView,
     }
 
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {
-        downloadReleaseUseCase
-                .download(movieReleaseViewMapper.transform(releaseViewModel))
-                .doOnError(errorLog::log)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe( {view.showDownloadOk()}, {view.showErrorDownload()} )
+        compositeDisposable.add(
+                downloadReleaseUseCase
+                        .download(movieReleaseViewMapper.transform(releaseViewModel))
+                        .doOnError(errorLog::log)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe({ view.showDownloadOk() }, { view.showErrorDownload() })
+        )
     }
 }

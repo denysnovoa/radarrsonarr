@@ -2,7 +2,6 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -30,18 +29,19 @@ class MoviesPresenter(val view: MoviesView,
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .doOnError { errorLog.log(it) }
+                        .doOnNext { view.hideLoading() }
                         .flatMapIterable { it }
                         .toList()
-                        .subscribe(this::moviesOnNext, {
-                            view.hideLoading()
-                            view.showErrorLoadMovies()
-                        })
+                        .subscribe(
+                                {
+                                    moviesModel ->
+                                    view.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
+                                },
+                                {
+                                    view.showErrorLoadMovies()
+                                }
+                        )
         )
-    }
-
-    private fun moviesOnNext(moviesModel: List<MovieModel>) {
-        view.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
-        view.hideLoading()
     }
 
     fun onMovieClicked(movie: MovieViewModel) {
