@@ -19,7 +19,6 @@
     <activity android:name=".radarr.movie.list.view.screen.MoviesActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
@@ -35,7 +34,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         >
     </activity>
-    <activity android:name=".radarr.movie.detail.view.screen.MovieReleaseActivity">
+    <activity android:name=".radarr.movie.release.view.screen.MovieReleaseActivity">
     </activity>
   </application>
 

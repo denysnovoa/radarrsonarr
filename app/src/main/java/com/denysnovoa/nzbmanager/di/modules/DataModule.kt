@@ -16,6 +16,7 @@ import com.denysnovoa.nzbmanager.di.qualifier.ApiKey
 import com.denysnovoa.nzbmanager.di.qualifier.ApiUrl
 import com.denysnovoa.nzbmanager.di.qualifier.ApplicationQualifier
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiRest
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.RadarrMovieReleaseApiRest
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -28,6 +29,9 @@ class DataModule {
 
     @Provides @Singleton
     fun provideApiRestProvider(@ApiUrl apiUrl: String, apiOkHttpClient: ApiOkHttpClient) = ApiRestProvider(apiUrl, apiOkHttpClient)
+
+    @Provides
+    fun provideRadarrMovieReleaseApiRest(apiRestProvider: ApiRestProvider) = apiRestProvider.get(RadarrMovieReleaseApiRest::class.java)
 
     @Provides @Singleton
     fun provideApiCacheProvider(@ApplicationQualifier context: Context, @ApiCacheKey apiCacheKey: String) = ApiCacheProvider(context, apiCacheKey)

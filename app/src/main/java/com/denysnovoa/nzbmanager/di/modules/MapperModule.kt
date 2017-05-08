@@ -9,6 +9,10 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMap
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MovieImageViewMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapperImpl
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapper
+import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapperImpl
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapperImpl
 import dagger.Module
 import dagger.Provides
 
@@ -22,11 +26,17 @@ class MapperModule {
     fun provideMovieImageMapper(): MovieImageMapper = MovieImageMapperImpl()
 
     @Provides
-    fun providerMoviesViewMapper(imageViewMapper: MovieImageViewMapper): MoviesViewMapper = MoviesViewMapperImpl(imageViewMapper)
+    fun provideMoviesViewMapper(imageViewMapper: MovieImageViewMapper): MoviesViewMapper = MoviesViewMapperImpl(imageViewMapper)
 
     @Provides
-    fun providerMovieImageViewMapper(): MovieImageViewMapper = MovieImageViewMapperImpl()
+    fun provideMovieImageViewMapper(): MovieImageViewMapper = MovieImageViewMapperImpl()
 
     @Provides
     fun provideErrorLog() = ErrorLog()
+
+    @Provides
+    fun provideMovieReleaseViewMapper(): MovieReleaseViewMapper = MovieReleaseViewMapperImpl()
+
+    @Provides
+    fun provideMoviesReleaseMapper(): MovieReleaseMapper = MovieReleaseMapperImpl()
 }

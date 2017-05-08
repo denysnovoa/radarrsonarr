@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textSize="14sp"
+            android:textStyle="bold"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
             />
         <TextView

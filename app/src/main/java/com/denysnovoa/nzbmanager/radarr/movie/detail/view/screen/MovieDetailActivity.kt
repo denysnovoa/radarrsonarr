@@ -11,6 +11,7 @@ import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailA
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
+import com.denysnovoa.nzbmanager.radarr.movie.release.view.screen.MovieReleaseActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
@@ -31,7 +32,7 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     @Inject
     lateinit var picasso: Picasso
 
-    var movieId: Int = 0
+    var movieId = 0
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
         applicationComponent.plus(MovieDetailActivityModule(this))
@@ -77,7 +78,7 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
         when (item?.itemId) {
-            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>()
+            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>(PARAMETER_MOVIE_ID to movieId)
             else -> finish()
         }
 

@@ -11,6 +11,11 @@
   <dimen name="recycler_spacing">2dp</dimen>
   <dimen name="image_row_item">180dp</dimen>
   <dimen name="card_elevation">2dp</dimen>
-  <dimen name="text_size">4sp</dimen>
+  <dimen name="text_secondary">16sp</dimen>
+
+  <dimen name="text_primary">18sp</dimen>
+  <dimen name="release_item">24dp</dimen>
+
+  <dimen name="icon_download">48dp</dimen>
 
 </resources>

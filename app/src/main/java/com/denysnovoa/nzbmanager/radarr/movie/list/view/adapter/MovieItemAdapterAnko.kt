@@ -46,7 +46,7 @@ class MovieItemAdapterAnko(listener: (MovieViewModel) -> Unit)
                         setTextAppearanceCompatible(R.style.TextAppearance_AppCompat_Subhead)
                         maxLines = 1
                         ellipsize = TextUtils.TruncateAt.END
-                        textSize = dimen(R.dimen.text_size).toFloat()
+                        textSizeDimen = R.dimen.text_secondary
                     }.lparams(width = matchParent)
 
                 }.lparams(width = matchParent, height = wrapContent)
