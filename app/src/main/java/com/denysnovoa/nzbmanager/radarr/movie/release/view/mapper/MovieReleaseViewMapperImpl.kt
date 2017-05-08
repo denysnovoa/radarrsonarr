@@ -19,7 +19,6 @@ class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
                 seeders,
                 leechers,
                 guid,
-                commentUrl,
                 downloadUrl,
                 infoUrl)
     }

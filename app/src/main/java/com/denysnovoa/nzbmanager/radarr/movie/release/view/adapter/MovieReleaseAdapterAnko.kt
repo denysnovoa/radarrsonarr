@@ -1,8 +1,6 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter
 
-import android.os.Build
 import android.support.v7.widget.RecyclerView
-import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.ImageView
@@ -11,6 +9,7 @@ import android.widget.TextView
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseAdapter
 import com.denysnovoa.nzbmanager.common.framework.ui.ViewAnkoComponent
+import com.denysnovoa.nzbmanager.common.framework.ui.setTextFormHtmlCompatible
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import org.jetbrains.anko.*
 import org.jetbrains.anko.cardview.v7.cardView
@@ -20,18 +19,12 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
     : BaseAdapter<MovieReleaseViewModel, MovieReleaseAdapterAnko.Component>(listener) {
 
     override val bind: Component.(item: MovieReleaseViewModel) -> Unit = {
-
-        if (Build.VERSION.SDK_INT >= 24) {
-            title.text = Html.fromHtml("<a href=\"${it.infoUrl}\">${it.title}</a>", Html.FROM_HTML_MODE_LEGACY)
-
-        } else {
-            title.text = Html.fromHtml("<a href=\"${it.infoUrl}\">${it.title}</a>")
-        }
-
+        title.setTextFormHtmlCompatible("<a href=\"${it.infoUrl}\">${it.title}</a>")
         age.text = "${it.age} days "
         indexer.text = it.indexer
         size.text = " ${it.size} G "
         peers.text = " ${it.seeders} / ${it.leechers} "
+
         if (!it.rejected) {
             iconDownload.visibility = View.GONE
         } else {
