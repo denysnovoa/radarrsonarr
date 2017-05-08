@@ -16,6 +16,7 @@ class MovieReleasePresenter(val view: MovieReleaseView,
 ) {
 
     val compositeDisposable = CompositeDisposable()
+    var callApi = false
 
     fun onStop() {
         compositeDisposable.clear()
@@ -25,20 +26,29 @@ class MovieReleasePresenter(val view: MovieReleaseView,
 
         view.showLoading()
 
-        compositeDisposable.add(
-                getMovieReleaseUseCase
-                        .get(id)
-                        .doOnError { errorLog::log }
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(
-                                { movieReleases ->
-                                    view.hideLoading()
-                                    view.showMovieReleases(movieReleaseViewMapper.transform(movieReleases))
-                                },
-                                { view.showErrorSearchReleases() }
-                        )
-        )
+        if (!callApi) {
+
+            callApi = true
+            compositeDisposable.add(
+                    getMovieReleaseUseCase
+                            .get(id)
+                            .doOnError { errorLog::log }
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .doOnNext {
+                                callApi = false
+                            }
+                            .subscribe(
+                                    { movieReleases ->
+                                        view.hideLoading()
+                                        view.showMovieReleases(movieReleaseViewMapper.transform(movieReleases))
+                                    },
+                                    {
+                                        view.showErrorSearchReleases()
+                                    }
+                            )
+            )
+        }
     }
 
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {
