@@ -10,6 +10,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter.MovieReleaseAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter.MovieReleasePresenter
+import org.jetbrains.anko.browse
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.toast
 import javax.inject.Inject
@@ -21,7 +22,7 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     @Inject
     lateinit var presenter: MovieReleasePresenter
 
-    val adapter = MovieReleaseAdapterAnko { presenter.onReleaseClicked(it) }
+    val adapter = MovieReleaseAdapterAnko({ presenter.onReleaseClicked(it) })
 
     var movieId = 0
 
@@ -77,7 +78,16 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
         progressDialog.show()
     }
 
+    override fun showItemClicked() {
+        toast(com.denysnovoa.nzbmanager.R.string.error_load_movie_release)
+    }
+
     override fun hideLoading() {
         progressDialog.hide()
     }
+
+    fun openBrowse(movie: MovieReleaseViewModel) {
+        browse("http://google.es")
+    }
+
 }

@@ -8,4 +8,8 @@ data class MovieReleaseModel(val title: String,
                              val downloadAllowed: Boolean,
                              val age: Int,
                              val seeders: Int,
-                             val leechers: Int)
+                             val leechers: Int,
+                             val guid: String,
+                             val commentUrl: String,
+                             val downloadUrl: String,
+                             val infoUrl: String)

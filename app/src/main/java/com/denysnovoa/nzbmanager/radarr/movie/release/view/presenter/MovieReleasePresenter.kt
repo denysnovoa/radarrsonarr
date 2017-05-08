@@ -53,5 +53,6 @@ class MovieReleasePresenter(val view: MovieReleaseView,
 
     fun onReleaseClicked(releaseViewModel: MovieReleaseViewModel) {
 
+        view.showItemClicked()
     }
 }

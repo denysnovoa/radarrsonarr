@@ -17,7 +17,11 @@ class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
                 downloadAllowed,
                 age,
                 seeders,
-                leechers)
+                leechers,
+                guid,
+                commentUrl,
+                downloadUrl,
+                infoUrl)
     }
 
     fun convertByteToGigabyte(size: Double): Double {

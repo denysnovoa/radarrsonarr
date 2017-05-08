@@ -13,7 +13,11 @@ class MovieReleaseMapperImpl : MovieReleaseMapper {
                 downloadAllowed,
                 age,
                 seeders,
-                leechers)
+                leechers,
+                guid,
+                commentUrl,
+                downloadUrl,
+                infoUrl)
     }
 
 

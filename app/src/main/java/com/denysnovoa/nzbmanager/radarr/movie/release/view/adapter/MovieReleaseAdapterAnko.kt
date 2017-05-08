@@ -1,7 +1,9 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter
 
-import android.graphics.Typeface.DEFAULT_BOLD
+import android.os.Build
 import android.support.v7.widget.RecyclerView
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -18,17 +20,25 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
     : BaseAdapter<MovieReleaseViewModel, MovieReleaseAdapterAnko.Component>(listener) {
 
     override val bind: Component.(item: MovieReleaseViewModel) -> Unit = {
-        title.text = it.title
+
+        if (Build.VERSION.SDK_INT >= 24) {
+            title.text = Html.fromHtml("<a href=\"${it.infoUrl}\">${it.title}</a>", Html.FROM_HTML_MODE_LEGACY)
+
+        } else {
+            title.text = Html.fromHtml("<a href=\"${it.infoUrl}\">${it.title}</a>")
+        }
+
         age.text = "${it.age} days "
         indexer.text = it.indexer
         size.text = " ${it.size} G "
         peers.text = " ${it.seeders} / ${it.leechers} "
-
         if (!it.rejected) {
             iconDownload.visibility = View.GONE
         } else {
-            iconDownload.setOnClickListener { listener }
+            iconDownload.onClick { listener }
         }
+
+        title.onClick { listener }
     }
 
     override fun onCreateComponent(recyclerView: RecyclerView) = Component(recyclerView)
@@ -55,7 +65,8 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
                                 title = textView {
                                     textSizeDimen = R.dimen.text_primary
-                                    typeface = DEFAULT_BOLD
+                                    linksClickable = true
+                                    movementMethod = LinkMovementMethod.getInstance()
                                 }
                             }
                             linearLayout {
