@@ -20,7 +20,8 @@ class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
                 leechers,
                 guid,
                 downloadUrl,
-                infoUrl)
+                infoUrl,
+                quality)
     }
 
     fun convertByteToGigabyte(size: Double): Double {
@@ -42,6 +43,7 @@ class MovieReleaseViewMapperImpl : MovieReleaseViewMapper {
                 leechers,
                 guid,
                 downloadUrl,
-                infoUrl)
+                infoUrl,
+                quality)
     }
 }

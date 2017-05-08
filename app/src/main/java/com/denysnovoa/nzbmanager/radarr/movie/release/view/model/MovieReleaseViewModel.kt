@@ -11,4 +11,5 @@ data class MovieReleaseViewModel(val title: String,
                                  val leechers: Int,
                                  val guid: String,
                                  val downloadUrl: String,
-                                 val infoUrl: String)
+                                 val infoUrl: String,
+                                 val quality: String)

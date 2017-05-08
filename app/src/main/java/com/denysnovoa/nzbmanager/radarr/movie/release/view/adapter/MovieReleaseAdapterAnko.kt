@@ -24,7 +24,7 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         indexer.text = it.indexer
         size.text = " ${it.size} G "
         peers.text = " ${it.seeders} / ${it.leechers} "
-
+        quality.text = it.quality
         if (!it.rejected) {
             iconDownload.visibility = View.GONE
         } else {
@@ -45,6 +45,7 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         lateinit var peers: TextView
         lateinit var quality: TextView
         lateinit var iconDownload: ImageView
+
 
         override fun createView(ui: AnkoContext<RecyclerView>) = with(ui) {
             verticalLayout {
