@@ -2,7 +2,6 @@ package com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.text.method.LinkMovementMethod
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -25,13 +24,12 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         size.text = "${it.size} G"
         peers.text = "${it.seeders}/${it.leechers}"
         quality.text = it.quality
-        if (!it.rejected) {
-            iconDownload.visibility = View.GONE
-        } else {
-            iconDownload.onClick { listener }
-        }
 
-        title.onClick { listener }
+        if (!it.rejected) {
+            title.textColor = R.color.material_blue_grey_950
+        } else {
+            title.textColor = R.color.tex_red
+        }
     }
 
     override fun onCreateComponent(recyclerView: RecyclerView) = Component(recyclerView)
@@ -93,14 +91,6 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
                                 }
                             }
 
-                        }
-
-                        iconDownload = imageView(R.drawable.ic_arrow_downward_black_24dp) {
-                            backgroundColor = R.color.cardview_dark_background
-                            scaleType = ImageView.ScaleType.CENTER_CROP
-                        }.lparams(width = dimen(R.dimen.icon_download), height = dimen(R.dimen.icon_download)) {
-                            padding = dip(8)
-                            margin = dip(8)
                         }
                     }
                 }

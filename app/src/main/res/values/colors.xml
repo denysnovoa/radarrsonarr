@@ -8,5 +8,8 @@
   <color name="colorTextBlack">#ff000000</color>
 
   <color name="colorRowItemText">#bebebe</color>
+  <color name="tex_red">#C70029</color>
+  <color name="tex_blue">#002639</color>
+
 
 </resources>
