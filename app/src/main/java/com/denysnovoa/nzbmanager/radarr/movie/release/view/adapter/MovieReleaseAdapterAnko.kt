@@ -20,10 +20,10 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
     override val bind: Component.(item: MovieReleaseViewModel) -> Unit = {
         title.setTextFormHtmlCompatible("<a href=\"${it.infoUrl}\">${it.title}</a>")
-        age.text = "${it.age} days "
+        age.text = "${it.age} d"
         indexer.text = it.indexer
-        size.text = " ${it.size} G "
-        peers.text = " ${it.seeders} / ${it.leechers} "
+        size.text = "${it.size} G"
+        peers.text = "${it.seeders}/${it.leechers}"
         quality.text = it.quality
         if (!it.rejected) {
             iconDownload.visibility = View.GONE
@@ -71,6 +71,12 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
                                 }
+
+                                quality = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
+
                                 age = textView {
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
@@ -78,17 +84,12 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
                                 peers = textView {
                                     padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
-                                }
-
-                                quality = textView {
-                                    padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
+                                    textSizeDimen = R.dimen.text_h3
                                 }
 
                                 indexer = textView {
                                     padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
+                                    textSizeDimen = R.dimen.text_h3
                                 }
                             }
 
