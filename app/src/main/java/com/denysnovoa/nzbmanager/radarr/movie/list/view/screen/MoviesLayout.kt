@@ -7,7 +7,6 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.R.style.AppTheme
 import com.denysnovoa.nzbmanager.common.framework.ui.ActivityAnkoComponent
 import com.denysnovoa.nzbmanager.common.framework.ui.custom.PaddingItemDecoration
 import org.jetbrains.anko.*
@@ -27,7 +26,7 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
     override fun createView(ui: AnkoContext<MoviesActivity>) = with(ui) {
         coordinatorLayout {
             appBarLayout {
-                toolbar = toolbar(AppTheme) {
+                toolbar = toolbar(R.style.AppTheme) {
                     elevation = dip(4).toFloat()
                     setTitleTextColor(R.color.colorTextWhite)
                 }.lparams(width = matchParent) {
