@@ -25,14 +25,14 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
 
     override fun createView(ui: AnkoContext<MoviesActivity>) = with(ui) {
         coordinatorLayout {
-            appBarLayout {
+            appBarLayout(R.style.AppTheme) {
                 toolbar = toolbar(R.style.AppTheme) {
                     elevation = dip(4).toFloat()
                     setTitleTextColor(R.color.colorTextWhite)
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
                 }
-            }.lparams(width = matchParent)
+            }.lparams(width = matchParent, height = wrapContent)
 
             swipe = swipeRefreshLayout {
 
@@ -40,15 +40,13 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
             recycler = recyclerView {
                 layoutManager = GridLayoutManager(context, 3)
                 clipToPadding = false
-                scrollBarStyle = android.view.View.SCROLLBARS_OUTSIDE_OVERLAY
                 horizontalPadding = dimen(R.dimen.recycler_spacing)
                 verticalPadding = dip(2)
+                scrollBarStyle = android.view.View.SCROLLBARS_OUTSIDE_OVERLAY
                 addItemDecoration(PaddingItemDecoration(dip(2)))
-
             }.lparams(matchParent, matchParent) {
                 behavior = AppBarLayout.ScrollingViewBehavior()
             }
-
         }
     }
 
