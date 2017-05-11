@@ -50,5 +50,5 @@
   <string name="action_search_download">Buscar péliculas</string>
   <string name="error_load_movie_release">\"Error al obtener las peliculas para descargar\"</string>
   <string name="title_activity_movie_release">Movie releases</string>
-  <string name="search_movie_releases">Opteniendo releases</string>
+  <string name="search_movie_releases">Obteniendo releases</string>
 </resources>
