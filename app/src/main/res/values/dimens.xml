@@ -18,4 +18,7 @@
 
   <dimen name="icon_download">48dp</dimen>
 
+  <dimen name="settings_row">48dp</dimen>
+
+
 </resources>
