@@ -11,6 +11,7 @@ import com.denysnovoa.nzbmanager.common.framework.ui.setTextAppearanceCompatible
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.*
+import org.jetbrains.anko.design.coordinatorLayout
 
 class MovieItemAdapterAnko(listener: (MovieViewModel) -> Unit)
     : BaseAdapter<MovieViewModel, MovieItemAdapterAnko.Component>(listener) {
@@ -32,7 +33,7 @@ class MovieItemAdapterAnko(listener: (MovieViewModel) -> Unit)
         lateinit var image: ImageView
 
         override fun createView(ui: AnkoContext<RecyclerView>) = with(ui) {
-            frameLayout {
+            coordinatorLayout {
                 verticalLayout {
 
                     image = imageView {

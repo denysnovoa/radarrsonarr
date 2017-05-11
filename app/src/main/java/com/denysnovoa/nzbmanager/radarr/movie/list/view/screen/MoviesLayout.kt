@@ -3,6 +3,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.AppBarLayout.LayoutParams.*
 import android.support.v4.widget.SwipeRefreshLayout
+import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
@@ -44,6 +45,7 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
                 verticalPadding = dip(2)
                 scrollBarStyle = android.view.View.SCROLLBARS_OUTSIDE_OVERLAY
                 addItemDecoration(PaddingItemDecoration(dip(2)))
+                itemAnimator = DefaultItemAnimator()
             }.lparams(matchParent, matchParent) {
                 behavior = AppBarLayout.ScrollingViewBehavior()
             }
