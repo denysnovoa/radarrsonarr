@@ -9,6 +9,7 @@ import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewMo
 import com.denysnovoa.nzbmanager.settings.screen.view.presenter.SettingsPresenter
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
+import io.reactivex.subscribers.TestSubscriber
 import org.junit.Before
 import org.junit.Test
 import org.mockito.BDDMockito.given
@@ -61,6 +62,16 @@ class SettingsPresenterShould {
         settingsPresenter.onResume()
 
         verify(view).showErrorLoadSettings()
+    }
+
+    @Test
+    fun on_stop_clear_subscriber() {
+
+        settingsPresenter.compositeDisposable.add(TestSubscriber<RadarrSettingsModel>())
+
+        settingsPresenter.onStop()
+
+        assert(settingsPresenter.compositeDisposable.size() == 0)
     }
 
     @Before
