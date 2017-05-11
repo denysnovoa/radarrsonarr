@@ -116,7 +116,9 @@ dependencies {
   compile 'nl.littlerobots.rxlint:rxlint:1.2'
   compile 'com.github.akarnokd:rxjava2-extensions:0.16.5'
   compile 'org.greenrobot:eventbus:3.0.0'
+
   testCompile 'junit:junit:4.12'
+  testCompile 'org.mockito:mockito-core:2.8.9'
 
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
