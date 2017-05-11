@@ -56,4 +56,9 @@
   <string name="yes">SI</string>
   <string name="no">No</string>
   <string name="search_movie_releases">Obteniendo releases</string>
+  <string name="ok_download_release">Se ha enviado a descargar correctamente</string>
+  <string name="error_download_release">Error al descargar release</string>
+  <string name="download_alert_text">Confirma descargar</string>
+  <string name="yes">SI</string>
+  <string name="no">No</string>
 </resources>

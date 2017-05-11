@@ -19,6 +19,22 @@
 
   </style>
 
+  <style name="AppTheme.DarkActionBar"
+         parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+
+    <item name="android:textColorSecondary">@color/colorTextWhite</item>
+    <item name="colorControlNormal">@color/colorTextWhite</item>
+    <item name="android:textColorPrimary">@color/colorTextWhite</item>
+
+    <item name="popupTheme">@style/PopupTheme</item>
+
+  </style>
+
+
   <style name="PopupTheme"
          parent="Theme.AppCompat.Light">
     <item name="android:textColorSecondary">@color/colorTextWhite</item>
