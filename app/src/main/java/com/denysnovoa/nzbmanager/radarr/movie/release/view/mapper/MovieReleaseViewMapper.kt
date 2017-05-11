@@ -6,5 +6,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseVie
 interface MovieReleaseViewMapper {
     fun transform(movieRelease: List<MovieReleaseModel>): List<MovieReleaseViewModel>
     fun transform(movieRelease: MovieReleaseModel): MovieReleaseViewModel
+    fun transform(movieRelease: MovieReleaseViewModel): MovieReleaseModel
+
 }
 

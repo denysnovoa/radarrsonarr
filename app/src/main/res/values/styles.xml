@@ -10,6 +10,26 @@
 
     <item name="android:textColorSecondary">@color/colorTextWhite</item>
     <item name="colorControlNormal">@color/colorTextWhite</item>
+    <item name="android:textColorPrimary">@color/colorTextWhite</item>
+
+
+    <item name="android:windowActivityTransitions">true</item>
+    <item name="android:windowAllowEnterTransitionOverlap">true</item>
+    <item name="popupTheme">@style/PopupTheme</item>
+
+  </style>
+
+  <style name="PopupTheme"
+         parent="Theme.AppCompat.Light">
+    <item name="android:textColorSecondary">@color/colorTextWhite</item>
+    <item name="colorControlNormal">@color/colorTextWhite</item>
+    <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+  </style>
+
+  <style name="OverflowMenu"
+         parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+    <item name="android:dropDownVerticalOffset">-4dp</item>
+    <item name="overlapAnchor">false</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
@@ -29,9 +49,4 @@
     <item name="android:textColorSecondary">@color/colorTextWhite</item>
     <item name="colorControlNormal">@color/colorTextWhite</item>
   </style>
-
-  <style name="text_primary">16</style>
-
-  <style name="text_secundary">14</style>
-
 </resources>

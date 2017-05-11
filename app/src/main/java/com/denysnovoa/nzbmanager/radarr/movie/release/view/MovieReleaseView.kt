@@ -7,4 +7,7 @@ interface MovieReleaseView {
     fun showErrorSearchReleases()
     fun showLoading()
     fun hideLoading()
+    fun showItemClicked()
+    fun showDownloadOk()
+    fun showErrorDownload()
 }

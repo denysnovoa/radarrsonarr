@@ -10,6 +10,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.MovieReleaseView
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter.MovieReleaseAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.presenter.MovieReleasePresenter
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.toast
 import javax.inject.Inject
@@ -21,7 +22,7 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     @Inject
     lateinit var presenter: MovieReleasePresenter
 
-    val adapter = MovieReleaseAdapterAnko { presenter.onReleaseClicked(it) }
+    val adapter = MovieReleaseAdapterAnko({ showConfirmDownloadRelease(it) })
 
     var movieId = 0
 
@@ -61,8 +62,11 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
 
     override fun onResume() {
         super.onResume()
-        progressDialog = indeterminateProgressDialog(R.string.search_movie_releases)
-        presenter.onResume(movieId)
+
+        if (adapter.itemCount == 0) {
+            progressDialog = indeterminateProgressDialog(R.string.search_movie_releases)
+            presenter.onResume(movieId)
+        }
     }
 
     override fun showMovieReleases(movieReleases: List<MovieReleaseViewModel>) {
@@ -70,14 +74,34 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
     }
 
     override fun showErrorSearchReleases() {
-        toast(com.denysnovoa.nzbmanager.R.string.error_load_movie_release)
+        toast(R.string.error_load_movie_release)
     }
 
     override fun showLoading() {
         progressDialog.show()
     }
 
+    override fun showItemClicked() {
+        toast(R.string.error_load_movie_release)
+    }
+
     override fun hideLoading() {
         progressDialog.hide()
     }
+
+    override fun showDownloadOk() {
+        toast(R.string.ok_download_release)
+    }
+
+    override fun showErrorDownload() {
+        toast(R.string.error_download_release)
+    }
+
+    private fun showConfirmDownloadRelease(release: MovieReleaseViewModel) {
+        alert(release.title, getString(R.string.download_alert_text)) {
+            positiveButton(R.string.yes) { presenter.onReleaseClicked(release) }
+            negativeButton(R.string.no) {}
+        }.show()
+    }
+
 }

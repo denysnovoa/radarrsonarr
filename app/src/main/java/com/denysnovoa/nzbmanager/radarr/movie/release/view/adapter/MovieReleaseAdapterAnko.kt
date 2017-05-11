@@ -1,14 +1,14 @@
 package com.denysnovoa.nzbmanager.radarr.movie.release.view.adapter
 
-import android.graphics.Typeface.DEFAULT_BOLD
 import android.support.v7.widget.RecyclerView
-import android.view.View
+import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseAdapter
 import com.denysnovoa.nzbmanager.common.framework.ui.ViewAnkoComponent
+import com.denysnovoa.nzbmanager.common.framework.ui.setTextFormHtmlCompatible
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.model.MovieReleaseViewModel
 import org.jetbrains.anko.*
 import org.jetbrains.anko.cardview.v7.cardView
@@ -18,16 +18,17 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
     : BaseAdapter<MovieReleaseViewModel, MovieReleaseAdapterAnko.Component>(listener) {
 
     override val bind: Component.(item: MovieReleaseViewModel) -> Unit = {
-        title.text = it.title
-        age.text = "${it.age} days "
+        title.setTextFormHtmlCompatible("<a href=\"${it.infoUrl}\">${it.title}</a>")
+        age.text = "${it.age} d"
         indexer.text = it.indexer
-        size.text = " ${it.size} G "
-        peers.text = " ${it.seeders} / ${it.leechers} "
+        size.text = "${it.size} G"
+        peers.text = "${it.seeders}/${it.leechers}"
+        quality.text = it.quality
 
         if (!it.rejected) {
-            iconDownload.visibility = View.GONE
+            title.textColor = R.color.material_blue_grey_950
         } else {
-            iconDownload.setOnClickListener { listener }
+            title.textColor = R.color.tex_red
         }
     }
 
@@ -43,6 +44,7 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
         lateinit var quality: TextView
         lateinit var iconDownload: ImageView
 
+
         override fun createView(ui: AnkoContext<RecyclerView>) = with(ui) {
             verticalLayout {
                 lparams(width = matchParent)
@@ -55,7 +57,8 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
                                 title = textView {
                                     textSizeDimen = R.dimen.text_primary
-                                    typeface = DEFAULT_BOLD
+                                    linksClickable = true
+                                    movementMethod = LinkMovementMethod.getInstance()
                                 }
                             }
                             linearLayout {
@@ -66,6 +69,12 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
                                 }
+
+                                quality = textView {
+                                    padding = dip(4)
+                                    textSizeDimen = R.dimen.text_secondary
+                                }
+
                                 age = textView {
                                     padding = dip(4)
                                     textSizeDimen = R.dimen.text_secondary
@@ -73,28 +82,15 @@ class MovieReleaseAdapterAnko(listener: (MovieReleaseViewModel) -> Unit)
 
                                 peers = textView {
                                     padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
-                                }
-
-                                quality = textView {
-                                    padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
+                                    textSizeDimen = R.dimen.text_h3
                                 }
 
                                 indexer = textView {
                                     padding = dip(4)
-                                    textSizeDimen = R.dimen.text_secondary
+                                    textSizeDimen = R.dimen.text_h3
                                 }
                             }
 
-                        }
-
-                        iconDownload = imageView(R.drawable.ic_arrow_downward_black_24dp) {
-                            backgroundColor = R.color.cardview_dark_background
-                            scaleType = ImageView.ScaleType.CENTER_CROP
-                        }.lparams(width = dimen(R.dimen.icon_download), height = dimen(R.dimen.icon_download)) {
-                            padding = dip(8)
-                            margin = dip(8)
                         }
                     }
                 }
