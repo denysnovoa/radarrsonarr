@@ -14,6 +14,8 @@
   <string name="tittle_pref_api_key">Api Key</string>
   <string name="pref_header_radarr">Radarr</string>
   <string name="tittle_pref_radarr">Radarr Settings</string>
+  <string name="settings_summary_radarr">Configure el acceso a la api de radar en su servidor</string>
+  <string name="settings_summary_ip_radarr">Especifique la Ip/ Host del server, sin http</string>
 
   <string name="title_activity_movie_detail">MovieDetailActivity</string>
   <string name="error_load_movie">Error al obtener los datos de la película</string>
@@ -30,5 +32,6 @@
   <string name="download_alert_text">Confirma descargar</string>
   <string name="yes">SI</string>
   <string name="no">No</string>
-  <string name="settings_sumary_radarr">Configure el acceso a la api de radar en su servidor</string>
+  <string name="settings_summary_port_radarr">Especifique el puerto, por defecto 7878</string>
+  <string name="settings_summary_api_key_radarr">Especifique la api key</string>
 </resources>

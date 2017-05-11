@@ -13,6 +13,7 @@
       android:padding="@dimen/padding_8dp"
       android:selectAllOnFocus="true"
       android:singleLine="true"
+      android:summary="@string/settings_summary_ip_radarr"
       android:title="@string/tittle_pref_host_address"
       android:key="pref_radarr_hots_address"
       />
@@ -25,6 +26,7 @@
       android:capitalize="characters"
       android:key="pref_radarr_hots_port"
       android:padding="@dimen/padding_24dp"
+      android:summary="@string/settings_summary_port_radarr"
       />
 
   <EditTextPreference
@@ -33,5 +35,7 @@
       android:singleLine="true"
       android:title="@string/tittle_pref_api_key"
       android:key="pref_radarr_api_key"
+      android:summary="@string/settings_summary_api_key_radarr"
+
       />
 </PreferenceScreen>
