@@ -26,6 +26,7 @@
         android:name=".settings.screen.SettingsActivity"
         android:label="@string/title_activity_settings"
         android:parentActivityName=".radarr.movie.list.view.screen.MoviesActivity"
+        android:theme="@style/AppTheme.DarkActionBar"
         >
     </activity>
     <activity
