@@ -1,15 +1,6 @@
-package com.denysnovoa.nzbmanager.settings.screen
+package com.denysnovoa.nzbmanager.settings.screen.view.screen
 
-import android.annotation.TargetApi
-import android.content.Context
-import android.content.Intent
-import android.content.res.Configuration
-import android.os.Build
-import android.os.Bundle
 import android.preference.PreferenceActivity
-import android.preference.PreferenceFragment
-import android.view.MenuItem
-import com.denysnovoa.nzbmanager.R
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
@@ -24,7 +15,7 @@ import com.denysnovoa.nzbmanager.R
  */
 class SettingsActivity : AppCompatPreferenceActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
 
         setupActionBar()
@@ -34,7 +25,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayShowHomeEnabled(true)
-        actionBar?.setTitle(R.string.action_settings)
+        actionBar?.setTitle(com.denysnovoa.nzbmanager.R.string.action_settings)
     }
 
     /** {@inheritDoc}  */
@@ -42,7 +33,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         return isXLargeTablet(this)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: android.view.MenuItem?): Boolean {
         if (item?.itemId == android.R.id.home) {
             finish()
         }
@@ -50,21 +41,21 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     }
 
     /** {@inheritDoc}  */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    override fun onBuildHeaders(target: List<PreferenceActivity.Header>) {
-        loadHeadersFromResource(R.xml.pref_headers, target)
+    @android.annotation.TargetApi(android.os.Build.VERSION_CODES.HONEYCOMB)
+    override fun onBuildHeaders(target: List<android.preference.PreferenceActivity.Header>) {
+        loadHeadersFromResource(com.denysnovoa.nzbmanager.R.xml.pref_headers, target)
     }
 
     override fun isValidFragment(fragmentName: String): Boolean {
-        return PreferenceFragment::class.java.name == fragmentName
-                || RadarPreferenceFragment::class.java.name == fragmentName
+        return android.preference.PreferenceFragment::class.java.name == fragmentName
+                || com.denysnovoa.nzbmanager.settings.screen.view.screen.SettingsActivity.RadarPreferenceFragment::class.java.name == fragmentName
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    class RadarPreferenceFragment : PreferenceFragment() {
-        override fun onCreate(savedInstanceState: Bundle?) {
+    @android.annotation.TargetApi(android.os.Build.VERSION_CODES.HONEYCOMB)
+    class RadarPreferenceFragment : android.preference.PreferenceFragment() {
+        override fun onCreate(savedInstanceState: android.os.Bundle?) {
             super.onCreate(savedInstanceState)
-            addPreferencesFromResource(R.xml.pref_radarr)
+            addPreferencesFromResource(com.denysnovoa.nzbmanager.R.xml.pref_radarr)
             setHasOptionsMenu(true)
 
             //bindPreferenceSummaryToValue(findPreference("pref_radarr_hots_address"))
@@ -72,10 +63,10 @@ class SettingsActivity : AppCompatPreferenceActivity() {
             //bindPreferenceSummaryToValue(findPreference("pref_radarr_api_key"))
         }
 
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
             val id = item.itemId
             if (id == android.R.id.home) {
-                startActivity(Intent(activity, SettingsActivity::class.java))
+                startActivity(android.content.Intent(activity, SettingsActivity::class.java))
                 return true
             }
             return super.onOptionsItemSelected(item)
@@ -86,8 +77,8 @@ class SettingsActivity : AppCompatPreferenceActivity() {
      * Helper method to determine if the device has an extra-large screen. For
      * example, 10" tablets are extra-large.
      */
-    private fun isXLargeTablet(context: Context): Boolean {
-        return context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_XLARGE
+    private fun isXLargeTablet(context: android.content.Context): Boolean {
+        return context.resources.configuration.screenLayout and android.content.res.Configuration.SCREENLAYOUT_SIZE_MASK >= android.content.res.Configuration.SCREENLAYOUT_SIZE_XLARGE
     }
 
 }

@@ -13,7 +13,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
-import com.denysnovoa.nzbmanager.settings.screen.SettingsActivity
+import com.denysnovoa.nzbmanager.settings.screen.view.screen.SettingsActivity
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
