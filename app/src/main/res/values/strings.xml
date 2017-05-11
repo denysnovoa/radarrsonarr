@@ -50,10 +50,10 @@
   <string name="action_search_download">Buscar péliculas</string>
   <string name="error_load_movie_release">\"Error al obtener las peliculas para descargar\"</string>
   <string name="title_activity_movie_release">Movie releases</string>
-  <string name="search_movie_releases">Opteniendo releases</string>
   <string name="ok_download_release">Se ha enviado a descargar correctamente</string>
   <string name="error_download_release">Error al descargar release</string>
   <string name="download_alert_text">Confirma descargar</string>
   <string name="yes">SI</string>
   <string name="no">No</string>
+  <string name="search_movie_releases">Obteniendo releases</string>
 </resources>
