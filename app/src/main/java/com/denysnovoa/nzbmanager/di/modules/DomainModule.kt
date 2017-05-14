@@ -6,6 +6,8 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.MoviesApiClien
 import com.denysnovoa.nzbmanager.radarr.movie.release.domain.DownloadReleaseUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.MovieReleaseApiClient
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.domain.GetMovieReleaseUseCase
+import com.denysnovoa.nzbmanager.settings.screen.domain.GetRadarrSettingsUseCase
+import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsRepository
 import dagger.Module
 import dagger.Provides
 
@@ -24,4 +26,6 @@ class DomainModule {
     @Provides
     fun provideDownloadReleaseUseCase(movieReleaseApiClient: MovieReleaseApiClient) = DownloadReleaseUseCase(movieReleaseApiClient)
 
+    @Provides
+    fun provideGetRadarrSettingsUseCase(radarrSettingsRepository: RadarrSettingsRepository) = GetRadarrSettingsUseCase(radarrSettingsRepository)
 }
