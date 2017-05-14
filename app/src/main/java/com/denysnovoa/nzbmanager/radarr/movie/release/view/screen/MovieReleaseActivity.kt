@@ -50,9 +50,11 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
-    override fun onOptionsItemSelected(item: android.view.MenuItem?): Boolean {
-        finish()
-        return true
+    override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
+        android.R.id.home -> {
+            onBackPressed(); true
+        }
+        else -> false
     }
 
     override fun onStop() {

@@ -48,12 +48,11 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.action_settings) {
-            startActivity<SettingsActivity>()
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            startActivity<SettingsActivity>(); true
         }
-
-        return true
+        else -> true
     }
 
     override fun onResume() {

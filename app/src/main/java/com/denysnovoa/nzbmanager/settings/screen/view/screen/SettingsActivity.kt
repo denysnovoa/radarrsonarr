@@ -1,6 +1,7 @@
 package com.denysnovoa.nzbmanager.settings.screen.view.screen
 
 import android.preference.PreferenceActivity
+import org.jetbrains.anko.startActivity
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
@@ -33,11 +34,12 @@ class SettingsActivity : AppCompatPreferenceActivity() {
         return isXLargeTablet(this)
     }
 
-    override fun onOptionsItemSelected(item: android.view.MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            finish()
+    override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
+        android.R.id.home -> {
+            onBackPressed();
+            true
         }
-        return true
+        else -> true
     }
 
     /** {@inheritDoc}  */
@@ -63,14 +65,23 @@ class SettingsActivity : AppCompatPreferenceActivity() {
             //bindPreferenceSummaryToValue(findPreference("pref_radarr_api_key"))
         }
 
-        override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
-            val id = item.itemId
-            if (id == android.R.id.home) {
-                startActivity(android.content.Intent(activity, SettingsActivity::class.java))
-                return true
+        override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
+            android.R.id.home -> {
+                startActivity<SettingsActivity>(); true
             }
-            return super.onOptionsItemSelected(item)
+            else -> super.onOptionsItemSelected(item)
+
         }
+
+
+//                : Boolean {
+//            val id = item.itemId
+//            if (id == android.R.id.home) {
+//                startActivity(android.content.Intent(activity, SettingsActivity::class.java))
+//                return true
+//            }
+//            return super.onOptionsItemSelected(item)
+//        }
     }
 
     /**
