@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.settings.screen.repository
 
 import android.content.Context
 import com.denysnovoa.nzbmanager.settings.screen.repository.model.RadarrSettingsModel
+import io.reactivex.Single
 
 class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
 
@@ -17,6 +18,7 @@ class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
     var apiPort: Int  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_PORT, 7878)
     var enableService: Boolean  by PreferenceStorageProvider(context, PREFERENCE_RADARR_ENABLE, false)
 
-    override fun get(): RadarrSettingsModel = RadarrSettingsModel(apiKey, apiPort, apiHost)
-
+    override fun get(): Single<RadarrSettingsModel>
+            = Single.just(RadarrSettingsModel(apiKey, apiPort, apiHost))
 }
+

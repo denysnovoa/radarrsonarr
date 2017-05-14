@@ -23,4 +23,5 @@ class DomainModule {
 
     @Provides
     fun provideDownloadReleaseUseCase(movieReleaseApiClient: MovieReleaseApiClient) = DownloadReleaseUseCase(movieReleaseApiClient)
+
 }
