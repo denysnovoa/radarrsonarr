@@ -42,10 +42,10 @@ class RadarPreferenceFragment : PreferenceFragment(), SettingsView, Preference.O
 
     override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
         android.R.id.home -> {
-            startActivity<SettingsActivity>(); true
+            startActivity<SettingsActivity>()
+            true
         }
         else -> super.onOptionsItemSelected(item)
-
     }
 
     override fun showErrorLoadSettings() {
