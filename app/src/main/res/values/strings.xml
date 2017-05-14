@@ -34,4 +34,5 @@
   <string name="no">No</string>
   <string name="settings_summary_port_radarr">Especifique el puerto, por defecto 7878</string>
   <string name="settings_summary_api_key_radarr">Especifique la api key</string>
+  <string name="error_save_type_sharedPreference">This type can be saved into Preference</string>
 </resources>
