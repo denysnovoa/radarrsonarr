@@ -52,7 +52,8 @@ class MovieReleaseActivity : BaseActivityAnko<MovieReleaseLayout>(), MovieReleas
 
     override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
         android.R.id.home -> {
-            onBackPressed(); true
+            onBackPressed()
+            true
         }
         else -> false
     }

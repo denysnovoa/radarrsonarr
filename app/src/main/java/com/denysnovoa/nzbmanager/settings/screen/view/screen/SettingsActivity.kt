@@ -36,7 +36,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
 
     override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
         android.R.id.home -> {
-            onBackPressed();
+            onBackPressed()
             true
         }
         else -> true
