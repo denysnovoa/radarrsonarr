@@ -6,7 +6,7 @@ import com.denysnovoa.nzbmanager.settings.screen.repository.model.RadarrSettings
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapper
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
-import com.denysnovoa.nzbmanager.settings.screen.view.presenter.SettingsPresenter
+import com.denysnovoa.nzbmanager.settings.screen.view.presenter.RadarrSettingsPresenter
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subscribers.TestSubscriber
@@ -21,7 +21,7 @@ import java.io.IOException
 
 class SettingsPresenterShould {
 
-    lateinit var settingsPresenter: SettingsPresenter
+    lateinit var radarrSettingsPresenter: RadarrSettingsPresenter
 
     @Mock
     lateinit var getRadarrSettingsUseCase: GetRadarrSettingsUseCase
@@ -46,7 +46,7 @@ class SettingsPresenterShould {
         given(radarrSettingsViewMapper.transform(radarrSettings)).willReturn(radarrSettingsView)
         given(getRadarrSettingsUseCase.get()).willReturn(Single.just(radarrSettings))
 
-        settingsPresenter.onResume()
+        radarrSettingsPresenter.onResume()
 
         verify(getRadarrSettingsUseCase).get()
         verify(radarrSettingsViewMapper).transform(radarrSettings)
@@ -59,7 +59,7 @@ class SettingsPresenterShould {
         val exception = IOException("Error test")
         given(getRadarrSettingsUseCase.get()).willReturn(Single.error { exception })
 
-        settingsPresenter.onResume()
+        radarrSettingsPresenter.onResume()
 
         verify(view).showErrorLoadSettings()
     }
@@ -67,18 +67,18 @@ class SettingsPresenterShould {
     @Test
     fun on_stop_clear_subscriber() {
 
-        settingsPresenter.compositeDisposable.add(TestSubscriber<RadarrSettingsModel>())
+        radarrSettingsPresenter.compositeDisposable.add(TestSubscriber<RadarrSettingsModel>())
 
-        settingsPresenter.onStop()
+        radarrSettingsPresenter.onStop()
 
-        assert(settingsPresenter.compositeDisposable.size() == 0)
+        assert(radarrSettingsPresenter.compositeDisposable.size() == 0)
     }
 
     @Before
     fun before() {
         initMocks(this)
 
-        settingsPresenter = SettingsPresenter(view, getRadarrSettingsUseCase, radarrSettingsViewMapper,
+        radarrSettingsPresenter = RadarrSettingsPresenter(view, getRadarrSettingsUseCase, radarrSettingsViewMapper,
                 errorLog, Schedulers.trampoline(), Schedulers.trampoline())
 
     }

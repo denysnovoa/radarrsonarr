@@ -6,5 +6,5 @@ import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewMo
 class RadarrSettingsViewMapperImpl : RadarrSettingsViewMapper {
 
     override fun transform(radarrSettingsModel: RadarrSettingsModel)
-            = with(radarrSettingsModel) { RadarrSettingsViewModel(hostName, ip, apiKey) }
+            = with(radarrSettingsModel) { RadarrSettingsViewModel(hostName, port, apiKey) }
 }
