@@ -9,15 +9,14 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class SettingsPresenter(val view: SettingsView,
-                        val getRadarrSettingsUseCase: GetRadarrSettingsUseCase,
-                        val radarrSettingsViewMapper: RadarrSettingsViewMapper,
-                        val errorLog: ErrorLog,
-                        val subscribeOn: Scheduler = Schedulers.io(),
-                        val observeOn: Scheduler = AndroidSchedulers.mainThread()) {
+class RadarrSettingsPresenter(val view: SettingsView,
+                              val getRadarrSettingsUseCase: GetRadarrSettingsUseCase,
+                              val radarrSettingsViewMapper: RadarrSettingsViewMapper,
+                              val errorLog: ErrorLog,
+                              val subscribeOn: Scheduler = Schedulers.io(),
+                              val observeOn: Scheduler = AndroidSchedulers.mainThread()) {
 
     val compositeDisposable = CompositeDisposable()
-
 
     fun onResume() {
         compositeDisposable.add(
@@ -38,6 +37,10 @@ class SettingsPresenter(val view: SettingsView,
 
     fun onStop() {
         compositeDisposable.clear()
+    }
+
+    fun onPreferenceChange(key: String?, newValue: Any?) {
+
     }
 
 }

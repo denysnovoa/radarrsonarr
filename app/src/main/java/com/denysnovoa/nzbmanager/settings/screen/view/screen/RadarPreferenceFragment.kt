@@ -3,7 +3,6 @@ package com.denysnovoa.nzbmanager.settings.screen.view.screen
 import android.os.Bundle
 import android.preference.EditTextPreference
 import android.preference.Preference
-import android.preference.SwitchPreference
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BasePreferenceFragment
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
@@ -25,7 +24,6 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     lateinit var hostAddress: EditTextPreference
     lateinit var hostPort: EditTextPreference
     lateinit var hostApiKey: EditTextPreference
-    lateinit var enableSettings: SwitchPreference
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
         applicationComponent.plus(RadarPreferenceFragmentModule(this))
@@ -40,12 +38,15 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
         hostAddress = findPreference("pref_radarr_hots_address") as EditTextPreference
         hostPort = findPreference("pref_radarr_hots_port") as EditTextPreference
         hostApiKey = findPreference("pref_radarr_api_key") as EditTextPreference
-        enableSettings = findPreference("switch_enable_radarr") as SwitchPreference
 
         hostAddress.onPreferenceChangeListener = this
         hostPort.onPreferenceChangeListener = this
         hostApiKey.onPreferenceChangeListener = this
-        enableSettings.onPreferenceChangeListener = this
+    }
+
+    override fun onStop() {
+        super.onStop()
+        presenter.onStop()
     }
 
     override fun onResume() {
@@ -74,12 +75,8 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     }
 
     override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
-
-
         presenter.onPreferenceChange(preference?.key, newValue)
-
-
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return true
     }
 
 

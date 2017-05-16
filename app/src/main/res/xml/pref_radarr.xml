@@ -3,12 +3,6 @@
                   android:title="@string/tittle_pref_radarr"
                   android:defaultValue="@string/tittle_pref_radarr"
     >
-  <SwitchPreference
-      android:padding="@dimen/padding_8dp"
-      android:defaultValue="false"
-      android:title="@string/preference_radarr_enable"
-      android:key="switch_enable_radarr"
-      />
   <EditTextPreference
       android:padding="@dimen/padding_8dp"
       android:selectAllOnFocus="true"
