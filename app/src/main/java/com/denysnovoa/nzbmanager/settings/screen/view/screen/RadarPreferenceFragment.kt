@@ -7,13 +7,20 @@ import android.preference.SwitchPreference
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BasePreferenceFragment
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
+import com.denysnovoa.nzbmanager.di.subcomponent.settings.RadarPreferenceFragmentModule
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
+import com.denysnovoa.nzbmanager.settings.screen.view.presenter.RadarrSettingsPresenter
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import javax.inject.Inject
 
 @android.annotation.TargetApi(android.os.Build.VERSION_CODES.HONEYCOMB)
 class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preference.OnPreferenceChangeListener {
+
+
+    @Inject
+    lateinit var presenter: RadarrSettingsPresenter
 
     lateinit var hostAddress: EditTextPreference
     lateinit var hostPort: EditTextPreference
@@ -21,7 +28,8 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     lateinit var enableSettings: SwitchPreference
 
     override fun injectDependencies(applicationComponent: ApplicationComponent) {
-
+        applicationComponent.plus(RadarPreferenceFragmentModule(this))
+                .injectTo(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +51,7 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     override fun onResume() {
         super.onResume()
 
+        presenter.onResume()
     }
 
     override fun onOptionsItemSelected(item: android.view.MenuItem) = when (item.itemId) {
@@ -57,11 +66,19 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
         toast(R.id.error_load_radarr_settings)
     }
 
-    override fun showSettings(radarrSettings: RadarrSettingsViewModel) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun showSettings(radarrSettings: RadarrSettingsViewModel) = with(radarrSettings)
+    {
+        hostAddress.summary = hostName
+        hostApiKey.summary = apiKey
+        hostPort.summary = port.toString()
     }
 
     override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
+
+
+        presenter.onPreferenceChange(preference?.key, newValue)
+
+
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

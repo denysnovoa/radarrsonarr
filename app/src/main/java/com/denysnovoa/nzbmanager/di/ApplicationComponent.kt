@@ -8,6 +8,8 @@ import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivi
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
+import com.denysnovoa.nzbmanager.di.subcomponent.settings.RadarPreferenceFragmentComponent
+import com.denysnovoa.nzbmanager.di.subcomponent.settings.RadarPreferenceFragmentModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -25,4 +27,5 @@ interface ApplicationComponent {
     fun plus(module: MoviesActivityModule): MoviesActivityComponent
     fun plus(module: MovieDetailActivityModule): MovieDetailActivityComponent
     fun plus(module: MovieReleaseActivityModule): MovieReleaseActivityComponent
+    fun plus(module: RadarPreferenceFragmentModule): RadarPreferenceFragmentComponent
 }
