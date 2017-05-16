@@ -9,7 +9,7 @@
       android:singleLine="true"
       android:summary="@string/settings_summary_ip_radarr"
       android:title="@string/tittle_pref_host_address"
-      android:key="pref_radarr_hots_address"
+      android:key="pref_radarr_host"
       />
   <EditTextPreference
       android:title="@string/tittle_pref_host_port"
@@ -18,7 +18,7 @@
       android:singleLine="true"
       android:maxLines="1"
       android:capitalize="characters"
-      android:key="pref_radarr_hots_port"
+      android:key="pref_radarr_port"
       android:padding="@dimen/padding_24dp"
       android:summary="@string/settings_summary_port_radarr"
       />

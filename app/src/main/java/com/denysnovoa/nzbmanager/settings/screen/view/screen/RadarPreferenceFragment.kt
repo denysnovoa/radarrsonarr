@@ -17,6 +17,11 @@ import javax.inject.Inject
 @android.annotation.TargetApi(android.os.Build.VERSION_CODES.HONEYCOMB)
 class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preference.OnPreferenceChangeListener {
 
+    companion object {
+        val PREF_RADARR_HOST = "pref_radarr_host"
+        val PREF_RADARR_PORT = "pref_radarr_port"
+        val PREF_RADARR_API_KEY = "pref_radarr_api_key"
+    }
 
     @Inject
     lateinit var presenter: RadarrSettingsPresenter
@@ -35,9 +40,9 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
         addPreferencesFromResource(R.xml.pref_radarr)
         setHasOptionsMenu(true)
 
-        hostAddress = findPreference("pref_radarr_hots_address") as EditTextPreference
-        hostPort = findPreference("pref_radarr_hots_port") as EditTextPreference
-        hostApiKey = findPreference("pref_radarr_api_key") as EditTextPreference
+        hostAddress = findPreference(PREF_RADARR_HOST) as EditTextPreference
+        hostPort = findPreference(PREF_RADARR_PORT) as EditTextPreference
+        hostApiKey = findPreference(PREF_RADARR_API_KEY) as EditTextPreference
 
         hostAddress.onPreferenceChangeListener = this
         hostPort.onPreferenceChangeListener = this
@@ -74,9 +79,20 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
         hostPort.summary = port.toString()
     }
 
-    override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
-        presenter.onPreferenceChange(preference?.key, newValue)
-        return true
+    override fun onPreferenceChange(preference: Preference?, newValue: Any?) = when (preference?.key) {
+        PREF_RADARR_HOST -> {
+            presenter.onHostChange(newValue)
+            true
+        }
+        PREF_RADARR_PORT -> {
+            presenter.onPortChange(newValue)
+            true
+        }
+        PREF_RADARR_API_KEY -> {
+            presenter.onApiKeyChange(newValue)
+            true
+        }
+        else -> false
     }
 
 

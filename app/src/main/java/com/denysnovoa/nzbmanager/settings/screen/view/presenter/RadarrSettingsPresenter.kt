@@ -39,8 +39,16 @@ class RadarrSettingsPresenter(val view: SettingsView,
         compositeDisposable.clear()
     }
 
-    fun onPreferenceChange(key: String?, newValue: Any?) {
+    fun onHostChange(newValue: Any?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
+    fun onPortChange(newValue: Any?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    fun onApiKeyChange(newValue: Any?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
 }
