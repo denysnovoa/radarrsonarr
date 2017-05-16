@@ -10,15 +10,13 @@ class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
         val PREFERENCE_RADARR_API_KEY = "PREFERENCE_RADARR_API_KEY"
         val PREFERENCE_RADARR_API_HOST = "PREFERENCE_RADARR_API_HOST"
         val PREFERENCE_RADARR_API_PORT = "PREFERENCE_RADARR_API_PORT"
-        val PREFERENCE_RADARR_ENABLE = "PREFERENCE_RADARR_ENABLE"
     }
 
-    var apiKey: String  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_KEY, "")
-    var apiHost: String  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_HOST, "")
+    var apiKey: String  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_KEY, "b5536e00243a4fd9ad002c53202fb771")
+    var apiHost: String  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_HOST, "dnovoa20.ddns.net")
     var apiPort: Int  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_PORT, 7878)
-    var enableService: Boolean  by PreferenceStorageProvider(context, PREFERENCE_RADARR_ENABLE, false)
 
     override fun get(): Single<RadarrSettingsModel>
-            = Single.just(RadarrSettingsModel(apiKey, apiPort, apiHost))
+            = Single.just(RadarrSettingsModel(apiHost, apiPort, apiKey))
 }
 
