@@ -1,10 +1,7 @@
 package com.denysnovoa.nzbmanager.di
 
 import com.denysnovoa.nzbmanager.common.framework.BaseApplication
-import com.denysnovoa.nzbmanager.di.modules.DataModule
-import com.denysnovoa.nzbmanager.di.modules.DomainModule
-import com.denysnovoa.nzbmanager.di.modules.MapperModule
-import com.denysnovoa.nzbmanager.di.modules.RepositoryModule
+import com.denysnovoa.nzbmanager.di.modules.*
 import com.denysnovoa.nzbmanager.di.subcomponent.movieDetail.MovieDetailActivityComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityModule
@@ -20,7 +17,8 @@ import javax.inject.Singleton
         MapperModule::class,
         DomainModule::class,
         DataModule::class,
-        RepositoryModule::class))
+        RepositoryModule::class,
+        FragmentModule::class))
 
 interface ApplicationComponent {
     fun inject(app: BaseApplication)

@@ -3,21 +3,26 @@ package com.denysnovoa.nzbmanager.settings.screen.view.screen
 import android.os.Bundle
 import android.preference.EditTextPreference
 import android.preference.Preference
-import android.preference.PreferenceFragment
 import android.preference.SwitchPreference
 import com.denysnovoa.nzbmanager.R
+import com.denysnovoa.nzbmanager.common.framework.ui.BasePreferenceFragment
+import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 @android.annotation.TargetApi(android.os.Build.VERSION_CODES.HONEYCOMB)
-class RadarPreferenceFragment : PreferenceFragment(), SettingsView, Preference.OnPreferenceChangeListener {
+class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preference.OnPreferenceChangeListener {
 
     lateinit var hostAddress: EditTextPreference
     lateinit var hostPort: EditTextPreference
     lateinit var hostApiKey: EditTextPreference
     lateinit var enableSettings: SwitchPreference
+
+    override fun injectDependencies(applicationComponent: ApplicationComponent) {
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
