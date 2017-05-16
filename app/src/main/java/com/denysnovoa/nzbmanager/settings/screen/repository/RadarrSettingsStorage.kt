@@ -18,5 +18,12 @@ class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
 
     override fun get(): Single<RadarrSettingsModel>
             = Single.just(RadarrSettingsModel(apiHost, apiPort, apiKey))
+
+    override fun save(radarrSettingsModel: RadarrSettingsModel) {
+
+        apiKey = radarrSettingsModel.apiKey
+        apiHost = radarrSettingsModel.hostName
+        apiPort = radarrSettingsModel.port
+    }
 }
 

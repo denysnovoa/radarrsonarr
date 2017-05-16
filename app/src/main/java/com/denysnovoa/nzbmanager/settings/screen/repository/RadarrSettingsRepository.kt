@@ -5,4 +5,5 @@ import io.reactivex.Single
 
 interface RadarrSettingsRepository {
     fun get(): Single<RadarrSettingsModel>
+    fun save(radarrSettingsModel: RadarrSettingsModel)
 }
