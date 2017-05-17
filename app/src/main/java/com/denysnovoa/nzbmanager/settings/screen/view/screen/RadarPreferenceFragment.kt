@@ -81,15 +81,15 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
 
     override fun onPreferenceChange(preference: Preference?, newValue: Any?) = when (preference?.key) {
         PREF_RADARR_HOST -> {
-            presenter.onHostChange(newValue)
+            presenter.onHostChange(newValue as String)
             true
         }
         PREF_RADARR_PORT -> {
-            presenter.onPortChange(newValue)
+            presenter.onPortChange(newValue as Int)
             true
         }
         PREF_RADARR_API_KEY -> {
-            presenter.onApiKeyChange(newValue)
+            presenter.onApiKeyChange(newValue as String)
             true
         }
         else -> false

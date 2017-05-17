@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.settings.screen.domain.GetRadarrSettingsUseCase
+import com.denysnovoa.nzbmanager.settings.screen.domain.SaveRadarrSettingsUseCase
 import com.denysnovoa.nzbmanager.settings.screen.repository.model.RadarrSettingsModel
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapper
@@ -28,6 +29,9 @@ class SettingsPresenterShould {
 
     @Mock
     lateinit var radarrSettingsViewMapper: RadarrSettingsViewMapper
+
+    @Mock
+    lateinit var saveRadarrSettingsUseCase: SaveRadarrSettingsUseCase
 
     @Mock
     lateinit var view: SettingsView
@@ -78,8 +82,8 @@ class SettingsPresenterShould {
     fun before() {
         initMocks(this)
 
-        radarrSettingsPresenter = RadarrSettingsPresenter(view, getRadarrSettingsUseCase, radarrSettingsViewMapper,
-                errorLog, Schedulers.trampoline(), Schedulers.trampoline())
+        radarrSettingsPresenter = RadarrSettingsPresenter(view, getRadarrSettingsUseCase, saveRadarrSettingsUseCase,
+                radarrSettingsViewMapper, errorLog, Schedulers.trampoline(), Schedulers.trampoline())
 
     }
 }

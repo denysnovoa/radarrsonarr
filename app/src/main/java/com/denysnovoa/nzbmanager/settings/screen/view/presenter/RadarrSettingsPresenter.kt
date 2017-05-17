@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.settings.screen.view.presenter
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.settings.screen.domain.GetRadarrSettingsUseCase
+import com.denysnovoa.nzbmanager.settings.screen.domain.SaveRadarrSettingsUseCase
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapper
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
@@ -12,6 +13,7 @@ import io.reactivex.schedulers.Schedulers
 
 class RadarrSettingsPresenter(val view: SettingsView,
                               val getRadarrSettingsUseCase: GetRadarrSettingsUseCase,
+                              val saveRadarrSettingsUseCase: SaveRadarrSettingsUseCase,
                               val radarrSettingsViewMapper: RadarrSettingsViewMapper,
                               val errorLog: ErrorLog,
                               val subscribeOn: Scheduler = Schedulers.io(),
@@ -44,14 +46,22 @@ class RadarrSettingsPresenter(val view: SettingsView,
 
     fun onHostChange(host: String) {
         radarrSettings.hostName = host
+        saveRadarrSettings()
     }
 
     fun onPortChange(port: Int) {
         radarrSettings.port = port
+
+        saveRadarrSettings()
     }
 
     fun onApiKeyChange(apiKey: String) {
         radarrSettings.apiKey = apiKey
+        saveRadarrSettings()
+    }
+
+    private fun saveRadarrSettings() {
+        saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
     }
 
 }

@@ -5,5 +5,6 @@ import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewMo
 
 interface RadarrSettingsViewMapper {
     fun transform(radarrSettings: RadarrSettingsModel): RadarrSettingsViewModel
+    fun transform(radarrSettingsViewModel: RadarrSettingsViewModel): RadarrSettingsModel
 }
 
