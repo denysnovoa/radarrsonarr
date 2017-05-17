@@ -4,6 +4,7 @@ import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.settings.screen.domain.GetRadarrSettingsUseCase
 import com.denysnovoa.nzbmanager.settings.screen.view.SettingsView
 import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapper
+import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -17,6 +18,7 @@ class RadarrSettingsPresenter(val view: SettingsView,
                               val observeOn: Scheduler = AndroidSchedulers.mainThread()) {
 
     val compositeDisposable = CompositeDisposable()
+    lateinit var radarrSettings: RadarrSettingsViewModel
 
     fun onResume() {
         compositeDisposable.add(
@@ -27,7 +29,8 @@ class RadarrSettingsPresenter(val view: SettingsView,
                         .subscribe(
                                 {
                                     radarrSettings ->
-                                    view.showSettings(radarrSettingsViewMapper.transform(radarrSettings))
+                                    this.radarrSettings = radarrSettingsViewMapper.transform(radarrSettings)
+                                    view.showSettings(this.radarrSettings)
                                 },
                                 {
                                     view.showErrorLoadSettings()
@@ -39,16 +42,16 @@ class RadarrSettingsPresenter(val view: SettingsView,
         compositeDisposable.clear()
     }
 
-    fun onHostChange(newValue: Any?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun onHostChange(host: String) {
+        radarrSettings.hostName = host
     }
 
-    fun onPortChange(newValue: Any?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun onPortChange(port: Int) {
+        radarrSettings.port = port
     }
 
-    fun onApiKeyChange(newValue: Any?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun onApiKeyChange(apiKey: String) {
+        radarrSettings.apiKey = apiKey
     }
 
 }

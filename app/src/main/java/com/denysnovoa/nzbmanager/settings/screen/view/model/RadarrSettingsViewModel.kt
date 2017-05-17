@@ -1,3 +1,3 @@
 package com.denysnovoa.nzbmanager.settings.screen.view.model
 
-data class RadarrSettingsViewModel(val hostName: String, val port: Int, val apiKey: String)
+data class RadarrSettingsViewModel(var hostName: String, var port: Int, var apiKey: String)
