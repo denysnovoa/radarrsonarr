@@ -24,9 +24,7 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  repositories {
-    mavenCentral()
-  }
+  flavorDimensions "compile"
 
   productFlavors {
     dev {
