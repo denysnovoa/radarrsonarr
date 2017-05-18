@@ -51,7 +51,6 @@ class RadarrSettingsPresenter(val view: SettingsView,
 
     fun onPortChange(port: Int) {
         radarrSettings.port = port
-
         saveRadarrSettings()
     }
 
@@ -61,9 +60,15 @@ class RadarrSettingsPresenter(val view: SettingsView,
     }
 
     private fun saveRadarrSettings() {
-        saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
-
-        view.showSettings(this.radarrSettings)
+        compositeDisposable.add(
+                saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
+                        .subscribeOn(subscribeOn)
+                        .observeOn(observeOn)
+                        .doOnError { errorLog::log }
+                        .subscribe {
+                            view.showSettings(this.radarrSettings)
+                        }
+        )
     }
 
 }

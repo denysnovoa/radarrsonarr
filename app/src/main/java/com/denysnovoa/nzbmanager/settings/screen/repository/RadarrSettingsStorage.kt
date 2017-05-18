@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.settings.screen.repository
 
 import android.content.Context
 import com.denysnovoa.nzbmanager.settings.screen.repository.model.RadarrSettingsModel
+import io.reactivex.Completable
 import io.reactivex.Single
 
 class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
@@ -19,8 +20,7 @@ class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
     override fun get(): Single<RadarrSettingsModel>
             = Single.just(RadarrSettingsModel(apiHost, apiPort, apiKey))
 
-    override fun save(radarrSettingsModel: RadarrSettingsModel) {
-
+    override fun save(radarrSettingsModel: RadarrSettingsModel): Completable = Completable.fromAction {
         apiKey = radarrSettingsModel.apiKey
         apiHost = radarrSettingsModel.hostName
         apiPort = radarrSettingsModel.port
