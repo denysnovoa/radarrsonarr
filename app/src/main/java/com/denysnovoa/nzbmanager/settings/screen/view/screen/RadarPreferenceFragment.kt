@@ -85,7 +85,7 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
             true
         }
         PREF_RADARR_PORT -> {
-            presenter.onPortChange(newValue as Int)
+            presenter.onPortChange((newValue as String).toInt())
             true
         }
         PREF_RADARR_API_KEY -> {

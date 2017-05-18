@@ -62,6 +62,8 @@ class RadarrSettingsPresenter(val view: SettingsView,
 
     private fun saveRadarrSettings() {
         saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
+
+        view.showSettings(this.radarrSettings)
     }
 
 }

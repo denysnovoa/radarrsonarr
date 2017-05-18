@@ -19,6 +19,7 @@
       android:maxLines="1"
       android:capitalize="characters"
       android:key="pref_radarr_port"
+      android:numeric="integer"
       android:padding="@dimen/padding_24dp"
       android:summary="@string/settings_summary_port_radarr"
       />
