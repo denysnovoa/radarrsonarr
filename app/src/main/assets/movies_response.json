@@ -1,0 +1,3869 @@
+[
+  {
+    "title": "The Fate of the Furious",
+    "sortTitle": "fate furious",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+    "inCinemas": "2017-04-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4723/poster.jpg?lastWrite=636285630640000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4723/banner.jpg?lastWrite=636309064750000000"
+      }
+    ],
+    "website": "http://www.fastandfurious.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "jeKBMdYaM3U",
+    "studio": "Universal Pictures",
+    "path": "/home/radarr/The Fate of the Furious (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Fate of the Furious (2017)",
+    "runtime": 136,
+    "lastInfoSync": "2017-05-24T19:56:12.228798Z",
+    "cleanTitle": "thefatefurious",
+    "imdbId": "tt4630562",
+    "tmdbId": 337339,
+    "titleSlug": "the-fate-of-the-furious-337339",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-04-23T16:51:03.441764Z",
+    "ratings": {
+      "votes": 1999,
+      "value": 6.7
+    },
+    "alternativeTitles": [
+      "The Fate of the Furious",
+      "Fast Eight",
+      "F8",
+      "Furious 8",
+      "The Fast and the Furious 8",
+      "#F8",
+      "Fast 8",
+      "Furious Eight",
+      "The Fast & The Furious 8"
+    ],
+    "qualityProfileId": 6,
+    "id": 4723
+  },
+  {
+    "title": "Going in Style",
+    "sortTitle": "going in style",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Desperate to pay the bills and come through for their loved ones, three lifelong pals risk it all by embarking on a daring bid to knock off the very bank that absconded with their money.",
+    "inCinemas": "2017-04-05T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4725/poster.jpg?lastWrite=636285630660000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4725/banner.jpg?lastWrite=636312525850000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "hcdTN5soeQw",
+    "studio": "New Line Cinema",
+    "path": "/home/radarr/Going in Style (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Going in Style (2017)",
+    "runtime": 96,
+    "lastInfoSync": "2017-05-24T19:56:21.016093Z",
+    "cleanTitle": "goinginstyle",
+    "imdbId": "tt2568862",
+    "tmdbId": 353070,
+    "titleSlug": "going-in-style-353070",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-04-23T16:51:05.926326Z",
+    "ratings": {
+      "votes": 91,
+      "value": 6.2
+    },
+    "alternativeTitles": [
+      "Going in Style"
+    ],
+    "qualityProfileId": 6,
+    "id": 4725
+  },
+  {
+    "title": "Beauty and the Beast",
+    "sortTitle": "beauty beast",
+    "sizeOnDisk": 2647999015,
+    "status": "inCinemas",
+    "overview": "A live-action adaptation of Disney's version of the classic 'Beauty and the Beast' tale of a cursed prince and a beautiful young woman who helps him break the spell.",
+    "inCinemas": "2017-03-15T23:00:00Z",
+    "physicalRelease": "2017-06-06T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4744/poster.jpg?lastWrite=636310795060000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4744/banner.jpg?lastWrite=636306469480000000"
+      }
+    ],
+    "website": "http://movies.disney.com/beauty-and-the-beast-2017",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "c38r-SAnTWM",
+    "studio": "Walt Disney Pictures",
+    "path": "/home/radarr/Beauty and the Beast (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Beauty and the Beast (2017)",
+    "runtime": 129,
+    "lastInfoSync": "2017-05-24T19:55:51.060791Z",
+    "cleanTitle": "beautybeast",
+    "imdbId": "tt2771200",
+    "tmdbId": 321612,
+    "titleSlug": "beauty-and-the-beast-321612",
+    "genres": [
+      "Music",
+      "Family",
+      "Fantasy",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2017-04-23T16:51:50.694983Z",
+    "ratings": {
+      "votes": 2645,
+      "value": 6.8
+    },
+    "alternativeTitles": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2017"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Beauty and the Beast (2017).mp4",
+      "size": 2647999015,
+      "dateAdded": "2017-05-19T08:11:34.965728Z",
+      "releaseGroup": "RARBG",
+      "quality": {
+        "quality": {
+          "id": 7,
+          "name": "Bluray-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 2500000,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 808,
+        "audioFormat": "AAC",
+        "audioBitrate": 223997,
+        "runTime": "02:09:16.7990000",
+        "audioStreamCount": 1,
+        "audioChannels": 2,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "LC",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1720
+    },
+    "qualityProfileId": 6,
+    "id": 4744
+  },
+  {
+    "title": "The Boss Baby",
+    "sortTitle": "boss baby",
+    "sizeOnDisk": 3579742630,
+    "status": "inCinemas",
+    "overview": "A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim.",
+    "inCinemas": "2017-03-22T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4797/poster.jpg?lastWrite=636308199600000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4797/banner.jpg?lastWrite=636309064570000000"
+      }
+    ],
+    "website": "http://www.dreamworks.com/thebossbaby/",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "Ud8j5GaqH3c",
+    "studio": "Twentieth Century Fox Film Corporation",
+    "path": "/home/radarr/The Boss Baby (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Boss Baby (2017)",
+    "runtime": 97,
+    "lastInfoSync": "2017-05-24T19:55:55.187091Z",
+    "cleanTitle": "thebossbaby",
+    "imdbId": "tt3874544",
+    "tmdbId": 295693,
+    "titleSlug": "the-boss-baby-295693",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "tags": [],
+    "added": "2017-04-23T17:56:08.052909Z",
+    "ratings": {
+      "votes": 1220,
+      "value": 5.7
+    },
+    "alternativeTitles": [
+      "The Boss Baby",
+      "Boss Baby"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "The Boss Baby (2017).mkv",
+      "size": 3579742630,
+      "dateAdded": "2017-05-18T19:25:44.001075Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4394964,
+        "videoBitDepth": 8,
+        "width": 1916,
+        "height": 812,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:37:53.2480000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1717
+    },
+    "qualityProfileId": 6,
+    "id": 4797
+  },
+  {
+    "title": "Smurfs: The Lost Village",
+    "sortTitle": "smurfs lost village",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "In this fully animated, all-new take on the Smurfs, a mysterious map sets Smurfette and her friends Brainy, Clumsy and Hefty on an exciting race through the Forbidden Forest leading to the discovery of the biggest secret in Smurf history.",
+    "inCinemas": "2017-03-29T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4798/poster.jpg?lastWrite=636285669710000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4798/banner.jpg?lastWrite=636285669780000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "8LdpyRBE0aA",
+    "studio": "Columbia Pictures",
+    "path": "/home/radarr/Smurfs The Lost Village (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Smurfs The Lost Village (2017)",
+    "runtime": 89,
+    "lastInfoSync": "2017-05-24T19:57:00.344835Z",
+    "cleanTitle": "smurfslostvillage",
+    "imdbId": "tt2398241",
+    "tmdbId": 137116,
+    "titleSlug": "smurfs-the-lost-village-137116",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "tags": [],
+    "added": "2017-04-23T17:56:09.889625Z",
+    "ratings": {
+      "votes": 118,
+      "value": 6
+    },
+    "alternativeTitles": [
+      "Smurfs: The Lost Village",
+      "The Smurfs 3",
+      "Smurfs The Lost Village",
+      "The Smurfs Animation Project",
+      "Get Smurfy"
+    ],
+    "qualityProfileId": 6,
+    "id": 4798
+  },
+  {
+    "title": "Gifted",
+    "sortTitle": "gifted",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Frank, a single man raising his child prodigy niece Mary, is drawn into a custody battle with his mother.",
+    "inCinemas": "2017-04-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/4799/poster.jpg?lastWrite=636296092820000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/4799/banner.jpg?lastWrite=636296092840000000"
+      }
+    ],
+    "website": "http://www.foxsearchlight.com/gifted/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "x7CAjpdRaXU",
+    "studio": "Fox Searchlight Pictures",
+    "path": "/home/radarr/Gifted (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Gifted (2017)",
+    "runtime": 101,
+    "lastInfoSync": "2017-05-24T19:56:19.679291Z",
+    "cleanTitle": "gifted",
+    "imdbId": "tt4481414",
+    "tmdbId": 400928,
+    "titleSlug": "gifted-400928",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-04-23T17:56:12.275646Z",
+    "ratings": {
+      "votes": 58,
+      "value": 8.1
+    },
+    "alternativeTitles": [
+      "Gifted"
+    ],
+    "qualityProfileId": 6,
+    "id": 4799
+  },
+  {
+    "title": "Unforgettable",
+    "sortTitle": "unforgettable",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Julia moves in with her fiancé, David, but his ex-wife and her own haunting past join forces to rock her quiet suburban existence.",
+    "inCinemas": "2017-04-19T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/5286/poster.jpg?lastWrite=636286409260000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/5286/banner.jpg?lastWrite=636290905350000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "iFXIBL617yc",
+    "studio": "DiNovi Pictures",
+    "path": "/home/radarr/Unforgettable (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Unforgettable (2017)",
+    "runtime": 100,
+    "lastInfoSync": "2017-05-24T19:57:11.811007Z",
+    "cleanTitle": "unforgettable",
+    "imdbId": "tt3462710",
+    "tmdbId": 418437,
+    "titleSlug": "unforgettable-418437",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-04-24T14:28:45.918175Z",
+    "ratings": {
+      "votes": 18,
+      "value": 5.2
+    },
+    "alternativeTitles": [
+      "Unforgettable",
+      "To Have and to Hold"
+    ],
+    "qualityProfileId": 6,
+    "id": 5286
+  },
+  {
+    "title": "The Circle",
+    "sortTitle": "circle",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A young tech worker takes a job at a powerful Internet corporation, quickly rises up the company's ranks, and soon finds herself in a perilous situation concerning privacy, surveillance and freedom. She comes to learn that her decisions and actions will determine the future of humanity.",
+    "inCinemas": "2017-04-26T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9322/poster.jpg?lastWrite=636292486580000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9322/banner.jpg?lastWrite=636311660450000000"
+      }
+    ],
+    "website": "http://wearethecircle.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "QUlr8Am4zQ0",
+    "studio": "Likely Story",
+    "path": "/home/radarr/The Circle (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "The Circle (2017)",
+    "runtime": 110,
+    "lastInfoSync": "2017-05-24T19:55:59.827337Z",
+    "cleanTitle": "thecircle",
+    "imdbId": "tt4287320",
+    "tmdbId": 339988,
+    "titleSlug": "the-circle-339988",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-01T15:17:31.238773Z",
+    "ratings": {
+      "votes": 170,
+      "value": 5.2
+    },
+    "alternativeTitles": [
+      "The Circle",
+      "Melinda's Song"
+    ],
+    "qualityProfileId": 6,
+    "id": 9322
+  },
+  {
+    "title": "Baahubali 2: The Conclusion",
+    "sortTitle": "baahubali 2 conclusion",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "When Mahendra, the son of Bahubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
+    "inCinemas": "2017-04-26T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9353/poster.jpg?lastWrite=636292533810000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9353/banner.jpg?lastWrite=636292541240000000"
+      }
+    ],
+    "website": "http://baahubali.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "qD-6d8Wo3do",
+    "studio": "Arka Media Works",
+    "path": "/home/radarr/Baahubali 2 The Conclusion (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Baahubali 2 The Conclusion (2017)",
+    "runtime": 161,
+    "lastInfoSync": "2017-05-24T19:55:46.449935Z",
+    "cleanTitle": "baahubali2conclusion",
+    "imdbId": "tt4849438",
+    "tmdbId": 350312,
+    "titleSlug": "baahubali-2-the-conclusion-350312",
+    "genres": [
+      "Action",
+      "Adventure",
+      "War"
+    ],
+    "tags": [],
+    "added": "2017-05-01T16:33:45.031317Z",
+    "ratings": {
+      "votes": 107,
+      "value": 6.3
+    },
+    "alternativeTitles": [
+      "Baahubali 2: The Conclusion",
+      "Bahubali 2"
+    ],
+    "qualityProfileId": 6,
+    "id": 9353
+  },
+  {
+    "title": "Free Fire",
+    "sortTitle": "free fire",
+    "sizeOnDisk": 3343087268,
+    "status": "inCinemas",
+    "overview": "A crime drama set in 1970s Boston, about a gun sale which goes wrong.",
+    "inCinemas": "2017-03-30T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9708/poster.jpg?lastWrite=636311660610000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9708/banner.jpg?lastWrite=636311660710000000"
+      }
+    ],
+    "website": "",
+    "downloaded": true,
+    "year": 2016,
+    "hasFile": true,
+    "youTubeTrailerId": "G_yyIfhhR8I",
+    "studio": "Film4",
+    "path": "/home/radarr/Free Fire (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Free Fire (2017)",
+    "runtime": 91,
+    "lastInfoSync": "2017-05-24T19:56:13.700186Z",
+    "cleanTitle": "freefire",
+    "imdbId": "tt4158096",
+    "tmdbId": 334521,
+    "titleSlug": "free-fire-334521",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:46.33072Z",
+    "ratings": {
+      "votes": 57,
+      "value": 6.4
+    },
+    "alternativeTitles": [
+      "Free Fire"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Free Fire (2016).mkv",
+      "size": 3343087268,
+      "dateAdded": "2017-05-22T22:40:04.130644Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4454708,
+        "videoBitDepth": 8,
+        "width": 1912,
+        "height": 800,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:30:17.2500000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 24,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1722
+    },
+    "qualityProfileId": 6,
+    "id": 9708
+  },
+  {
+    "title": "The Promise",
+    "sortTitle": "promise",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Set during the last days of the Ottoman Empire, The Promise follows a love triangle between Mikael, a brilliant medical student, the beautiful and sophisticated artist Ana, and Chris - a renowned American journalist based in Paris.",
+    "inCinemas": "2017-04-20T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9709/poster.jpg?lastWrite=636293116070000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9709/banner.jpg?lastWrite=636293116100000000"
+      }
+    ],
+    "website": "http://www.survivalpictures.org/the-promise/",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "gnwgMYeaqr4",
+    "studio": "Babieka",
+    "path": "/home/radarr/The Promise (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Promise (2017)",
+    "runtime": 130,
+    "lastInfoSync": "2017-05-24T19:56:51.171314Z",
+    "cleanTitle": "thepromise",
+    "imdbId": "tt4776998",
+    "tmdbId": 354859,
+    "titleSlug": "the-promise-354859",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:47.017521Z",
+    "ratings": {
+      "votes": 22,
+      "value": 6.2
+    },
+    "alternativeTitles": [
+      "The Promise"
+    ],
+    "qualityProfileId": 6,
+    "id": 9709
+  },
+  {
+    "title": "The Lost City of Z",
+    "sortTitle": "lost city z",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A true-life drama, centering on British explorer Col. Percival Fawcett, who disappeared while searching for a mysterious city in the Amazon in the 1920s.",
+    "inCinemas": "2017-03-14T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9710/poster.jpg?lastWrite=636293116080000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9710/banner.jpg?lastWrite=636293116150000000"
+      }
+    ],
+    "website": "http://www.lostcityofzfilm.co.uk/home",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "Yixiv6A0BbU",
+    "studio": "Plan B Entertainment",
+    "path": "/home/radarr/The Lost City of Z (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Lost City of Z (2017)",
+    "runtime": 140,
+    "lastInfoSync": "2017-05-24T19:56:41.575648Z",
+    "cleanTitle": "thelostcityz",
+    "imdbId": "tt1212428",
+    "tmdbId": 314095,
+    "titleSlug": "the-lost-city-of-z-314095",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "History"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:47.689892Z",
+    "ratings": {
+      "votes": 129,
+      "value": 5.8
+    },
+    "alternativeTitles": [
+      "The Lost City of Z"
+    ],
+    "qualityProfileId": 6,
+    "id": 9710
+  },
+  {
+    "title": "Guardians",
+    "sortTitle": "guardians",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "During the Cold War, an organization called \"Patriot\" created a super-hero squad, which includes members of multiple soviet republics. For years, the heroes had to hide their identities, but in hard times they must show themselves again.",
+    "inCinemas": "2017-02-13T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9711/poster.jpg?lastWrite=636293116090000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9711/banner.jpg?lastWrite=636293116300000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "QfNcy271FSI",
+    "studio": "Enjoy Movies",
+    "path": "/home/radarr/Guardians (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Guardians (2017)",
+    "runtime": 100,
+    "lastInfoSync": "2017-05-24T19:56:25.040025Z",
+    "cleanTitle": "guardians",
+    "imdbId": "tt4600952",
+    "tmdbId": 354556,
+    "titleSlug": "guardians-354556",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:48.621801Z",
+    "ratings": {
+      "votes": 39,
+      "value": 4.8
+    },
+    "alternativeTitles": [
+      "Защитники"
+    ],
+    "qualityProfileId": 6,
+    "id": 9711
+  },
+  {
+    "title": "Scribe",
+    "sortTitle": "scribe",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "",
+    "inCinemas": "2017-01-10T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9712/poster.jpg?lastWrite=636293116100000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9712/banner.jpg?lastWrite=636293116370000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "2425 PRODUCTION",
+    "path": "/home/radarr/Scribe (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Scribe (2017)",
+    "runtime": 88,
+    "lastInfoSync": "2017-05-24T19:56:56.825633Z",
+    "cleanTitle": "scribe",
+    "imdbId": "tt5231916",
+    "tmdbId": 395767,
+    "titleSlug": "scribe-395767",
+    "genres": [
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:49.714127Z",
+    "ratings": {
+      "votes": 12,
+      "value": 6.1
+    },
+    "alternativeTitles": [
+      "La Mécanique de l'ombre"
+    ],
+    "qualityProfileId": 6,
+    "id": 9712
+  },
+  {
+    "title": "The Comedian",
+    "sortTitle": "comedian",
+    "sizeOnDisk": 1557176163,
+    "status": "released",
+    "overview": "A look at the life of an aging insult comic.",
+    "inCinemas": "2016-12-08T23:00:00Z",
+    "physicalRelease": "2017-05-02T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9713/poster.jpg?lastWrite=636297822130000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9713/banner.jpg?lastWrite=636306469510000000"
+      }
+    ],
+    "website": "",
+    "downloaded": true,
+    "year": 2016,
+    "hasFile": true,
+    "youTubeTrailerId": "QJit_DU2XhM",
+    "studio": "Linson Entertainment",
+    "path": "/home/radarr/The Comedian (2016)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "The Comedian (2016)",
+    "runtime": 120,
+    "lastInfoSync": "2017-05-24T19:56:01.048645Z",
+    "cleanTitle": "thecomedian",
+    "imdbId": "tt1967614",
+    "tmdbId": 369524,
+    "titleSlug": "the-comedian-369524",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:50.490898Z",
+    "ratings": {
+      "votes": 16,
+      "value": 5.4
+    },
+    "alternativeTitles": [
+      "The Comedian"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "The Comedian (2016).mp4",
+      "size": 1557176163,
+      "dateAdded": "2017-05-16T15:21:26.747977Z",
+      "releaseGroup": "RARBG",
+      "quality": {
+        "quality": {
+          "id": 6,
+          "name": "Bluray-720p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 1500000,
+        "videoBitDepth": 8,
+        "width": 1280,
+        "height": 694,
+        "audioFormat": "AAC",
+        "audioBitrate": 223999,
+        "runTime": "01:59:56.1970000",
+        "audioStreamCount": 1,
+        "audioChannels": 2,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "LC",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1714
+    },
+    "qualityProfileId": 6,
+    "id": 9713
+  },
+  {
+    "title": "Despicable Me 3",
+    "sortTitle": "despicable me 3",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "Gru and his wife Lucy must stop former '80s child star Balthazar Bratt from achieving world domination.",
+    "inCinemas": "2017-06-28T22:00:00Z",
+    "physicalRelease": "2017-08-24T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9714/poster.jpg?lastWrite=636293116130000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9714/banner.jpg?lastWrite=636293116440000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "6DBi41reeF0",
+    "studio": "Illumination Entertainment",
+    "path": "/home/radarr/Despicable Me 3 (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": false,
+    "folderName": "Despicable Me 3 (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:56:02.602023Z",
+    "cleanTitle": "despicableme3",
+    "imdbId": "tt3469046",
+    "tmdbId": 324852,
+    "titleSlug": "despicable-me-3-324852",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:51.967203Z",
+    "ratings": {
+      "votes": 0,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Despicable Me 3"
+    ],
+    "qualityProfileId": 6,
+    "id": 9714
+  },
+  {
+    "title": "Transformers: The Last Knight",
+    "sortTitle": "transformers last knight",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "In the absence of Optimus Prime, a battle for survival has commenced between the human race and the Transformers. Cade Yeager forms an alliance with Bumblebee, an English lord, and an Oxford professor to learn why the Transformers keep coming back to Earth.",
+    "inCinemas": "2017-06-20T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9715/poster.jpg?lastWrite=636293116130000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9715/banner.jpg?lastWrite=636306469900000000"
+      }
+    ],
+    "website": "http://www.transformersmovie.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "6Vtf0MszgP8",
+    "studio": "Paramount Pictures",
+    "path": "/home/radarr/Transformers The Last Knight (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": false,
+    "folderName": "Transformers The Last Knight (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:57:10.266095Z",
+    "cleanTitle": "transformerslastknight",
+    "imdbId": "tt3371366",
+    "tmdbId": 335988,
+    "titleSlug": "transformers-the-last-knight-335988",
+    "genres": [
+      "Action",
+      "Science Fiction",
+      "Thriller",
+      "Adventure"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:53.2398Z",
+    "ratings": {
+      "votes": 60,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Transformers: The Last Knight"
+    ],
+    "qualityProfileId": 6,
+    "id": 9715
+  },
+  {
+    "title": "Rough Night",
+    "sortTitle": "rough night",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "Five best friends from college reunite 10 years later for a wild bachelorette weekend in Miami. Their hard partying takes a hilariously dark turn when they accidentally kill a male stripper. Amidst the craziness of trying to cover it up, they're ultimately brought closer together when it matters most.",
+    "inCinemas": "2017-06-14T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9716/poster.jpg?lastWrite=636295228420000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9716/banner.jpg?lastWrite=636304740220000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "oIB4jNYeRY4",
+    "studio": "Sony Pictures Entertainment",
+    "path": "/home/radarr/Rough Night (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": false,
+    "folderName": "Rough Night (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:56:55.020536Z",
+    "cleanTitle": "roughnight",
+    "imdbId": "tt4799050",
+    "tmdbId": 397422,
+    "titleSlug": "rough-night-397422",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:54.377841Z",
+    "ratings": {
+      "votes": 1,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Rough Night",
+      "Move That Body",
+      "Rock That Body"
+    ],
+    "qualityProfileId": 6,
+    "id": 9716
+  },
+  {
+    "title": "Cars 3",
+    "sortTitle": "cars 3",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "Blindsided by a new generation of blazing-fast racers, the legendary Lightning McQueen is suddenly pushed out of the sport he loves. To get back in the game, he will need the help of an eager young race technician with her own plan to win, inspiration from the late Fabulous Hudson Hornet, and a few unexpected turns. Proving that #95 isn't through yet will test the heart of a champion on Piston Cup Racing’s biggest stage!",
+    "inCinemas": "2017-06-14T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9717/poster.jpg?lastWrite=636293116160000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9717/banner.jpg?lastWrite=636293116490000000"
+      }
+    ],
+    "website": "http://cars.disney.com",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "E4K7JgPJ8-s",
+    "studio": "Walt Disney Pictures",
+    "path": "/home/radarr/Cars 3 (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": false,
+    "folderName": "Cars 3 (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:55:58.37031Z",
+    "cleanTitle": "cars3",
+    "imdbId": "tt3606752",
+    "tmdbId": 260514,
+    "titleSlug": "cars-3-260514",
+    "genres": [
+      "Comedy",
+      "Animation",
+      "Adventure"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:55.454741Z",
+    "ratings": {
+      "votes": 2,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Cars 3"
+    ],
+    "qualityProfileId": 6,
+    "id": 9717
+  },
+  {
+    "title": "The Mummy",
+    "sortTitle": "mummy",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "Though safely entombed in a crypt deep beneath the unforgiving desert, an ancient queen whose destiny was unjustly taken from her is awakened in our current day, bringing with her malevolence grown over millennia, and terrors that defy human comprehension.",
+    "inCinemas": "2017-06-07T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9718/poster.jpg?lastWrite=636293116170000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9718/banner.jpg?lastWrite=636293116520000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "IjHgzkQM2Sg",
+    "studio": "Universal Pictures",
+    "path": "/home/radarr/The Mummy (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": false,
+    "folderName": "The Mummy (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:56:47.17015Z",
+    "cleanTitle": "themummy",
+    "imdbId": "tt2345759",
+    "tmdbId": 282035,
+    "titleSlug": "the-mummy-282035",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Horror",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:56.36616Z",
+    "ratings": {
+      "votes": 2,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "The Mummy",
+      "Untitled Mummy Reboot"
+    ],
+    "qualityProfileId": 6,
+    "id": 9718
+  },
+  {
+    "title": "Wonder Woman",
+    "sortTitle": "wonder woman",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "An Amazon princess comes to the world of Man to become the greatest of the female superheroes.",
+    "inCinemas": "2017-05-24T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9719/poster.jpg?lastWrite=636309065540000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9719/banner.jpg?lastWrite=636309065620000000"
+      }
+    ],
+    "website": "http://www.warnerbros.com/wonder-woman",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "5lGoQhFb4NM",
+    "studio": "Dune Entertainment",
+    "path": "/home/radarr/Wonder Woman (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Wonder Woman (2017)",
+    "runtime": 141,
+    "lastInfoSync": "2017-05-24T19:57:13.201401Z",
+    "cleanTitle": "wonderwoman",
+    "imdbId": "tt0451279",
+    "tmdbId": 297762,
+    "titleSlug": "wonder-woman-297762",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:57.281073Z",
+    "ratings": {
+      "votes": 20,
+      "value": 6.2
+    },
+    "alternativeTitles": [
+      "Wonder Woman"
+    ],
+    "qualityProfileId": 6,
+    "id": 9719
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+    "sortTitle": "pirates caribbean dead men tell no tales",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Captain Jack Sparrow is pursued by an old rival, Captain Salazar, who along with his crew of ghost pirates has escaped from the Devil's Triangle, and is determined to kill every pirate at sea. Jack seeks the Trident of Poseidon, a powerful artifact that grants its possessor total control over the seas, in order to defeat Salazar.",
+    "inCinemas": "2017-05-22T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9720/poster.jpg?lastWrite=636293116180000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9720/banner.jpg?lastWrite=636293116570000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "Hgeu5rhoxxY",
+    "studio": "Walt Disney Pictures",
+    "path": "/home/radarr/Pirates of the Caribbean Dead Men Tell No Tales (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Pirates of the Caribbean Dead Men Tell No Tales (2017)",
+    "runtime": 129,
+    "lastInfoSync": "2017-05-24T19:56:48.4798Z",
+    "cleanTitle": "piratescaribbeandeadmentellnotales",
+    "imdbId": "tt1790809",
+    "tmdbId": 166426,
+    "titleSlug": "pirates-of-the-caribbean-dead-men-tell-no-tales-166426",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:58.351361Z",
+    "ratings": {
+      "votes": 96,
+      "value": 5.1
+    },
+    "alternativeTitles": [
+      "Pirates of the Caribbean: Dead Men Tell No Tales",
+      "Pirates of the Caribbean 5"
+    ],
+    "qualityProfileId": 6,
+    "id": 9720
+  },
+  {
+    "title": "Alien: Covenant",
+    "sortTitle": "alien covenant",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Bound for a remote planet on the far side of the galaxy, the crew of the colony ship Covenant discovers what they think is an uncharted paradise, but is actually a dark, dangerous world — whose sole inhabitant is the “synthetic” David, survivor of the doomed Prometheus expedition.",
+    "inCinemas": "2017-05-08T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9721/poster.jpg?lastWrite=636293116240000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9721/banner.jpg?lastWrite=636307334100000000"
+      }
+    ],
+    "website": "http://www.alien-covenant.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "H0VW6sg50Pk",
+    "studio": "Twentieth Century Fox Film Corporation",
+    "path": "/home/radarr/Alien Covenant (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Alien Covenant (2017)",
+    "runtime": 123,
+    "lastInfoSync": "2017-05-24T19:55:41.714879Z",
+    "cleanTitle": "aliencovenant",
+    "imdbId": "tt2316204",
+    "tmdbId": 126889,
+    "titleSlug": "alien-covenant-126889",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:46:59.272686Z",
+    "ratings": {
+      "votes": 586,
+      "value": 6
+    },
+    "alternativeTitles": [
+      "Alien: Covenant",
+      "Alien: Paradise Lost",
+      "Prometheus 2"
+    ],
+    "qualityProfileId": 6,
+    "id": 9721
+  },
+  {
+    "title": "King Arthur: Legend of the Sword",
+    "sortTitle": "king arthur legend sword",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "When the child Arthur’s father is murdered, Vortigern, Arthur’s uncle, seizes the crown. Robbed of his birthright and with no idea who he truly is, Arthur comes up the hard way in the back alleys of the city. But once he pulls the sword Excalibur from the stone, his life is turned upside down and he is forced to acknowledge his true legacy... whether he likes it or not.",
+    "inCinemas": "2017-04-26T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9722/poster.jpg?lastWrite=636293116260000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9722/banner.jpg?lastWrite=636303875480000000"
+      }
+    ],
+    "website": "http://kingarthurmovie.com",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "6rbPTQIdjmY",
+    "studio": "Weed Road Pictures",
+    "path": "/home/radarr/King Arthur Legend of the Sword (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "King Arthur Legend of the Sword (2017)",
+    "runtime": 126,
+    "lastInfoSync": "2017-05-24T19:56:34.066773Z",
+    "cleanTitle": "kingarthurlegendsword",
+    "imdbId": "tt1972591",
+    "tmdbId": 274857,
+    "titleSlug": "king-arthur-legend-of-the-sword-274857",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:04.155027Z",
+    "ratings": {
+      "votes": 253,
+      "value": 6.4
+    },
+    "alternativeTitles": [
+      "King Arthur: Legend of the Sword",
+      "King Arthur",
+      "Knights of the Roundtable: King Arthur"
+    ],
+    "qualityProfileId": 6,
+    "id": 9722
+  },
+  {
+    "title": "The Zookeeper's Wife",
+    "sortTitle": "zookeepers wife",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "The Zookeeper's Wife tells the account of keepers of the Warsaw Zoo, Jan and Antonina Zabinski, who helped save hundreds of people and animals during the Nazi invasion.",
+    "inCinemas": "2017-03-30T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9723/poster.jpg?lastWrite=636297822500000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9723/banner.jpg?lastWrite=636293116560000000"
+      }
+    ],
+    "website": "http://www.focusfeatures.com/thezookeeperswife/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "rJNFeHHGGN4",
+    "path": "/home/radarr/The Zookeeper's Wife (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "The Zookeeper's Wife (2017)",
+    "runtime": 126,
+    "lastInfoSync": "2017-05-24T19:57:17.658212Z",
+    "cleanTitle": "thezookeeperswife",
+    "imdbId": "tt1730768",
+    "tmdbId": 289222,
+    "titleSlug": "the-zookeepers-wife-289222",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:06.6241Z",
+    "ratings": {
+      "votes": 15,
+      "value": 7
+    },
+    "alternativeTitles": [
+      "The Zookeeper's Wife"
+    ],
+    "qualityProfileId": 6,
+    "id": 9723
+  },
+  {
+    "title": "Slamma Jamma",
+    "sortTitle": "slamma jamma",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Wrongfully accused and sent to prison, a former basketball star prepares for the national slam dunk competition while finding redemption in himself and in those he loves.",
+    "inCinemas": "2017-03-23T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9724/poster.jpg?lastWrite=636303875620000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9724/banner.jpg?lastWrite=636303011070000000"
+      }
+    ],
+    "website": "http://www.slammajammamovie.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "kW_ETJsa6DU",
+    "path": "/home/radarr/Slamma Jamma (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Slamma Jamma (2017)",
+    "runtime": 104,
+    "lastInfoSync": "2017-05-24T19:56:58.691896Z",
+    "cleanTitle": "slammajamma",
+    "imdbId": "tt5319866",
+    "tmdbId": 428323,
+    "titleSlug": "slamma-jamma-428323",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:07.902033Z",
+    "ratings": {
+      "votes": 0,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Slamma Jamma"
+    ],
+    "qualityProfileId": 6,
+    "id": 9724
+  },
+  {
+    "title": "Power Rangers",
+    "sortTitle": "power rangers",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Saban's Power Rangers follows five ordinary teens who must become something extraordinary when they learn that their small town of Angel Grove — and the world — is on the verge of being obliterated by an alien threat. Chosen by destiny, our heroes quickly discover they are the only ones who can save the planet. But to do so, they will have to overcome their real-life issues and before it’s too late, band together as the Power Rangers.",
+    "inCinemas": "2017-03-22T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9725/poster.jpg?lastWrite=636293116300000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9725/banner.jpg?lastWrite=636293116590000000"
+      }
+    ],
+    "website": "http://www.powerrangers.movie/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "5kIe6UZHSXw",
+    "studio": "Lionsgate",
+    "path": "/home/radarr/Power Rangers (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Power Rangers (2017)",
+    "runtime": 124,
+    "lastInfoSync": "2017-05-24T19:56:49.892971Z",
+    "cleanTitle": "powerrangers",
+    "imdbId": "tt3717490",
+    "tmdbId": 305470,
+    "titleSlug": "power-rangers-305470",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:09.617387Z",
+    "ratings": {
+      "votes": 432,
+      "value": 6.6
+    },
+    "alternativeTitles": [
+      "Power Rangers",
+      "Saban's Power Rangers",
+      "Power/Rangers"
+    ],
+    "qualityProfileId": 6,
+    "id": 9725
+  },
+  {
+    "title": "Song to Song",
+    "sortTitle": "song to song",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "In this modern love story set against the Austin, Texas music scene, two entangled couples — struggling songwriters Faye and BV, and music mogul Cook and the waitress whom he ensnares — chase success through a rock ‘n’ roll landscape of seduction and betrayal.",
+    "inCinemas": "2017-03-16T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9726/poster.jpg?lastWrite=636303011060000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9726/banner.jpg?lastWrite=636293116590000000"
+      }
+    ],
+    "website": "http://www.songtosongmovie.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "O4SrVkj84zc",
+    "studio": "FilmNation Entertainment",
+    "path": "/home/radarr/Song to Song (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Song to Song (2017)",
+    "runtime": 129,
+    "lastInfoSync": "2017-05-24T19:57:03.333437Z",
+    "cleanTitle": "songtosong",
+    "imdbId": "tt2062700",
+    "tmdbId": 330947,
+    "titleSlug": "song-to-song-330947",
+    "genres": [
+      "Romance",
+      "Music",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:11.277461Z",
+    "ratings": {
+      "votes": 43,
+      "value": 6.1
+    },
+    "alternativeTitles": [
+      "Song to Song",
+      "Lawless",
+      "Weightless"
+    ],
+    "qualityProfileId": 6,
+    "id": 9726
+  },
+  {
+    "title": "Tomorrow Everything Starts",
+    "sortTitle": "tomorrow everything starts",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "A man without attachments or responsibilities suddenly finds himself with an abandoned baby and leaves for London to try and find the mother. Eight years later after he and his daughter become inseparable Gloria's mother reappears.",
+    "inCinemas": "2016-12-06T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9727/poster.jpg?lastWrite=636293116350000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9727/banner.jpg?lastWrite=636293116620000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "OAt0mmfW8S4",
+    "studio": "Mars Films",
+    "path": "/home/radarr/Tomorrow Everything Starts (2016)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Tomorrow Everything Starts (2016)",
+    "runtime": 118,
+    "lastInfoSync": "2017-05-24T19:57:08.666795Z",
+    "cleanTitle": "tomorroweverythingstarts",
+    "imdbId": "tt5078204",
+    "tmdbId": 382591,
+    "titleSlug": "tomorrow-everything-starts-382591",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:13.090499Z",
+    "ratings": {
+      "votes": 412,
+      "value": 7.4
+    },
+    "alternativeTitles": [
+      "Demain tout commence"
+    ],
+    "qualityProfileId": 6,
+    "id": 9727
+  },
+  {
+    "title": "Don't Tell Me the Boy Was Mad",
+    "sortTitle": "dont tell me boy was mad",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "Aram, a young man from Marseille of Armenian origin, blows up the Turkish ambassador's car in Paris. Gilles, a young cyclist who was passing at that precise moment, is seriously injured. Aram's mother feels guilty and feels the need to visit Gilles at the hospital and beg for his forgiveness, something that Gilles does not understand. Against the advice of his comrades in Beirut, Aram decides to go meet his victim.",
+    "inCinemas": "2015-11-10T23:00:00Z",
+    "physicalRelease": "2016-04-05T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9728/poster.jpg?lastWrite=636293116360000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9728/banner.jpg?lastWrite=636293116630000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2015,
+    "hasFile": false,
+    "studio": "Agat Films",
+    "path": "/home/radarr/Don't Tell Me the Boy Was Mad (2015)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Don't Tell Me the Boy Was Mad (2015)",
+    "runtime": 134,
+    "lastInfoSync": "2017-05-24T19:56:05.77348Z",
+    "cleanTitle": "donttellmeboywasmad",
+    "imdbId": "tt4062208",
+    "tmdbId": 337110,
+    "titleSlug": "dont-tell-me-the-boy-was-mad-337110",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:16.002193Z",
+    "ratings": {
+      "votes": 6,
+      "value": 6.7
+    },
+    "alternativeTitles": [
+      "Une Histoire de Fou"
+    ],
+    "qualityProfileId": 6,
+    "id": 9728
+  },
+  {
+    "title": "A Bag of Marbles",
+    "sortTitle": "bag marbles",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "In occupied France, Maurice and Joseph, two young Jewish brothers left to their own devices demonstrate an incredible amount of cleverness, courage, and ingenuity to escape the enemy invasion and to try to reunite their family once again.",
+    "inCinemas": "2017-01-17T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9729/poster.jpg?lastWrite=636293116370000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9729/banner.jpg?lastWrite=636303875250000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "TF1 Films Productions",
+    "path": "/home/radarr/A Bag of Marbles (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "A Bag of Marbles (2017)",
+    "runtime": 110,
+    "lastInfoSync": "2017-05-24T19:55:48.385183Z",
+    "cleanTitle": "abagmarbles",
+    "imdbId": "tt5091612",
+    "tmdbId": 398924,
+    "titleSlug": "a-bag-of-marbles-398924",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T08:47:17.312372Z",
+    "ratings": {
+      "votes": 35,
+      "value": 7.7
+    },
+    "alternativeTitles": [
+      "Un sac de billes"
+    ],
+    "qualityProfileId": 6,
+    "id": 9729
+  },
+  {
+    "title": "Ghost in the Shell",
+    "sortTitle": "ghost in shell",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "In the near future, Major is the first of her kind: a human saved from a terrible crash, who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals.",
+    "inCinemas": "2017-03-28T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9731/poster.jpg?lastWrite=636293144520000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9731/banner.jpg?lastWrite=636300416280000000"
+      }
+    ],
+    "website": "http://www.ghostintheshellmovie.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "xTPvnQ2wDlI",
+    "studio": "Paramount Pictures",
+    "path": "/home/radarr/Ghost in the Shell (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Ghost in the Shell (2017)",
+    "runtime": 107,
+    "lastInfoSync": "2017-05-24T19:56:18.051061Z",
+    "cleanTitle": "ghostinshell",
+    "imdbId": "tt1219827",
+    "tmdbId": 315837,
+    "titleSlug": "ghost-in-the-shell-315837",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-02T09:34:12.043706Z",
+    "ratings": {
+      "votes": 1133,
+      "value": 5.8
+    },
+    "alternativeTitles": [
+      "Ghost in the Shell"
+    ],
+    "qualityProfileId": 6,
+    "id": 9731
+  },
+  {
+    "title": "Lady Macbeth",
+    "sortTitle": "lady macbeth",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "The passionate affair of a young woman trapped in a marriage of convenience unleashes a maelstrom of murder and mayhem on a country estate.",
+    "inCinemas": "2017-04-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9732/poster.jpg?lastWrite=636293144960000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9732/banner.jpg?lastWrite=636293144990000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "2Z0N8ULhuUA",
+    "path": "/home/radarr/Lady Macbeth (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Lady Macbeth (2017)",
+    "runtime": 89,
+    "lastInfoSync": "2017-05-24T19:56:35.536491Z",
+    "cleanTitle": "ladymacbeth",
+    "imdbId": "tt4291600",
+    "tmdbId": 410117,
+    "titleSlug": "lady-macbeth-410117",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-02T09:34:56.089616Z",
+    "ratings": {
+      "votes": 14,
+      "value": 6.5
+    },
+    "alternativeTitles": [
+      "Lady Macbeth"
+    ],
+    "qualityProfileId": 6,
+    "id": 9732
+  },
+  {
+    "title": "xXx: Return of Xander Cage",
+    "sortTitle": "xxx return xander cage",
+    "sizeOnDisk": 2185405777,
+    "status": "released",
+    "overview": "Extreme athlete turned government operative Xander Cage comes out of self-imposed exile, thought to be long dead, and is set on a collision course with deadly alpha warrior Xiang and his team in a race to recover a sinister and seemingly unstoppable weapon known as Pandora's Box. Recruiting an all-new group of thrill-seeking cohorts, Xander finds himself enmeshed in a deadly conspiracy that points to collusion at the highest levels of world governments.",
+    "inCinemas": "2017-01-12T23:00:00Z",
+    "physicalRelease": "2017-05-16T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9734/poster.jpg?lastWrite=636295888890000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9734/banner.jpg?lastWrite=636309930640000000"
+      }
+    ],
+    "website": "http://www.returnofxandercage.com/",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "mspnr56tnLA",
+    "studio": "Paramount Pictures",
+    "path": "/home/radarr/xXx Return of Xander Cage (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "xXx Return of Xander Cage (2017)",
+    "runtime": 107,
+    "lastInfoSync": "2017-05-24T19:57:14.541048Z",
+    "cleanTitle": "xxxreturnxandercage",
+    "imdbId": "tt1293847",
+    "tmdbId": 47971,
+    "titleSlug": "xxx-return-of-xander-cage-47971",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "tags": [],
+    "added": "2017-05-05T13:48:09.205106Z",
+    "ratings": {
+      "votes": 988,
+      "value": 5.4
+    },
+    "alternativeTitles": [
+      "xXx: Return of Xander Cage",
+      "xXx 3",
+      "xXx: The Return of Xander Cage"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "xXx Return of Xander Cage (2017).mp4",
+      "size": 2185405777,
+      "dateAdded": "2017-05-05T13:56:03.618069Z",
+      "releaseGroup": "RARBG",
+      "quality": {
+        "quality": {
+          "id": 7,
+          "name": "Bluray-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 2500000,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 800,
+        "audioFormat": "AAC",
+        "audioBitrate": 223998,
+        "runTime": "01:46:46.2820000",
+        "audioStreamCount": 1,
+        "audioChannels": 2,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "LC",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1706
+    },
+    "qualityProfileId": 6,
+    "id": 9734
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 2",
+    "sortTitle": "guardians galaxy vol 2",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+    "inCinemas": "2017-04-23T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9735/poster.jpg?lastWrite=636300416320000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9735/banner.jpg?lastWrite=636300416420000000"
+      }
+    ],
+    "website": "https://marvel.com/guardians",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "wUn05hdkhjM",
+    "studio": "Walt Disney Pictures",
+    "path": "/home/radarr/Guardians of the Galaxy Vol. 2 (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Guardians of the Galaxy Vol. 2 (2017)",
+    "runtime": 137,
+    "lastInfoSync": "2017-05-24T19:56:26.9029Z",
+    "cleanTitle": "guardiansgalaxyvol2",
+    "imdbId": "tt3896198",
+    "tmdbId": 283995,
+    "titleSlug": "guardians-of-the-galaxy-vol-2-283995",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Comedy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-06T01:08:34.602254Z",
+    "ratings": {
+      "votes": 1787,
+      "value": 7.6
+    },
+    "alternativeTitles": [
+      "Guardians of the Galaxy Vol. 2",
+      "Guardians of the Galaxy 2",
+      "Awesome Mixtape 2",
+      "Guardians 3000"
+    ],
+    "qualityProfileId": 6,
+    "id": 9735
+  },
+  {
+    "title": "Take Me Home Tonight",
+    "sortTitle": "take me home tonight",
+    "sizeOnDisk": 1503474300,
+    "status": "released",
+    "overview": "Recent MIT grad Matt Franklin (Topher Grace) should be well on his way to a successful career at a Fortune 500 company, but instead, he rebels against maturity by taking a job at a video store. Matt rethinks his position when his unrequited high-school crush, Tori (Teresa Palmer), walks in and invites him to an end-of-summer party. With the help of his twin sister (Anna Faris) and his best friend (Dan Fogler), Matt hatches a plan to change the course of his life.",
+    "inCinemas": "2011-03-03T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9736/poster.jpg?lastWrite=636297510950000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9736/banner.jpg?lastWrite=636297510970000000"
+      }
+    ],
+    "website": "http://www.iamrogue.com/takemehometonight/fullsite/",
+    "downloaded": true,
+    "year": 2011,
+    "hasFile": true,
+    "youTubeTrailerId": "ZsSNCmGUK2I",
+    "studio": "Imagine Entertainment",
+    "path": "/home/radarr/Take Me Home Tonight (2011)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Take Me Home Tonight (2011)",
+    "runtime": 97,
+    "lastInfoSync": "2017-05-24T19:57:06.710952Z",
+    "cleanTitle": "takemehometonight",
+    "imdbId": "tt0810922",
+    "tmdbId": 50725,
+    "titleSlug": "take-me-home-tonight-50725",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2017-05-07T10:51:35.025414Z",
+    "ratings": {
+      "votes": 185,
+      "value": 6.2
+    },
+    "alternativeTitles": [
+      "Take Me Home Tonight",
+      "Kids in America",
+      "That '80s Movie",
+      "Young Americans"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Take Me Home Tonight (2011).mp4",
+      "size": 1503474300,
+      "dateAdded": "2017-05-07T15:46:07.38282Z",
+      "quality": {
+        "quality": {
+          "id": 7,
+          "name": "Bluray-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 1962000,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 800,
+        "audioFormat": "AAC",
+        "audioBitrate": 96000,
+        "runTime": "01:37:17.5820000",
+        "audioStreamCount": 1,
+        "audioChannels": 2,
+        "audioChannelPositions": "2/0/0",
+        "audioChannelPositionsText": "Front: L R",
+        "audioProfile": "LC",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1708
+    },
+    "qualityProfileId": 6,
+    "id": 9736
+  },
+  {
+    "title": "You Get Me",
+    "sortTitle": "you get me",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "After arguing with his girlfriend, Ali, Tyler lands in the arms of sexy new girl, Grace. The next morning, he finds that not only does Ali agree to take him back, but Grace is a new student at their school and is dead set on her new man.",
+    "inCinemas": "2017-06-15T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9737/poster.jpg?lastWrite=636297706710000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9737/banner.jpg"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "path": "/home/radarr/You Get Me (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "You Get Me (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:57:16.07194Z",
+    "cleanTitle": "yougetme",
+    "imdbId": "tt5539054",
+    "tmdbId": 412105,
+    "titleSlug": "you-get-me-412105",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-07T16:17:51.01112Z",
+    "ratings": {
+      "votes": 1,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "You Get Me"
+    ],
+    "qualityProfileId": 1,
+    "id": 9737
+  },
+  {
+    "title": "Baywatch",
+    "sortTitle": "baywatch",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit. Together, they uncover a local criminal plot that threatens the future of the Bay.",
+    "inCinemas": "2017-05-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9739/poster.jpg?lastWrite=636302145650000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9739/banner.jpg?lastWrite=636298394860000000"
+      }
+    ],
+    "website": "http://www.thebaywatchmovie.com/",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "gUFgJ8f9slo",
+    "studio": "Paramount Pictures",
+    "path": "/home/radarr/Baywatch (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Baywatch (2017)",
+    "runtime": 116,
+    "lastInfoSync": "2017-05-24T19:55:49.551907Z",
+    "cleanTitle": "baywatch",
+    "imdbId": "tt1469304",
+    "tmdbId": 339846,
+    "titleSlug": "baywatch-339846",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-08T11:24:36.06323Z",
+    "ratings": {
+      "votes": 62,
+      "value": 4.7
+    },
+    "alternativeTitles": [
+      "Baywatch"
+    ],
+    "qualityProfileId": 1,
+    "id": 9739
+  },
+  {
+    "title": "Get Out",
+    "sortTitle": "get out",
+    "sizeOnDisk": 3873746922,
+    "status": "inCinemas",
+    "overview": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
+    "inCinemas": "2017-02-23T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9740/poster.jpg?lastWrite=636299071900000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9740/banner.jpg?lastWrite=636301281140000000"
+      }
+    ],
+    "website": "http://www.getoutfilm.com/",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "sRfnevzM9kQ",
+    "studio": "Blumhouse Productions",
+    "path": "/home/radarr/Get Out (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Get Out (2017)",
+    "runtime": 104,
+    "lastInfoSync": "2017-05-24T19:56:15.928093Z",
+    "cleanTitle": "getout",
+    "imdbId": "tt5052448",
+    "tmdbId": 419430,
+    "titleSlug": "get-out-419430",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Horror"
+    ],
+    "tags": [],
+    "added": "2017-05-09T06:13:09.494628Z",
+    "ratings": {
+      "votes": 1205,
+      "value": 7.1
+    },
+    "alternativeTitles": [
+      "Get Out"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Get Out (2017).mkv",
+      "size": 3873746922,
+      "dateAdded": "2017-05-09T07:02:10.990089Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4479297,
+        "videoBitDepth": 8,
+        "width": 1916,
+        "height": 796,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:44:05.4120000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1710
+    },
+    "qualityProfileId": 6,
+    "id": 9740
+  },
+  {
+    "title": "Money",
+    "sortTitle": "money",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "Two wealthy businessmen are about to get away with $5 million in ill-gotten money until their plans are revealed by an uninvited house guest.",
+    "inCinemas": "2017-05-11T22:00:00Z",
+    "physicalRelease": "2016-11-09T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9741/poster.jpg?lastWrite=636299154400000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9741/banner.jpg?lastWrite=636299154420000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "studio": "Kamel Films",
+    "path": "/home/radarr/Money (2016)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Money (2016)",
+    "runtime": 86,
+    "lastInfoSync": "2017-05-24T19:56:45.809342Z",
+    "cleanTitle": "money",
+    "imdbId": "tt4715356",
+    "tmdbId": 422874,
+    "titleSlug": "money-422874",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-09T08:30:39.890716Z",
+    "ratings": {
+      "votes": 17,
+      "value": 4
+    },
+    "alternativeTitles": [
+      "Money",
+      "$"
+    ],
+    "qualityProfileId": 1,
+    "id": 9741
+  },
+  {
+    "title": "The Great Wall",
+    "sortTitle": "great wall",
+    "sizeOnDisk": 2109916038,
+    "status": "released",
+    "overview": "European mercenaries searching for black powder become embroiled in the defense of the Great Wall of China against a horde of monstrous creatures.",
+    "inCinemas": "2016-12-15T23:00:00Z",
+    "physicalRelease": "2017-05-17T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9742/poster.jpg?lastWrite=636299987750000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9742/banner.jpg?lastWrite=636299987940000000"
+      }
+    ],
+    "website": "http://www.thegreatwallmovie.com/",
+    "downloaded": true,
+    "year": 2016,
+    "hasFile": true,
+    "youTubeTrailerId": "Bnsesxk5LF4",
+    "studio": "Universal Pictures",
+    "path": "/home/radarr/The Great Wall (2016)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "The Great Wall (2016)",
+    "runtime": 103,
+    "lastInfoSync": "2017-05-24T19:56:23.015592Z",
+    "cleanTitle": "thegreatwall",
+    "imdbId": "tt2034800",
+    "tmdbId": 311324,
+    "titleSlug": "the-great-wall-311324",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2017-05-10T07:39:35.128758Z",
+    "ratings": {
+      "votes": 776,
+      "value": 5.9
+    },
+    "alternativeTitles": [
+      "The Great Wall",
+      "Untitled Great Wall Project"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "The Great Wall (2016).mp4",
+      "size": 2109916038,
+      "dateAdded": "2017-05-10T08:02:29.117616Z",
+      "releaseGroup": "RARBG",
+      "quality": {
+        "quality": {
+          "id": 7,
+          "name": "Bluray-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 2500000,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 808,
+        "audioFormat": "AAC",
+        "audioBitrate": 223998,
+        "runTime": "01:43:03.3510000",
+        "audioStreamCount": 1,
+        "audioChannels": 2,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "LC",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1712
+    },
+    "qualityProfileId": 6,
+    "id": 9742
+  },
+  {
+    "title": "The Levelling",
+    "sortTitle": "levelling",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Clover is finishing a veterinary course when her brother dies and she is called home to her family's struggling Somerset farm.",
+    "inCinemas": "2017-05-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9743/poster.jpg?lastWrite=636301431820000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9743/banner.jpg?lastWrite=636303875510000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "r423OfVwPZ4",
+    "studio": "Wellington Films",
+    "path": "/home/radarr/The Levelling (2016)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Levelling (2016)",
+    "runtime": 83,
+    "lastInfoSync": "2017-05-24T19:56:38.628021Z",
+    "cleanTitle": "thelevelling",
+    "imdbId": "tt5158522",
+    "tmdbId": 413762,
+    "titleSlug": "the-levelling-413762",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-11T23:46:22.129716Z",
+    "ratings": {
+      "votes": 5,
+      "value": 8
+    },
+    "alternativeTitles": [
+      "The Levelling"
+    ],
+    "qualityProfileId": 1,
+    "id": 9743
+  },
+  {
+    "title": "John Wick: Chapter 2",
+    "sortTitle": "john wick chapter 2",
+    "sizeOnDisk": 4521296406,
+    "status": "inCinemas",
+    "overview": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
+    "inCinemas": "2017-02-07T23:00:00Z",
+    "physicalRelease": "2017-06-13T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9744/poster.jpg?lastWrite=636301679370000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9744/banner.jpg?lastWrite=636301679400000000"
+      }
+    ],
+    "website": "http://www.johnwick.movie/",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "LZrX9mffH8Y",
+    "studio": "Thunder Road Pictures",
+    "path": "/home/radarr/John Wick Chapter 2 (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "John Wick Chapter 2 (2017)",
+    "runtime": 122,
+    "lastInfoSync": "2017-05-24T19:56:32.388452Z",
+    "cleanTitle": "johnwickchapter2",
+    "imdbId": "tt4425200",
+    "tmdbId": 324552,
+    "titleSlug": "john-wick-chapter-2-324552",
+    "genres": [
+      "Thriller",
+      "Action",
+      "Crime"
+    ],
+    "tags": [],
+    "added": "2017-05-12T06:38:57.431823Z",
+    "ratings": {
+      "votes": 1317,
+      "value": 6.5
+    },
+    "alternativeTitles": [
+      "John Wick: Chapter 2",
+      "John Wick 2",
+      "John Wick: Chapter Two"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "John Wick Chapter 2 (2017).mkv",
+      "size": 4521296406,
+      "dateAdded": "2017-05-23T06:53:02.29654Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4445443,
+        "videoBitDepth": 8,
+        "width": 1912,
+        "height": 792,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "02:02:20.5070000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1723
+    },
+    "qualityProfileId": 6,
+    "id": 9744
+  },
+  {
+    "title": "Es por tu bien",
+    "sortTitle": "es por tu bien",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "",
+    "inCinemas": "2017-02-23T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9745/poster.jpg?lastWrite=636301984660000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9745/banner.jpg?lastWrite=636301984710000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "Telecinco Cinema",
+    "path": "/home/radarr/Es por tu bien (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Es por tu bien (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T19:56:09.457826Z",
+    "cleanTitle": "esportubien",
+    "imdbId": "tt5790492",
+    "tmdbId": 435050,
+    "titleSlug": "es-por-tu-bien-435050",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-12T15:07:46.48151Z",
+    "ratings": {
+      "votes": 14,
+      "value": 6.4
+    },
+    "alternativeTitles": [
+      "Es por tu bien"
+    ],
+    "qualityProfileId": 6,
+    "id": 9745
+  },
+  {
+    "title": "The Lego Batman Movie",
+    "sortTitle": "lego batman movie",
+    "sizeOnDisk": 3811496452,
+    "status": "inCinemas",
+    "overview": "In the irreverent spirit of fun that made “The Lego Movie” a worldwide phenomenon, the self-described leading man of that ensemble—Lego Batman—stars in his own big-screen adventure. But there are big changes brewing in Gotham, and if he wants to save the city from The Joker’s hostile takeover, Batman may have to drop the lone vigilante thing, try to work with others and maybe, just maybe, learn to lighten up.",
+    "inCinemas": "2017-02-07T23:00:00Z",
+    "physicalRelease": "2017-06-13T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9746/poster.jpg?lastWrite=636307334830000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9746/banner.jpg?lastWrite=636301986480000000"
+      }
+    ],
+    "website": "http://www.legobatman.com",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "aBJyp2LFHgk",
+    "studio": "Lin Pictures",
+    "path": "/home/radarr/The Lego Batman Movie (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "The Lego Batman Movie (2017)",
+    "runtime": 104,
+    "lastInfoSync": "2017-05-24T19:56:37.128693Z",
+    "cleanTitle": "thelegobatmanmovie",
+    "imdbId": "tt4116284",
+    "tmdbId": 324849,
+    "titleSlug": "the-lego-batman-movie-324849",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "tags": [],
+    "added": "2017-05-12T15:10:45.645129Z",
+    "ratings": {
+      "votes": 623,
+      "value": 7.2
+    },
+    "alternativeTitles": [
+      "The Lego Batman Movie"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "The Lego Batman Movie (2017).mkv",
+      "size": 3811496452,
+      "dateAdded": "2017-05-19T07:39:06.127532Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4383789,
+        "videoBitDepth": 8,
+        "width": 1912,
+        "height": 792,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:44:28.1430000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1719
+    },
+    "qualityProfileId": 6,
+    "id": 9746
+  },
+  {
+    "title": "Brain Drain",
+    "sortTitle": "brain drain",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "",
+    "inCinemas": "2008-12-31T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9747/poster.jpg?lastWrite=636302064030000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9747/banner.jpg?lastWrite=636302064100000000"
+      }
+    ],
+    "website": "http://www.fugadecerebros.com/",
+    "downloaded": false,
+    "year": 2009,
+    "hasFile": false,
+    "studio": "Antena 3 Films / Cangrejo Films",
+    "path": "/home/radarr/Brain Drain (2009)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Brain Drain (2009)",
+    "runtime": 105,
+    "lastInfoSync": "2017-05-24T19:55:56.856966Z",
+    "cleanTitle": "braindrain",
+    "imdbId": "tt1272013",
+    "tmdbId": 18120,
+    "titleSlug": "brain-drain-18120",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-12T17:20:00.590957Z",
+    "ratings": {
+      "votes": 26,
+      "value": 5.3
+    },
+    "alternativeTitles": [
+      "Fuga de Cerebros"
+    ],
+    "qualityProfileId": 6,
+    "id": 9747
+  },
+  {
+    "title": "The Meyerowitz Stories",
+    "sortTitle": "meyerowitz stories",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "An estranged family gathers together in New York for an event celebrating the artistic work of their father.",
+    "inCinemas": "2017-05-20T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9748/poster.jpg"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9748/banner.jpg?lastWrite=636311660950000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "Gilded Halfwing",
+    "path": "/home/radarr/The Meyerowitz Stories (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Meyerowitz Stories (2017)",
+    "runtime": 110,
+    "lastInfoSync": "2017-05-24T19:56:44.566919Z",
+    "cleanTitle": "themeyerowitzstories",
+    "imdbId": "tt5536736",
+    "tmdbId": 396398,
+    "titleSlug": "the-meyerowitz-stories-396398",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-12T22:51:05.924169Z",
+    "ratings": {
+      "votes": 1,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "The Meyerowitz Stories",
+      "Yeh Din Ka Kissa"
+    ],
+    "qualityProfileId": 1,
+    "id": 9748
+  },
+  {
+    "title": "How to Talk to Girls at Parties",
+    "sortTitle": "how to talk to girls at parties",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A couple of British 1970s teen-aged boys, Enn and Vic, go to a party to meet girls, only to find that the girls are very different from the boys' expectations.",
+    "inCinemas": "2017-05-20T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9749/poster.jpg?lastWrite=636311660780000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9749/banner.jpg?lastWrite=636308199890000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "HanWay Films",
+    "path": "/home/radarr/How to Talk to Girls at Parties (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "How to Talk to Girls at Parties (2017)",
+    "runtime": 102,
+    "lastInfoSync": "2017-05-24T19:56:30.453445Z",
+    "cleanTitle": "howtotalktogirlsatparties",
+    "imdbId": "tt3859310",
+    "tmdbId": 341689,
+    "titleSlug": "how-to-talk-to-girls-at-parties-341689",
+    "genres": [
+      "Comedy",
+      "Music",
+      "Romance",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2017-05-13T00:51:30.035502Z",
+    "ratings": {
+      "votes": 3,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "How to Talk to Girls at Parties"
+    ],
+    "qualityProfileId": 1,
+    "id": 9749
+  },
+  {
+    "title": "Everything, Everything",
+    "sortTitle": "everything everything",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A teenager who's lived a sheltered life because she's allergic to everything, falls for the boy who moves in next door.",
+    "inCinemas": "2017-05-18T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9750/poster.jpg?lastWrite=636303744000000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9750/banner.jpg?lastWrite=636303744020000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "0LyEE7eR0nM",
+    "path": "/home/radarr/Everything, Everything (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Everything, Everything (2017)",
+    "runtime": 96,
+    "lastInfoSync": "2017-05-24T19:56:10.962766Z",
+    "cleanTitle": "everythingeverything",
+    "imdbId": "tt5001718",
+    "tmdbId": 417678,
+    "titleSlug": "everything-everything-417678",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2017-05-14T15:59:59.655555Z",
+    "ratings": {
+      "votes": 22,
+      "value": 7.1
+    },
+    "alternativeTitles": [
+      "Everything, Everything"
+    ],
+    "qualityProfileId": 1,
+    "id": 9750
+  },
+  {
+    "title": "Snatched",
+    "sortTitle": "snatched",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "When her boyfriend dumps Emily, a spontaneous woman in her 30s, she persuades her ultra-cautious mom to accompany her on a vacation to Ecuador. When these two very different women are trapped on this wild journey, their bond as mother and daughter is tested and strengthened while they attempt to navigate the jungle and escape.",
+    "inCinemas": "2017-05-10T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9751/poster.jpg?lastWrite=636307335100000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9751/banner.jpg?lastWrite=636304466870000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "PsBWnst8f7w",
+    "studio": "Twentieth Century Fox Film Corporation",
+    "path": "/home/radarr/Snatched (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Snatched (2017)",
+    "runtime": 90,
+    "lastInfoSync": "2017-05-24T19:57:01.916051Z",
+    "cleanTitle": "snatched",
+    "imdbId": "tt2334871",
+    "tmdbId": 373569,
+    "titleSlug": "snatched-373569",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2017-05-15T12:04:42.043094Z",
+    "ratings": {
+      "votes": 29,
+      "value": 3.9
+    },
+    "alternativeTitles": [
+      "Snatched"
+    ],
+    "qualityProfileId": 6,
+    "id": 9751
+  },
+  {
+    "title": "Lowriders",
+    "sortTitle": "lowriders",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A young street artist in East Los Angeles is caught between his father's obsession with lowrider car culture, his ex-felon brother and his need for self-expression.",
+    "inCinemas": "2017-04-27T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9752/poster.jpg?lastWrite=636304466830000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9752/banner.jpg?lastWrite=636304466850000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "-CJj_ZZPZng",
+    "studio": "Imagine Entertainment",
+    "path": "/home/radarr/Lowriders (2016)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Lowriders (2016)",
+    "runtime": 99,
+    "lastInfoSync": "2017-05-24T19:56:43.093823Z",
+    "cleanTitle": "lowriders",
+    "imdbId": "tt1366338",
+    "tmdbId": 333384,
+    "titleSlug": "lowriders-333384",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-15T12:04:43.497167Z",
+    "ratings": {
+      "votes": 6,
+      "value": 8.7
+    },
+    "alternativeTitles": [
+      "Lowriders",
+      "Low Riders"
+    ],
+    "qualityProfileId": 6,
+    "id": 9752
+  },
+  {
+    "title": "Before I Fall",
+    "sortTitle": "before i fall",
+    "sizeOnDisk": 3699102194,
+    "status": "inCinemas",
+    "overview": "Samantha Kingston has everything. Then, everything changes. After one fateful night, she wakes up with no future at all. Trapped into reliving the same day over and over, she begins to question just how perfect her life really was.",
+    "inCinemas": "2017-03-02T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9753/poster.jpg?lastWrite=636306469440000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9753/banner.jpg?lastWrite=636305302440000000"
+      }
+    ],
+    "website": "http://www.beforeifallfilm.com/",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "q3Zyy4ZXegE",
+    "studio": "Jon Shestack Productions",
+    "path": "/home/radarr/Before I Fall (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "preDB",
+    "isAvailable": false,
+    "folderName": "Before I Fall (2017)",
+    "runtime": 98,
+    "lastInfoSync": "2017-05-24T19:55:53.192963Z",
+    "cleanTitle": "beforeifall",
+    "imdbId": "tt1691916",
+    "tmdbId": 397837,
+    "titleSlug": "before-i-fall-397837",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-16T11:17:19.713799Z",
+    "ratings": {
+      "votes": 78,
+      "value": 6.5
+    },
+    "alternativeTitles": [
+      "Before I Fall"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Before I Fall (2017).mkv",
+      "size": 3699102194,
+      "dateAdded": "2017-05-16T19:47:53.880426Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4507898,
+        "videoBitDepth": 8,
+        "width": 1916,
+        "height": 796,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:38:48.9710000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1715
+    },
+    "qualityProfileId": 6,
+    "id": 9753
+  },
+  {
+    "title": "American Wrestler: The Wizard",
+    "sortTitle": "american wrestler wizard",
+    "sizeOnDisk": 4294679136,
+    "status": "released",
+    "overview": "In 1980, a teenage boy escapes the unrest in Iran only to face more hostility in America, due to the hostage crisis. Determined to fit in, he joins the school's floundering wrestling team.",
+    "inCinemas": "2016-04-22T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9754/poster.jpg?lastWrite=636311660270000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9754/banner.jpg?lastWrite=636306469430000000"
+      }
+    ],
+    "website": "http://americanwrestlermovie.com",
+    "downloaded": true,
+    "year": 2016,
+    "hasFile": true,
+    "youTubeTrailerId": "_dAYaYPgj4A",
+    "studio": "ESX Productions",
+    "path": "/home/radarr/American Wrestler The Wizard (2016)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "American Wrestler The Wizard (2016)",
+    "runtime": 117,
+    "lastInfoSync": "2017-05-24T19:55:42.920656Z",
+    "cleanTitle": "americanwrestlerwizard",
+    "imdbId": "tt4303202",
+    "tmdbId": 431261,
+    "titleSlug": "american-wrestler-the-wizard-431261",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-16T11:19:35.385002Z",
+    "ratings": {
+      "votes": 4,
+      "value": 7.5
+    },
+    "alternativeTitles": [
+      "American Wrestler: The Wizard",
+      "American Wrestler",
+      "The Wizard"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "American Wrestler The Wizard (2016).mkv",
+      "size": 4294679136,
+      "dateAdded": "2017-05-16T11:36:36.320351Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4420176,
+        "videoBitDepth": 8,
+        "width": 1912,
+        "height": 792,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:56:49.2590000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1713
+    },
+    "qualityProfileId": 6,
+    "id": 9754
+  },
+  {
+    "title": "Awakening the Zodiac",
+    "sortTitle": "awakening zodiac",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "The story follows a down-on-their-luck couple who discovers a serial killer's film reels. They decide to take the law into their own hands, risking everything for the chance at a $100,000 reward. It isn't long until they find themselves in the killer's lethal cross-hairs.",
+    "inCinemas": "2017-06-08T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9755/poster.jpg?lastWrite=636305586800000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9755/banner.jpg?lastWrite=636305586820000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "studio": "Bunk 11 Pictures",
+    "path": "/home/radarr/Awakening the Zodiac (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Awakening the Zodiac (2017)",
+    "runtime": 100,
+    "lastInfoSync": "2017-05-24T19:55:44.898445Z",
+    "cleanTitle": "awakeningzodiac",
+    "imdbId": "tt6294892",
+    "tmdbId": 431112,
+    "titleSlug": "awakening-the-zodiac-431112",
+    "genres": [
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-16T19:11:19.375099Z",
+    "ratings": {
+      "votes": 7,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Awakening the Zodiac"
+    ],
+    "qualityProfileId": 1,
+    "id": 9755
+  },
+  {
+    "title": "Eden Lake",
+    "sortTitle": "eden lake",
+    "sizeOnDisk": 2649676946,
+    "status": "released",
+    "overview": "Eden Lake is a relentlessly tense and immaculately paced horror-thriller about modern youth gone wild. When a young couple goes to a remote wooded lake for a romantic getaway, their quiet weekend is shattered by an aggressive group of local kids. Rowdiness quickly turns to rage as the teens terrorize the couple in unimaginable ways, and a weekend outing becomes a bloody battle for survival.",
+    "inCinemas": "2008-09-11T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9756/poster.jpg?lastWrite=636305600940000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9756/banner.jpg?lastWrite=636305600960000000"
+      }
+    ],
+    "website": "",
+    "downloaded": true,
+    "year": 2008,
+    "hasFile": true,
+    "youTubeTrailerId": "-6j3K4MmOKs",
+    "studio": "Aramid Entertainment Fund",
+    "path": "/home/radarr/Eden Lake (2008)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Eden Lake (2008)",
+    "runtime": 91,
+    "lastInfoSync": "2017-05-24T19:56:08.064058Z",
+    "cleanTitle": "edenlake",
+    "imdbId": "tt1020530",
+    "tmdbId": 13510,
+    "titleSlug": "eden-lake-13510",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-16T19:34:54.426925Z",
+    "ratings": {
+      "votes": 337,
+      "value": 6.7
+    },
+    "alternativeTitles": [
+      "Eden Lake",
+      "Little Terrors"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Eden Lake (2008).mp4",
+      "size": 2649676946,
+      "dateAdded": "2017-05-16T19:53:02.495046Z",
+      "quality": {
+        "quality": {
+          "id": 7,
+          "name": "Bluray-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 3149000,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 816,
+        "audioFormat": "AAC",
+        "audioBitrate": 639576,
+        "runTime": "01:30:57.6670000",
+        "audioStreamCount": 2,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "LC",
+        "videoFps": 24,
+        "audioLanguages": "English / English",
+        "subtitles": "",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1716
+    },
+    "qualityProfileId": 6,
+    "id": 9756
+  },
+  {
+    "title": "Alcoholist",
+    "sortTitle": "alcoholist",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "An alcoholic spends all his time spying on his neighbor, waiting for the right moment to kill him.",
+    "inCinemas": "2017-05-17T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9757/poster.jpg?lastWrite=636307334060000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9757/banner.jpg?lastWrite=636307334170000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2016,
+    "hasFile": false,
+    "youTubeTrailerId": "trqmAKto1GI",
+    "path": "/home/radarr/Alcoholist (2016)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Alcoholist (2016)",
+    "runtime": 105,
+    "lastInfoSync": "2017-05-24T19:55:40.494261Z",
+    "cleanTitle": "alcoholist",
+    "imdbId": "tt3061222",
+    "tmdbId": 424208,
+    "titleSlug": "alcoholist-424208",
+    "genres": [
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2017-05-18T09:19:35.871196Z",
+    "ratings": {
+      "votes": 4,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Alcoholist"
+    ],
+    "qualityProfileId": 1,
+    "id": 9757
+  },
+  {
+    "title": "The Long Way Down",
+    "sortTitle": "long way down",
+    "sizeOnDisk": 0,
+    "status": "released",
+    "overview": "After one of their friends overdoses, a group of coked-out, paranoid teenagers have to figure out what to do next.",
+    "inCinemas": "2017-05-18T22:00:00Z",
+    "physicalRelease": "2017-05-19T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9758/poster.jpg?lastWrite=636307683090000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9758/banner.jpg"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "x90BbYhRQt0",
+    "studio": "IceEagle Productions",
+    "path": "/home/radarr/The Long Way Down (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "The Long Way Down (2017)",
+    "runtime": 12,
+    "lastInfoSync": "2017-05-24T19:56:39.999195Z",
+    "cleanTitle": "thelongwaydown",
+    "imdbId": "",
+    "tmdbId": 447333,
+    "titleSlug": "the-long-way-down-447333",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-19T05:25:07.987352Z",
+    "ratings": {
+      "votes": 1,
+      "value": 10
+    },
+    "alternativeTitles": [
+      "The Long Way Down"
+    ],
+    "qualityProfileId": 1,
+    "id": 9758
+  },
+  {
+    "title": "Half Girlfriend",
+    "sortTitle": "half girlfriend",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "Madhav Jha, a rustic boy from Bihar who is drawn to his college-mate, Riya Somani, an affluent English-speaking girl from Delhi. There’s just one hitch here. Riya is willing to go thus far and no further; Madhav continues being obsessed with her. Will the Bihar boy and the Delhi girl make it past the half-way mark?",
+    "inCinemas": "2017-05-18T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9759/poster.jpg?lastWrite=636308045090000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9759/banner.jpg?lastWrite=636309064970000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "KmlBnmyelHI",
+    "studio": "Balaji Motion Pictures",
+    "path": "/home/radarr/हाफ गर्लफ्रेंड (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "हाफ गर्लफ्रेंड (2017)",
+    "runtime": 135,
+    "lastInfoSync": "2017-05-24T19:56:28.841852Z",
+    "cleanTitle": "halfgirlfriend",
+    "imdbId": "tt5474042",
+    "tmdbId": 413884,
+    "titleSlug": "half-girlfriend-413884",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2017-05-19T15:28:29.204658Z",
+    "ratings": {
+      "votes": 5,
+      "value": 6.8
+    },
+    "alternativeTitles": [
+      "हाफ गर्लफ्रेंड"
+    ],
+    "qualityProfileId": 1,
+    "id": 9759
+  },
+  {
+    "title": "T2 Trainspotting",
+    "sortTitle": "t2 trainspotting",
+    "sizeOnDisk": 4919831165,
+    "status": "released",
+    "overview": "After 20 years abroad, Mark Renton returns to Scotland and reunites with his old friends Sick Boy, Spud, and Begbie.",
+    "inCinemas": "2017-01-26T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9760/poster.jpg?lastWrite=636309032570000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9760/banner.jpg?lastWrite=636309930520000000"
+      }
+    ],
+    "website": "",
+    "downloaded": true,
+    "year": 2017,
+    "hasFile": true,
+    "youTubeTrailerId": "EsozpEE543w",
+    "studio": "DNA Films",
+    "path": "/home/radarr/T2 Trainspotting (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "T2 Trainspotting (2017)",
+    "runtime": 117,
+    "lastInfoSync": "2017-05-24T19:57:04.807402Z",
+    "cleanTitle": "t2trainspotting",
+    "imdbId": "tt2763304",
+    "tmdbId": 180863,
+    "titleSlug": "t2-trainspotting-180863",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2017-05-20T18:54:09.8566Z",
+    "ratings": {
+      "votes": 358,
+      "value": 7.2
+    },
+    "alternativeTitles": [
+      "T2 Trainspotting",
+      "T2: Trainspotting 2",
+      "Trainspotting 2"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "T2 Trainspotting (2017).mkv",
+      "size": 4919831165,
+      "dateAdded": "2017-05-20T19:25:18.404259Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 5080508,
+        "videoBitDepth": 8,
+        "width": 1920,
+        "height": 1036,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:57:39.2500000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 24,
+        "audioLanguages": "English",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1721
+    },
+    "qualityProfileId": 6,
+    "id": 9760
+  },
+  {
+    "title": "Diary of a Wimpy Kid: The Long Haul",
+    "sortTitle": "diary wimpy kid long haul",
+    "sizeOnDisk": 0,
+    "status": "inCinemas",
+    "overview": "A Heffley family road trip to attend Meemaw's 90th birthday party goes hilariously off course thanks to Greg's newest scheme to get to a video gaming convention.",
+    "inCinemas": "2017-05-18T22:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9761/poster.jpg?lastWrite=636310542020000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9761/banner.jpg?lastWrite=636310542060000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "4w3bzzyyR94",
+    "path": "/home/radarr/Diary of a Wimpy Kid The Long Haul (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Diary of a Wimpy Kid The Long Haul (2017)",
+    "runtime": 90,
+    "lastInfoSync": "2017-05-24T19:56:04.149819Z",
+    "cleanTitle": "diarywimpykidlonghaul",
+    "imdbId": "tt6003368",
+    "tmdbId": 417830,
+    "titleSlug": "diary-of-a-wimpy-kid-the-long-haul-417830",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "tags": [],
+    "added": "2017-05-22T12:50:02.152816Z",
+    "ratings": {
+      "votes": 6,
+      "value": 5.5
+    },
+    "alternativeTitles": [
+      "Diary of a Wimpy Kid: The Long Haul"
+    ],
+    "qualityProfileId": 6,
+    "id": 9761
+  },
+  {
+    "title": "Raw",
+    "sortTitle": "raw",
+    "sizeOnDisk": 3640813091,
+    "status": "inCinemas",
+    "overview": "In Justine’s family everyone is a vet and a vegetarian. At 16, she’s a gifted teen ready to take on her first year in vet school, where her older sister also studies. There, she gets no time to settle: hazing starts right away. Justine is forced to eat raw meat for the first time in her life. Unexpected consequences emerge as her true self begins to form.",
+    "inCinemas": "2017-03-09T23:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9762/poster.jpg?lastWrite=636311157600000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9762/banner.jpg?lastWrite=636311157710000000"
+      }
+    ],
+    "website": "",
+    "downloaded": true,
+    "year": 2016,
+    "hasFile": true,
+    "youTubeTrailerId": "gFlXVX2af_Y",
+    "studio": "Angoa-Agicoa",
+    "path": "/home/radarr/Raw (2017)",
+    "profileId": 6,
+    "pathState": "static",
+    "monitored": true,
+    "minimumAvailability": "inCinemas",
+    "isAvailable": true,
+    "folderName": "Raw (2017)",
+    "runtime": 95,
+    "lastInfoSync": "2017-05-24T19:56:52.7967Z",
+    "cleanTitle": "raw",
+    "imdbId": "tt4954522",
+    "tmdbId": 393519,
+    "titleSlug": "raw-393519",
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "tags": [],
+    "added": "2017-05-23T05:55:59.771901Z",
+    "ratings": {
+      "votes": 95,
+      "value": 7.1
+    },
+    "alternativeTitles": [
+      "Grave",
+      "Grave"
+    ],
+    "movieFile": {
+      "movieId": 0,
+      "relativePath": "Raw (2016).mkv",
+      "size": 3640813091,
+      "dateAdded": "2017-05-23T07:18:18.897678Z",
+      "releaseGroup": "FGT",
+      "quality": {
+        "quality": {
+          "id": 3,
+          "name": "WEBDL-1080p"
+        },
+        "revision": {
+          "version": 1,
+          "real": 0
+        }
+      },
+      "mediaInfo": {
+        "videoCodec": "AVC",
+        "videoBitrate": 4443981,
+        "videoBitDepth": 8,
+        "width": 1916,
+        "height": 800,
+        "audioFormat": "AC-3",
+        "audioBitrate": 384000,
+        "runTime": "01:38:32.7880000",
+        "audioStreamCount": 1,
+        "audioChannels": 6,
+        "audioChannelPositions": "3/2/0.1",
+        "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+        "audioProfile": "",
+        "videoFps": 23.976,
+        "audioLanguages": "French",
+        "subtitles": "English",
+        "scanType": "Progressive",
+        "schemaRevision": 3
+      },
+      "id": 1724
+    },
+    "qualityProfileId": 6,
+    "id": 9762
+  },
+  {
+    "title": "Eat Local",
+    "sortTitle": "eat local",
+    "sizeOnDisk": 0,
+    "status": "announced",
+    "overview": "In a quiet countryside farmhouse, Britain's vampires gather for their once-every-fifty-years meeting. Others will be joining them too; Sebastian Crockett, an unwitting Essex boy who thinks he's on a promise with sexy cougar Vanessa; and a detachment of Special Forces vampire killers who have bitten off more than they can chew. This is certainly going to be a night to remember... and for some of them it will be their last.",
+    "inCinemas": "2017-05-25T22:00:00Z",
+    "physicalRelease": "2017-05-26T00:00:00Z",
+    "images": [
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/9763/poster.jpg?lastWrite=636312315780000000"
+      },
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/9763/banner.jpg?lastWrite=636312315680000000"
+      }
+    ],
+    "website": "",
+    "downloaded": false,
+    "year": 2017,
+    "hasFile": false,
+    "youTubeTrailerId": "1Wd_xYluz_8",
+    "studio": "Evolution Pictures",
+    "path": "/home/radarr/Eat Local (2017)",
+    "profileId": 1,
+    "pathState": "static",
+    "monitored": false,
+    "minimumAvailability": "announced",
+    "isAvailable": true,
+    "folderName": "Eat Local (2017)",
+    "runtime": 0,
+    "lastInfoSync": "2017-05-24T14:06:05.368177Z",
+    "cleanTitle": "eatlocal",
+    "imdbId": "tt4401006",
+    "tmdbId": 412758,
+    "titleSlug": "eat-local-412758",
+    "genres": [
+      "Horror",
+      "Action"
+    ],
+    "tags": [],
+    "added": "2017-05-24T14:06:04.244655Z",
+    "ratings": {
+      "votes": 0,
+      "value": 0
+    },
+    "alternativeTitles": [
+      "Eat Local"
+    ],
+    "qualityProfileId": 1,
+    "id": 9763
+  }
+]
