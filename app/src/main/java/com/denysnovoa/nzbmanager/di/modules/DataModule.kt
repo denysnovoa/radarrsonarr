@@ -10,6 +10,8 @@ import com.denysnovoa.nzbmanager.common.framework.api.NetworkConnection
 import com.denysnovoa.nzbmanager.common.framework.api.cache.ApiCacheProvider
 import com.denysnovoa.nzbmanager.common.framework.api.cache.NetworkCacheInterceptor
 import com.denysnovoa.nzbmanager.common.framework.api.cache.OfflineCacheInterceptor
+import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJson
+import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJsonProvider
 import com.denysnovoa.nzbmanager.common.framework.api.provider.ApiRestProvider
 import com.denysnovoa.nzbmanager.di.qualifier.ApiCacheKey
 import com.denysnovoa.nzbmanager.di.qualifier.ApiKey
@@ -61,5 +63,8 @@ class DataModule {
 
     @Provides @Singleton
     fun provideOfflineCacheInterceptor(networkConnection: NetworkConnection) = OfflineCacheInterceptor(networkConnection)
+
+    @Provides @Singleton
+    fun provideOfflineJsonProvider(@ApplicationQualifier context: Context): OfflineJson = OfflineJsonProvider(context)
 }
 

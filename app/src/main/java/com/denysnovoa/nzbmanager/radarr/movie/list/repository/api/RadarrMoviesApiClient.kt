@@ -1,6 +1,7 @@
 package com.denysnovoa.nzbmanager.radarr.movie.list.repository.api
 
 import com.denysnovoa.nzbmanager.common.framework.OfflineMode
+import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJson
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import io.reactivex.Flowable
@@ -9,7 +10,8 @@ import io.reactivex.Single
 
 class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                             val movieMapper: MoviesMapper,
-                            val radarrMoviesOfflineRepository: RadarrMoviesOfflineRest) : MoviesApiClient {
+                            val radarrMoviesOfflineRepository: OfflineJson) : MoviesApiClient {
+
     override fun getMovies(): Flowable<List<MovieModel>> =
             if (OfflineMode) {
                 radarrMoviesOfflineRepository.getMovies()
