@@ -1,6 +1,6 @@
 package com.denysnovoa.nzbmanager.radarr.movie.list.repository.api
 
-import com.denysnovoa.nzbmanager.common.framework.OfflineMode
+import com.denysnovoa.nzbmanager.common.framework.OfflineDebugMode
 import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJson
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
@@ -12,7 +12,7 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                             val offlineJson: OfflineJson) : MoviesApiClient {
 
     override fun getMovies(): Flowable<List<MovieModel>> =
-            if (OfflineMode) {
+            if (OfflineDebugMode) {
                 offlineJson.getMovies()
                         .flatMapIterable { it }
                         .map(movieMapper::transform)
@@ -27,7 +27,7 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
             }
 
     override fun getDetail(id: Int): Single<MovieModel> =
-            if (OfflineMode) {
+            if (OfflineDebugMode) {
                 offlineJson.getMovie().map(movieMapper::transform)
             } else {
                 moviesApi.getDetail(id).map(movieMapper::transform)
