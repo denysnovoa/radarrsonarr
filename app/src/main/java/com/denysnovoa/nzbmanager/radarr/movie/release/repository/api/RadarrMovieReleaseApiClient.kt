@@ -3,7 +3,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.release.repository.api
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapper
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.model.MovieReleaseModel
 import io.reactivex.Flowable
-
+import io.reactivex.Single
 
 class RadarrMovieReleaseApiClient(val movieReleaseApi: RadarrMovieReleaseApiRest,
                                   val movieReleaseMapper: MovieReleaseMapper) : MovieReleaseApiClient {
@@ -15,7 +15,10 @@ class RadarrMovieReleaseApiClient(val movieReleaseApi: RadarrMovieReleaseApiRest
             .toList()
             .toFlowable()
 
-    override fun download(movieReleaseModel: MovieReleaseModel) =
-            movieReleaseApi.post(movieReleaseMapper.transform(movieReleaseModel))
-                    .map(movieReleaseMapper::transform)
+    override fun download(movieReleaseModel: MovieReleaseModel): Single<MovieReleaseModel>
+            = movieReleaseApi.post(movieReleaseMapper.transform(movieReleaseModel))
+            .map(movieReleaseMapper::transform)
+
 }
+
+
