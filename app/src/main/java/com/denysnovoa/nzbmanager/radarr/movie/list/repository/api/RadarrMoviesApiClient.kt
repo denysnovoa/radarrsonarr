@@ -7,14 +7,13 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import io.reactivex.Flowable
 import io.reactivex.Single
 
-
 class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                             val movieMapper: MoviesMapper,
-                            val radarrMoviesOfflineRepository: OfflineJson) : MoviesApiClient {
+                            val offlineJson: OfflineJson) : MoviesApiClient {
 
     override fun getMovies(): Flowable<List<MovieModel>> =
             if (OfflineMode) {
-                radarrMoviesOfflineRepository.getMovies()
+                offlineJson.getMovies()
                         .flatMapIterable { it }
                         .map(movieMapper::transform)
                         .toList()
@@ -27,7 +26,12 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                         .toFlowable()
             }
 
-    override fun getDetail(id: Int): Single<MovieModel> = moviesApi.getDetail(id)
-            .map(movieMapper::transform)
+    override fun getDetail(id: Int): Single<MovieModel> =
+            if (OfflineMode) {
+                offlineJson.getMovie().map(movieMapper::transform)
+            } else {
+                moviesApi.getDetail(id).map(movieMapper::transform)
+            }
 }
+
 
