@@ -24,9 +24,7 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  repositories {
-    mavenCentral()
-  }
+  flavorDimensions "compile"
 
   productFlavors {
     dev {
@@ -37,12 +35,18 @@ android {
       minSdkVersion parent.ext.androidMinSdkVersion
       signingConfig signingConfigs.releaseconfig
     }
+    offline {
+      minSdkVersion 21
+      signingConfig signingConfigs.releaseconfig
+    }
   }
 
   variantFilter { variant ->
     def names = variant.flavors*.name
 
-    if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains("pro") && variant.buildType.name == "debug")) {
+    if ((names.contains("dev") && variant.buildType.name == "release")
+            || (names.contains("pro") && variant.buildType.name == "debug")
+            || (names.contains("offline") && variant.buildType.name == "release")) {
       variant.ignore = true
     }
   }
@@ -70,9 +74,6 @@ android {
   }
 }
 
-kapt {
-  generateStubs = true
-}
 
 dependencies {
 
@@ -116,7 +117,9 @@ dependencies {
   compile 'nl.littlerobots.rxlint:rxlint:1.2'
   compile 'com.github.akarnokd:rxjava2-extensions:0.16.5'
   compile 'org.greenrobot:eventbus:3.0.0'
+
   testCompile 'junit:junit:4.12'
+  testCompile 'org.mockito:mockito-core:2.8.9'
 
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'

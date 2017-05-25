@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="error_load_radarr_settings"
+        type="id">Error al obtener las preferencias de Radarr
+  </item>
+</resources>

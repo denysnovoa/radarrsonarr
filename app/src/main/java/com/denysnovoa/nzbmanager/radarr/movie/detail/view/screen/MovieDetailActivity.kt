@@ -75,15 +75,17 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-
-        when (item?.itemId) {
-            R.id.action_movie_search_download -> startActivity<MovieReleaseActivity>(PARAMETER_MOVIE_ID to movieId)
-            else -> finish()
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_movie_search_download -> {
+            startActivity<MovieReleaseActivity>(PARAMETER_MOVIE_ID to movieId)
+            true
         }
-
-        return true
+        android.R.id.home -> {
+            onBackPressed(); true
+        }
+        else -> false
     }
+
 
     override fun showDetail(movie: MovieViewModel) {
         with(movie) {

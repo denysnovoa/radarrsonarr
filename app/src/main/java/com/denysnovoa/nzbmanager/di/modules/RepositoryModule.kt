@@ -11,6 +11,8 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.MovieReleas
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.RadarrMovieReleaseApiClient
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.RadarrMovieReleaseApiRest
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapper
+import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsRepository
+import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsStorage
 import dagger.Module
 import dagger.Provides
 
@@ -24,6 +26,9 @@ class RepositoryModule {
     @Provides
     fun provideRadarrMovieReleaseApiClient(movieReleaseApiRest: RadarrMovieReleaseApiRest, movieReleaseMapper: MovieReleaseMapper)
             : MovieReleaseApiClient = RadarrMovieReleaseApiClient(movieReleaseApiRest, movieReleaseMapper)
+
+    @Provides
+    fun provideRadarrSettingsStorage(@ApplicationQualifier context: Context): RadarrSettingsRepository = RadarrSettingsStorage(context)
 
     @Provides
     fun providerRadarrMoviesOfflineRest(@ApplicationQualifier context: Context) = RadarrMoviesOfflineRest(context)

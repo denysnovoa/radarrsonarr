@@ -13,6 +13,8 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieRel
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.mapper.MovieReleaseMapperImpl
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapper
 import com.denysnovoa.nzbmanager.radarr.movie.release.view.mapper.MovieReleaseViewMapperImpl
+import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapper
+import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewMapperImpl
 import dagger.Module
 import dagger.Provides
 
@@ -39,4 +41,7 @@ class MapperModule {
 
     @Provides
     fun provideMoviesReleaseMapper(): MovieReleaseMapper = MovieReleaseMapperImpl()
+
+    @Provides
+    fun provideRadarrSettingsViewMapper(): RadarrSettingsViewMapper = RadarrSettingsViewMapperImpl()
 }
