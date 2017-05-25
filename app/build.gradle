@@ -35,12 +35,18 @@ android {
       minSdkVersion parent.ext.androidMinSdkVersion
       signingConfig signingConfigs.releaseconfig
     }
+    offline {
+      minSdkVersion 21
+      signingConfig signingConfigs.releaseconfig
+    }
   }
 
   variantFilter { variant ->
     def names = variant.flavors*.name
 
-    if ((names.contains("dev") && variant.buildType.name == "release") || (names.contains("pro") && variant.buildType.name == "debug")) {
+    if ((names.contains("dev") && variant.buildType.name == "release")
+            || (names.contains("pro") && variant.buildType.name == "debug")
+            || (names.contains("offline") && variant.buildType.name == "release")) {
       variant.ignore = true
     }
   }
