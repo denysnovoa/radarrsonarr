@@ -24,8 +24,8 @@ class RepositoryModule {
             : MoviesApiClient = RadarrMoviesApiClient(radarrMoviesApiRest, moviesMapper, offlineRest)
 
     @Provides
-    fun provideRadarrMovieReleaseApiClient(movieReleaseApiRest: RadarrMovieReleaseApiRest, movieReleaseMapper: MovieReleaseMapper)
-            : MovieReleaseApiClient = RadarrMovieReleaseApiClient(movieReleaseApiRest, movieReleaseMapper)
+    fun provideRadarrMovieReleaseApiClient(movieReleaseApiRest: RadarrMovieReleaseApiRest, movieReleaseMapper: MovieReleaseMapper, offlineRest: OfflineJson)
+            : MovieReleaseApiClient = RadarrMovieReleaseApiClient(movieReleaseApiRest, movieReleaseMapper, offlineRest)
 
     @Provides
     fun provideRadarrSettingsStorage(@ApplicationQualifier context: Context): RadarrSettingsRepository = RadarrSettingsStorage(context)
