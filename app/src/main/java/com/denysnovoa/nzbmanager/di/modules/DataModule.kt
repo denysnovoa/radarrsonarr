@@ -2,8 +2,6 @@ package com.denysnovoa.nzbmanager.di.modules
 
 import android.content.Context
 import com.denysnovoa.nzbmanager.common.framework.ApiCacheKey
-import com.denysnovoa.nzbmanager.common.framework.ApiKey
-import com.denysnovoa.nzbmanager.common.framework.ApiUrl
 import com.denysnovoa.nzbmanager.common.framework.api.ApiOkHttpClient
 import com.denysnovoa.nzbmanager.common.framework.api.AuthenticationInterceptor
 import com.denysnovoa.nzbmanager.common.framework.api.NetworkConnection
@@ -19,6 +17,7 @@ import com.denysnovoa.nzbmanager.di.qualifier.ApiUrl
 import com.denysnovoa.nzbmanager.di.qualifier.ApplicationQualifier
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiRest
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.RadarrMovieReleaseApiRest
+import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsStorage
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -47,10 +46,11 @@ class DataModule {
     fun provideAuthenticationInterceptor(@ApiKey apiKey: String) = AuthenticationInterceptor(apiKey)
 
     @Provides @Singleton @ApiKey
-    fun provideApiKey(): String = ApiKey
+    fun provideApiKey(@ApplicationQualifier context: Context): String = RadarrSettingsStorage(context).apiKey
 
     @Provides @Singleton @ApiUrl
-    fun provideApiUrl(): String = ApiUrl
+    fun provideApiUrl(@ApplicationQualifier context: Context): String =
+            "http://${RadarrSettingsStorage(context).apiHost}:${RadarrSettingsStorage(context).apiPort}/"
 
     @Provides @Singleton @ApiCacheKey
     fun provideApiCacheKey(): String = ApiCacheKey
