@@ -7,10 +7,16 @@ import io.reactivex.Flowable
 import io.reactivex.Single
 
 
-class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest, val movieMapper: MoviesMapper) : MoviesApiClient {
+class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
+                            val movieMapper: MoviesMapper,
+                            val radarrMoviesOfflineRepository: RadarrMoviesOfflineRest) : MoviesApiClient {
     override fun getMovies(): Flowable<List<MovieModel>> =
             if (OfflineMode) {
-                Flowable.empty()
+                radarrMoviesOfflineRepository.getMovies()
+                        .flatMapIterable { it }
+                        .map(movieMapper::transform)
+                        .toList()
+                        .toFlowable()
             } else {
                 moviesApi.movies()
                         .flatMapIterable { it }
