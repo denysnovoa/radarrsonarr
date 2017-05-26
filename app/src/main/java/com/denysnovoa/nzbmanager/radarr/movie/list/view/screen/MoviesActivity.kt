@@ -88,5 +88,11 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     }
 
     override fun showConfigureApi() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    override fun showErrorLoadApiSettings() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 }

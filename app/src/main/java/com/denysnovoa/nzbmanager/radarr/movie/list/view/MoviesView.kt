@@ -9,4 +9,5 @@ interface MoviesView {
     fun hideLoading()
     fun goToMovieDetail(id: Int)
     fun showConfigureApi()
+    fun showErrorLoadApiSettings()
 }
