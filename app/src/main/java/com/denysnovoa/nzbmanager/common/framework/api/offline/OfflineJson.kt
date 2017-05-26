@@ -1,13 +1,14 @@
 package com.denysnovoa.nzbmanager.common.framework.api.offline
 
-import com.denysnovoa.nzbmanager.radarr.movie.list.repository.entity.MovieEntity
-import com.denysnovoa.nzbmanager.radarr.movie.release.repository.MovieReleaseEntity
-import io.reactivex.Flowable
-import io.reactivex.Single
+import java.lang.reflect.Type
 
 interface OfflineJson {
-    fun <T> get(nameFile: String): T
-    fun getMovies(): Flowable<List<MovieEntity>>
-    fun getReleases(): Flowable<List<MovieReleaseEntity>>
-    fun getMovie(): Single<MovieEntity>
+
+    companion object {
+        val MOVIE_DETAIL_JSON = "movie_detail.json"
+        val MOVIES_JSON = "movies_response.json"
+        val MOVIES_RELEASES_JSON = "movie_releases.json"
+    }
+
+    fun <T> get(nameFile: String, typeOfT: Type): T
 }
