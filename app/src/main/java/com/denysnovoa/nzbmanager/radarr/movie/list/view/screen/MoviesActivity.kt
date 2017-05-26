@@ -13,7 +13,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.adapter.MovieItemAdapterAnko
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
-import com.denysnovoa.nzbmanager.settings.screen.SettingsActivity
+import com.denysnovoa.nzbmanager.settings.screen.view.screen.SettingsActivity
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -48,12 +48,12 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.action_settings) {
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
             startActivity<SettingsActivity>()
+            true
         }
-
-        return true
+        else -> true
     }
 
     override fun onResume() {
@@ -85,6 +85,14 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     override fun showMovies(movies: List<MovieViewModel>) {
         adapter.picasso = picasso
         adapter.items = movies
-
     }
+
+    override fun showConfigureApi() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun showErrorLoadApiSettings() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.denysnovoa.nzbmanager.settings.screen
+package com.denysnovoa.nzbmanager.settings.screen.view.screen
 
 import android.content.res.Configuration
 import android.os.Bundle

@@ -1,0 +1,557 @@
+[
+  {
+    "guid": "rarbg-568c4e6b2bdefbc57b13ef4bc5958d85cfe7f019",
+    "quality": {
+      "quality": {
+        "id": 7,
+        "name": "Bluray-1080p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1801,
+    "age": 394,
+    "ageHours": 9461.9199114725,
+    "ageMinutes": 567715.19468923332,
+    "size": 35061686597,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "FGT",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.1080p.BluRay.AVC.DTS-HD.MA.5.1-FGT",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "32.7 GB is larger than maximum allowed 4.1 GB (for Take Me Home Tonight)",
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2016-04-26T11:50:52Z",
+    "downloadUrl": "magnet:?xt=urn:btih:568c4e6b2bdefbc57b13ef4bc5958d85cfe7f019&dn=Take.Me.Home.Tonight.2011.1080p.BluRay.AVC.DTS-HD.MA.5.1-FGT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_0_4_1_9_4_6__568c4e6b2b",
+    "downloadAllowed": true,
+    "releaseWeight": 0,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 2,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-182d8c8b740cfc11cb8657dbfcd0dc5ccb9cbbb1",
+    "quality": {
+      "quality": {
+        "id": 7,
+        "name": "Bluray-1080p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1801,
+    "age": 2155,
+    "ageHours": 51722.798800460274,
+    "ageMinutes": 3103367.9280277169,
+    "size": 10842067583,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "CHD",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.BluRay.1080p.DTS.x264-CHD",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "10.1 GB is larger than maximum allowed 4.1 GB (for Take Me Home Tonight)",
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2011-07-01T14:58:08Z",
+    "downloadUrl": "magnet:?xt=urn:btih:182d8c8b740cfc11cb8657dbfcd0dc5ccb9cbbb1&dn=Take.Me.Home.Tonight.2011.BluRay.1080p.DTS.x264-CHD&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_1_9_6_1_0__182d8c8b74",
+    "downloadAllowed": true,
+    "releaseWeight": 1,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 3,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-a8522da2a5b8bd095073e92d701e1dfab69ab6ed",
+    "quality": {
+      "quality": {
+        "id": 7,
+        "name": "Bluray-1080p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1801,
+    "age": 550,
+    "ageHours": 13203.310189419166,
+    "ageMinutes": 792198.61136523332,
+    "size": 7033893704,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "MaxHD",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.1080p.Bluray.x264-MaxHD",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "6.6 GB is larger than maximum allowed 4.1 GB (for Take Me Home Tonight)",
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2015-11-22T14:27:27Z",
+    "downloadUrl": "magnet:?xt=urn:btih:a8522da2a5b8bd095073e92d701e1dfab69ab6ed&dn=Take.Me.Home.Tonight.2011.1080p.Bluray.x264-MaxHD&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=9_5_2_5_7_0__a8522da2a5",
+    "downloadAllowed": true,
+    "releaseWeight": 2,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 1,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-91256a45c93f4d68d1750f0dbcfa77ba82639197",
+    "quality": {
+      "quality": {
+        "id": 7,
+        "name": "Bluray-1080p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1801,
+    "age": 549,
+    "ageHours": 13187.900745048888,
+    "ageMinutes": 791274.04470301664,
+    "size": 1993919964,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "RARBG",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.1080p.BluRay.H264.AAC-RARBG",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1"
+    ],
+    "publishDate": "2015-11-23T05:52:01Z",
+    "downloadUrl": "magnet:?xt=urn:btih:91256a45c93f4d68d1750f0dbcfa77ba82639197&dn=Take.Me.Home.Tonight.2011.1080p.BluRay.H264.AAC-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=9_5_2_8_6_7__91256a45c9",
+    "downloadAllowed": true,
+    "releaseWeight": 3,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 1,
+    "leechers": 2,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-2b955043004e99b90f41bbfcbece2033109d90f0",
+    "quality": {
+      "quality": {
+        "id": 6,
+        "name": "Bluray-720p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1501,
+    "age": 2157,
+    "ageHours": 51774.870745105552,
+    "ageMinutes": 3106492.2447064333,
+    "size": 5423888109,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "CHD",
+    "releaseHash": "",
+    "title": "Take Me Home Tonight 2011 BluRay 720p DTS x264-CHD",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "5.1 GB is larger than maximum allowed 2.7 GB (for Take Me Home Tonight)",
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2011-06-29T10:53:49Z",
+    "downloadUrl": "magnet:?xt=urn:btih:2b955043004e99b90f41bbfcbece2033109d90f0&dn=Take+Me+Home+Tonight+2011+BluRay+720p+DTS+x264-CHD&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_1_9_1_8_2__2b95504300",
+    "downloadAllowed": true,
+    "releaseWeight": 4,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 1,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-07cd6439980852c4873b15f16942a697f9fb1fd1",
+    "quality": {
+      "quality": {
+        "id": 6,
+        "name": "Bluray-720p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1501,
+    "age": 549,
+    "ageHours": 13187.89852295,
+    "ageMinutes": 791273.9113771,
+    "size": 1264183893,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "RARBG",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.720p.BluRay.H264.AAC-RARBG",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1"
+    ],
+    "publishDate": "2015-11-23T05:52:09Z",
+    "downloadUrl": "magnet:?xt=urn:btih:07cd6439980852c4873b15f16942a697f9fb1fd1&dn=Take.Me.Home.Tonight.2011.720p.BluRay.H264.AAC-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=9_5_2_8_6_9__07cd643998",
+    "downloadAllowed": true,
+    "releaseWeight": 5,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 1,
+    "leechers": 1,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-492e72a9cc9d32f7eadb3a1ee0454c21313fe72b",
+    "quality": {
+      "quality": {
+        "id": 2,
+        "name": "DVD"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 801,
+    "age": 2149,
+    "ageHours": 51588.096023015554,
+    "ageMinutes": 3095285.7613810166,
+    "size": 1542473728,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "SANTi",
+    "releaseHash": "",
+    "title": "Take Me Home Tonight 2011 BRRip XviD AC3-SANTi",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "DVD is not wanted in profile",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2011-07-07T05:40:18Z",
+    "downloadUrl": "magnet:?xt=urn:btih:492e72a9cc9d32f7eadb3a1ee0454c21313fe72b&dn=Take+Me+Home+Tonight+2011+BRRip+XviD+AC3-SANTi&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_2_0_3_6_4__492e72a9cc",
+    "downloadAllowed": true,
+    "releaseWeight": 6,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 0,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-3f5b6b782d305d42477113d02751302443243da4",
+    "quality": {
+      "quality": {
+        "id": 2,
+        "name": "DVD"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 801,
+    "age": 2150,
+    "ageHours": 51612.973800858053,
+    "ageMinutes": 3096778.4280515835,
+    "size": 1650839628,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "CM8",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.BDRip.XVID.AC3.HQ.Hive-CM8",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "DVD is not wanted in profile",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2011-07-06T04:47:38Z",
+    "downloadUrl": "magnet:?xt=urn:btih:3f5b6b782d305d42477113d02751302443243da4&dn=Take.Me.Home.Tonight.2011.BDRip.XVID.AC3.HQ.Hive-CM8&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_2_0_1_8_7__3f5b6b782d",
+    "downloadAllowed": true,
+    "releaseWeight": 7,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 2,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-de057ff96d0a041d788570fe72fd17bd9b1b3a42",
+    "quality": {
+      "quality": {
+        "id": 2,
+        "name": "DVD"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 801,
+    "age": 549,
+    "ageHours": 13187.899634240834,
+    "ageMinutes": 791273.97805453336,
+    "size": 1318693233,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseGroup": "RARBG",
+    "releaseHash": "",
+    "title": "Take.Me.Home.Tonight.2011.BRRip.XviD.MP3-RARBG",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "DVD is not wanted in profile",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2015-11-23T05:52:05Z",
+    "downloadUrl": "magnet:?xt=urn:btih:de057ff96d0a041d788570fe72fd17bd9b1b3a42&dn=Take.Me.Home.Tonight.2011.BRRip.XviD.MP3-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=9_5_2_8_6_8__de057ff96d",
+    "downloadAllowed": true,
+    "releaseWeight": 8,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 1,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  },
+  {
+    "guid": "rarbg-825fc21478b99bd62aab05b198db9e173072ff21",
+    "quality": {
+      "quality": {
+        "id": 0,
+        "name": "Unknown"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "qualityWeight": 1,
+    "age": 2183,
+    "ageHours": 52402.6229676425,
+    "ageMinutes": 3144157.37805865,
+    "size": 1475313259,
+    "indexerId": 1,
+    "indexer": "Rarbg",
+    "releaseHash": "",
+    "title": "Take Me Home Tonight 2011 PPVRiP XViD - IMAGiNE",
+    "fullSeason": false,
+    "seasonNumber": 0,
+    "language": "english",
+    "airDate": "",
+    "seriesTitle": "Take Me Home Tonight",
+    "episodeNumbers": [],
+    "absoluteEpisodeNumbers": [],
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejected": true,
+    "tvdbId": 0,
+    "tvRageId": 0,
+    "rejections": [
+      "Existing file meets cutoff: Bluray-720p",
+      "Unknown is not wanted in profile",
+      "Quality for existing file on disk is of equal or higher preference: Bluray-1080p v1",
+      "Not enough seeders. (0)"
+    ],
+    "publishDate": "2011-06-03T07:08:41Z",
+    "downloadUrl": "magnet:?xt=urn:btih:825fc21478b99bd62aab05b198db9e173072ff21&dn=Take+Me+Home+Tonight+2011+PPVRiP+XViD+-+IMAGiNE&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710&tr=udp%3A%2F%2F9.rarbg.to%3A2710&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce",
+    "infoUrl": "https://torrentapi.org/redirect_to_info.php?token=bk3rea0tid&p=1_1_5_4_9_9__825fc21478",
+    "downloadAllowed": true,
+    "releaseWeight": 9,
+    "indexerFlags": [
+      "0"
+    ],
+    "seeders": 0,
+    "leechers": 0,
+    "protocol": "torrent",
+    "isDaily": false,
+    "isAbsoluteNumbering": false,
+    "isPossibleSpecialEpisode": false,
+    "special": false
+  }
+]

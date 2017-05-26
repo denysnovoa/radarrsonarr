@@ -1,39 +1,12 @@
 <resources>
-  <string name="app_name">Radarr</string>
+  <string name="app_name">Radarr Manager</string>
   <string name="error_load_movies">Error al obtener las películas</string>
   <string name="image_description">Imagen</string>
+
+  <!-- Settings for Radarr -->
   <string name="title_activity_settings">Settings</string>
-
-  <!-- Strings related to Settings -->
-
-  <!-- Example General settings -->
-  <string name="pref_header_general">General</string>
-  <string name="pref_title_social_recommendations">Enable social recommendations</string>
-  <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
-  <string name="pref_title_display_name">Display name</string>
-  <string name="pref_default_display_name">John Smith</string>
-
-  <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-  <string-array name="pref_example_list_titles">
-    <item>Always</item>
-    <item>When possible</item>
-    <item>Never</item>
-  </string-array>
-  <string-array name="pref_example_list_values">
-    <item>1</item>
-    <item>0</item>
-    <item>-1</item>
-  </string-array>
-
-  <!-- Example settings for Notifications -->
-  <string name="pref_header_notifications">Notifications</string>
-  <string name="pref_title_new_message_notifications">New message notifications</string>
-  <string name="pref_title_ringtone">Ringtone</string>
-  <string name="pref_ringtone_silent">Silent</string>
-  <string name="pref_title_vibrate">Vibrate</string>
   <string name="action_settings">Settings</string>
 
-  <!-- Example settings for Radarr -->
   <string name="preference_radarr_enable">Enable radarr</string>
   <string name="tittle_pref_host_address">Ip/Host Address</string>
   <string name="tittle_pref_host_port">Port</string>
@@ -41,6 +14,9 @@
   <string name="tittle_pref_api_key">Api Key</string>
   <string name="pref_header_radarr">Radarr</string>
   <string name="tittle_pref_radarr">Radarr Settings</string>
+  <string name="settings_summary_radarr">Configure el acceso a la api de radar en su servidor</string>
+  <string name="settings_summary_ip_radarr">Especifique la Ip/ Host del server, sin http</string>
+
   <string name="title_activity_movie_detail">MovieDetailActivity</string>
   <string name="error_load_movie">Error al obtener los datos de la película</string>
   <string name="literal_download_movie">download</string>
@@ -56,4 +32,7 @@
   <string name="download_alert_text">Confirma descargar</string>
   <string name="yes">SI</string>
   <string name="no">No</string>
+  <string name="settings_summary_port_radarr">Especifique el puerto, por defecto 7878</string>
+  <string name="settings_summary_api_key_radarr">Especifique la api key</string>
+  <string name="error_save_type_sharedPreference">This type can be saved into Preference</string>
 </resources>

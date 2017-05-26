@@ -1,0 +1,92 @@
+{
+  "title": "The Boss Baby",
+  "sortTitle": "boss baby",
+  "sizeOnDisk": 3579742630,
+  "status": "inCinemas",
+  "overview": "A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim.",
+  "inCinemas": "2017-03-22T23:00:00Z",
+  "images": [
+    {
+      "coverType": "poster",
+      "url": "/MediaCover/4797/poster.jpg?lastWrite=636308199600000000"
+    },
+    {
+      "coverType": "banner",
+      "url": "/MediaCover/4797/banner.jpg?lastWrite=636309064570000000"
+    }
+  ],
+  "website": "http://www.dreamworks.com/thebossbaby/",
+  "downloaded": true,
+  "year": 2017,
+  "hasFile": true,
+  "youTubeTrailerId": "Ud8j5GaqH3c",
+  "studio": "Twentieth Century Fox Film Corporation",
+  "path": "/home/radarr/The Boss Baby (2017)",
+  "profileId": 6,
+  "pathState": "static",
+  "monitored": true,
+  "minimumAvailability": "announced",
+  "isAvailable": true,
+  "folderName": "The Boss Baby (2017)",
+  "runtime": 97,
+  "lastInfoSync": "2017-05-24T19:55:55.187091Z",
+  "cleanTitle": "thebossbaby",
+  "imdbId": "tt3874544",
+  "tmdbId": 295693,
+  "titleSlug": "the-boss-baby-295693",
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "tags": [],
+  "added": "2017-04-23T17:56:08.052909Z",
+  "ratings": {
+    "votes": 1220,
+    "value": 5.7
+  },
+  "alternativeTitles": [
+    "The Boss Baby",
+    "Boss Baby"
+  ],
+  "movieFile": {
+    "movieId": 0,
+    "relativePath": "The Boss Baby (2017).mkv",
+    "size": 3579742630,
+    "dateAdded": "2017-05-18T19:25:44.001075Z",
+    "releaseGroup": "FGT",
+    "quality": {
+      "quality": {
+        "id": 3,
+        "name": "WEBDL-1080p"
+      },
+      "revision": {
+        "version": 1,
+        "real": 0
+      }
+    },
+    "mediaInfo": {
+      "videoCodec": "AVC",
+      "videoBitrate": 4394964,
+      "videoBitDepth": 8,
+      "width": 1916,
+      "height": 812,
+      "audioFormat": "AC-3",
+      "audioBitrate": 384000,
+      "runTime": "01:37:53.2480000",
+      "audioStreamCount": 1,
+      "audioChannels": 6,
+      "audioChannelPositions": "3/2/0.1",
+      "audioChannelPositionsText": "Front: L C R, Side: L R, LFE",
+      "audioProfile": "",
+      "videoFps": 23.976,
+      "audioLanguages": "English",
+      "subtitles": "English",
+      "scanType": "Progressive",
+      "schemaRevision": 3
+    },
+    "id": 1717
+  },
+  "qualityProfileId": 6,
+  "id": 4797
+}

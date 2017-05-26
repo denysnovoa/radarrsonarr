@@ -19,11 +19,13 @@
     <activity android:name=".radarr.movie.list.view.screen.MoviesActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+        <action android:name="android.intent.action.VIEW"/>
+
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
     <activity
-        android:name=".settings.screen.SettingsActivity"
+        android:name=".settings.screen.view.screen.SettingsActivity"
         android:label="@string/title_activity_settings"
         android:parentActivityName=".radarr.movie.list.view.screen.MoviesActivity"
         android:theme="@style/AppTheme.DarkActionBar"
