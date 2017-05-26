@@ -32,7 +32,7 @@ allprojects {
 
         androidSupportVersion = '25.3.1'
         ankoSupportVersion = "0.9.1"
-        fireBaseVersion = '10.2.4'
+        fireBaseVersion = '10.2.6'
 
         okhttpVersion = "3.6.0"
         daggerVersion = "2.10"
