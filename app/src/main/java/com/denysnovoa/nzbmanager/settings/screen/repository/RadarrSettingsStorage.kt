@@ -19,7 +19,7 @@ class RadarrSettingsStorage(val context: Context) : RadarrSettingsRepository {
     var apiPort: Int  by PreferenceStorageProvider(context, PREFERENCE_RADARR_API_PORT, 7878)
 
     init {
-        if (BuildConfig.DEBUG) {
+        if (!BuildConfig.DEBUG) {
             apiKey = "b5536e00243a4fd9ad002c53202fb771"
             apiHost = "dnovoa20.ddns.net"
             apiPort = 7878

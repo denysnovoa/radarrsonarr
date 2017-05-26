@@ -85,6 +85,8 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     override fun showMovies(movies: List<MovieViewModel>) {
         adapter.picasso = picasso
         adapter.items = movies
+    }
 
+    override fun showConfigureApi() {
     }
 }
