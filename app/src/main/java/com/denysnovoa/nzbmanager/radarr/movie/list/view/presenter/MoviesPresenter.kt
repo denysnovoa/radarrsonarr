@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
+import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.ApiUnknownHostException
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.MoviesView
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.mapper.MoviesViewMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -40,6 +41,10 @@ class MoviesPresenter(val view: MoviesView,
                                     view.showMovies(moviesModel.mapNotNull { moviesViewMapper.transform(it) })
                                 },
                                 {
+                                    error ->
+                                    if (error is ApiUnknownHostException) {
+                                        view.showConfigureApi()
+                                    }
                                     view.showErrorLoadMovies()
                                 }
                         )

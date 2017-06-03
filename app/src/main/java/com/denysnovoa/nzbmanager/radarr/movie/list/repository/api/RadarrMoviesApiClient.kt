@@ -10,6 +10,10 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import com.google.gson.reflect.TypeToken
 import io.reactivex.Flowable
 import io.reactivex.Single
+import retrofit2.HttpException
+import java.net.ConnectException
+import java.net.HttpURLConnection
+import java.net.UnknownHostException
 
 class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                             val movieMapper: MoviesMapper,
@@ -25,6 +29,20 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                         .toFlowable()
             } else {
                 moviesApi.movies()
+                        .onErrorResumeNext { t: Throwable ->
+                            when (t) {
+                                is UnknownHostException ->
+                                    Flowable.error<NetworkConnectionException>(NetworkConnectionException(t.message))
+                                is HttpException ->
+                                    if (t.code() == HttpURLConnection.HTTP_NOT_FOUND) {
+                                        Flowable.error<HttpNotFoundException>(HttpNotFoundException(t.message))
+                                    }
+                                is ConnectException ->
+                                    Flowable.error<ApiUnknownHostException>(ApiUnknownHostException(t.message))
+                            }
+
+                            Flowable.error { t }
+                        }
                         .flatMapIterable { it }
                         .map(movieMapper::transform)
                         .toList()
@@ -37,8 +55,14 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                     offlineJson.get<MovieEntity>(MOVIE_DETAIL_JSON, object : TypeToken<MovieEntity>() {}.type)
                 }.map(movieMapper::transform)
             } else {
-                moviesApi.getDetail(id).map(movieMapper::transform)
+                moviesApi.getDetail(id)
+                        .map(movieMapper::transform)
             }
+
 }
+
+class NetworkConnectionException(messageError: String?) : Throwable(messageError)
+class ApiUnknownHostException(messageError: String?) : Throwable(messageError)
+class HttpNotFoundException(messageError: String?) : Throwable(messageError)
 
 
