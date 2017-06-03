@@ -26,7 +26,7 @@ android {
 
     productFlavors {
         dev {
-            minSdkVersion 21
+            minSdkVersion 19
             signingConfig signingConfigs.releaseconfig
         }
         pro {
@@ -68,11 +68,6 @@ android {
         exclude 'META-INF/rxjava.properties'
     }
 }
-
-kapt {
-    generateStubs = true
-}
-
 
 dependencies {
 
