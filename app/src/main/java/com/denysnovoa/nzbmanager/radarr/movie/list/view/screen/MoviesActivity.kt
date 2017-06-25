@@ -40,8 +40,14 @@ class MoviesActivity : BaseActivity(), MoviesView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
+        initializeToolbar()
+
         recyclerMovies.adapter = adapter
         swipeMovies.setOnRefreshListener { presenter.onResume() }
+    }
+
+    private fun initializeToolbar() {
+        setSupportActionBar(my_toolbar)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
