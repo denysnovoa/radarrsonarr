@@ -2,6 +2,7 @@ package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.v7.widget.GridLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
@@ -42,6 +43,7 @@ class MoviesActivity : BaseActivity(), MoviesView {
 
         initializeToolbar()
 
+        recyclerMovies.layoutManager = GridLayoutManager(this, 3)
         recyclerMovies.adapter = adapter
         swipeMovies.setOnRefreshListener { presenter.onResume() }
     }
