@@ -30,18 +30,17 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
             } else {
                 moviesApi.movies()
                         .onErrorResumeNext { t: Throwable ->
-                            when (t) {
-                                is UnknownHostException ->
-                                    Flowable.error<NetworkConnectionException>(NetworkConnectionException(t.message))
+                            val error = when (t) {
+                                is UnknownHostException -> NetworkConnectionException(t.message)
                                 is HttpException ->
                                     if (t.code() == HttpURLConnection.HTTP_NOT_FOUND) {
-                                        Flowable.error<HttpNotFoundException>(HttpNotFoundException(t.message))
-                                    }
-                                is ConnectException ->
-                                    Flowable.error<ApiUnknownHostException>(ApiUnknownHostException(t.message))
+                                        HttpNotFoundException(t.message)
+                                    } else t
+                                is ConnectException -> ApiUnknownHostException(t.message)
+                                else -> t
                             }
 
-                            Flowable.error { t }
+                            Flowable.error { error }
                         }
                         .flatMapIterable { it }
                         .map(movieMapper::transform)

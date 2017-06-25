@@ -101,8 +101,9 @@ class MoviesActivity : BaseActivity(), MoviesView {
     }
 
     override fun showConfigureApi() {
-        Snackbar.make(moviesLayout, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        val snackBar = Snackbar.make(moviesLayout, "Configure las Api", Snackbar.LENGTH_INDEFINITE)
+        snackBar.setAction("Preference", { startActivity<SettingsActivity>() })
+        snackBar.show()
     }
 
     override fun showErrorLoadApiSettings() {
