@@ -76,11 +76,15 @@ class MoviesActivity : BaseActivity(), MoviesView {
     }
 
     override fun showLoading() {
-        swipeMovies.isRefreshing = true
+        swipeMovies.post {
+            swipeMovies.isRefreshing = true
+        }
     }
 
     override fun hideLoading() {
-        swipeMovies.isRefreshing = false
+        swipeMovies.post {
+            swipeMovies.isRefreshing = false
+        }
     }
 
     override fun showErrorLoadMovies() {
