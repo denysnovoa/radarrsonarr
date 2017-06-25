@@ -30,7 +30,10 @@ class MoviesPresenter(val view: MoviesView,
                 getLastMoviesUseCase.get()
                         .subscribeOn(subscribeOn)
                         .observeOn(observeOn)
-                        .doOnError { errorLog.log(it) }
+                        .doOnError {
+                            errorLog.log(it)
+                            view.hideLoading()
+                        }
                         .doOnNext { view.hideLoading() }
                         .flatMapIterable { it }
                         .toList()
