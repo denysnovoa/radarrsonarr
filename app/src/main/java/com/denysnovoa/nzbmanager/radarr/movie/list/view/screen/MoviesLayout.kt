@@ -28,7 +28,6 @@ class MoviesLayout : ActivityAnkoComponent<MoviesActivity> {
         coordinatorLayout {
             appBarLayout(R.style.AppTheme) {
                 toolbar = toolbar(R.style.AppTheme) {
-                    elevation = dip(4).toFloat()
                     setTitleTextColor(R.color.colorTextWhite)
                 }.lparams(width = matchParent) {
                     scrollFlags = SCROLL_FLAG_SNAP or SCROLL_FLAG_SCROLL or SCROLL_FLAG_ENTER_ALWAYS
