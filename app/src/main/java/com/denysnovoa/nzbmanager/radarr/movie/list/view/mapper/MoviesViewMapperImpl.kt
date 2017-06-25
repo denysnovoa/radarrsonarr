@@ -10,7 +10,7 @@ class MoviesViewMapperImpl(val imageViewMapper: MovieImageViewMapper) : MoviesVi
                 status,
                 downloaded,
                 monitored,
-                overview,
+                overview ?: "",
                 imdbId,
                 tmdbId,
                 qualityProfileId,

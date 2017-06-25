@@ -1,10 +1,12 @@
 package com.denysnovoa.nzbmanager.radarr.movie.list.view.screen
 
 import android.os.Bundle
+import android.support.design.widget.Snackbar
+import android.support.v7.widget.GridLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
-import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivityAnko
+import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity
@@ -15,13 +17,12 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.presenter.MoviesPresenter
 import com.denysnovoa.nzbmanager.settings.screen.view.screen.SettingsActivity
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_movies.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
-class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
-
-    override val ui = MoviesLayout()
+class MoviesActivity : BaseActivity(), MoviesView {
 
     @Inject
     lateinit var presenter: MoviesPresenter
@@ -38,9 +39,17 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ui.recycler.adapter = adapter
+        setContentView(R.layout.activity_movies)
 
-        ui.swipe.setOnRefreshListener { presenter.onResume() }
+        initializeToolbar()
+
+        recyclerMovies.layoutManager = GridLayoutManager(this, 3)
+        recyclerMovies.adapter = adapter
+        swipeMovies.setOnRefreshListener { presenter.onResume() }
+    }
+
+    private fun initializeToolbar() {
+        setSupportActionBar(my_toolbar)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,11 +76,15 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     }
 
     override fun showLoading() {
-        ui.swipe.isRefreshing = true
+        swipeMovies.post {
+            swipeMovies.isRefreshing = true
+        }
     }
 
     override fun hideLoading() {
-        ui.swipe.isRefreshing = false
+        swipeMovies.post {
+            swipeMovies.isRefreshing = false
+        }
     }
 
     override fun showErrorLoadMovies() {
@@ -88,7 +101,8 @@ class MoviesActivity : BaseActivityAnko<MoviesLayout>(), MoviesView {
     }
 
     override fun showConfigureApi() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Snackbar.make(moviesLayout, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
     }
 
     override fun showErrorLoadApiSettings() {
