@@ -16,7 +16,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
-import org.mockito.Mockito
+import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 
 
@@ -40,32 +40,55 @@ class RadarrSettingsPresenterShould {
     lateinit var errorLog: ErrorLog
 
     private val HOST_NAME = "dnovoa20.dnns.net"
-    private val HOST_EMPTY: String = ""
-
+    private val PORT = 7878
+    private val EMPTY: String = ""
 
     @Test
     fun returnFalseWhenHostNameIsEmpty() {
-        assertFalse(presenter.onHostChange(HOST_EMPTY))
+        assertFalse(presenter.onHostChange(EMPTY))
 
-        Mockito.verify(view).showHostRadarrSettingsIsRequired()
-        Mockito.verifyZeroInteractions(saveRadarrSettingsUseCase)
+        verify(view).showHostRadarrSettingsIsRequired()
+        verifyZeroInteractions(saveRadarrSettingsUseCase)
     }
 
     @Test
     fun returnTrueAndUpdateHostWhenNoIsEmpty() {
-        val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, 7878, "1222222")
-        val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, 7878, "1222222")
-        Mockito.`when`(getRadarrSettingsUseCase.get()).thenReturn(Single.just(radarrSettingsModel))
-        Mockito.`when`(radarrSettingsViewMapper.transform(radarrSettingsModel)).thenReturn(radarrSettingsViewModel)
-        Mockito.`when`(radarrSettingsViewMapper.transform(radarrSettingsViewModel)).thenReturn(radarrSettingsModel)
-        Mockito.`when`(saveRadarrSettingsUseCase.save(radarrSettingsModel)).thenReturn(Completable.complete())
-
-        presenter.onResume()
+        val radarrSettingsModel = givenARadarrSettings()
 
         Assert.assertTrue(presenter.onHostChange(HOST_NAME))
 
-        Mockito.verify(saveRadarrSettingsUseCase).save(radarrSettingsModel)
-        Mockito.verify(view, Mockito.never()).showHostRadarrSettingsIsRequired()
+        verify(saveRadarrSettingsUseCase).save(radarrSettingsModel)
+        verify(view, never()).showHostRadarrSettingsIsRequired()
+    }
+
+    @Test
+    fun returnFalseWhenHostPortIsZero() {
+        assertFalse(presenter.onPortChange(0))
+
+        verify(view).showPortRadarrSettingsIsRequired()
+        verifyZeroInteractions(saveRadarrSettingsUseCase)
+    }
+
+    @Test
+    fun returnTrueAndUpdatePortWhenGreatZero() {
+        val radarrSettingsModel = givenARadarrSettings()
+
+        Assert.assertTrue(presenter.onPortChange(PORT))
+
+        verify(saveRadarrSettingsUseCase).save(radarrSettingsModel)
+        verify(view, never()).showPortRadarrSettingsIsRequired()
+    }
+
+    private fun givenARadarrSettings(): RadarrSettingsModel {
+        val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, PORT, "1222222")
+        val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, PORT, "1222222")
+        `when`(getRadarrSettingsUseCase.get()).thenReturn(Single.just(radarrSettingsModel))
+        `when`(radarrSettingsViewMapper.transform(radarrSettingsModel)).thenReturn(radarrSettingsViewModel)
+        `when`(radarrSettingsViewMapper.transform(radarrSettingsViewModel)).thenReturn(radarrSettingsModel)
+        `when`(saveRadarrSettingsUseCase.save(radarrSettingsModel)).thenReturn(Completable.complete())
+
+        presenter.onResume()
+        return radarrSettingsModel
     }
 
     @Before

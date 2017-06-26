@@ -55,9 +55,15 @@ class RadarrSettingsPresenter(val view: SettingsView,
         }
     }
 
-    fun onPortChange(port: Int) {
-        radarrSettings.port = port
-        saveRadarrSettings()
+    fun onPortChange(port: Int): Boolean {
+        if (port > 0) {
+            radarrSettings.port = port
+            saveRadarrSettings()
+            return true
+        } else {
+            view.showPortRadarrSettingsIsRequired()
+            return false
+        }
     }
 
     fun onApiKeyChange(apiKey: String) {

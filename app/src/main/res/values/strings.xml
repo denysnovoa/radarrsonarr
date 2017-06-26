@@ -38,4 +38,5 @@
     <string name="error_load_api_settings">No se ha podido obtener los datos de configuración</string>
   <string name="text_configure_api">Añada la configuración</string>
     <string name="requiered_radarr_host">El nombre del host es requerido</string>
+    <string name="requiered_radarr_port">El puerto es requerido</string>
 </resources>
