@@ -31,12 +31,12 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                 moviesApi.movies()
                         .onErrorResumeNext { t: Throwable ->
                             val error = when (t) {
-                                is UnknownHostException -> NetworkConnectionException(t.message)
+                                is UnknownHostException -> ApiUnknownHostException(t.message)
+                                is ConnectException -> ApiUnknownHostException(t.message)
                                 is HttpException ->
                                     if (t.code() == HttpURLConnection.HTTP_NOT_FOUND) {
                                         HttpNotFoundException(t.message)
                                     } else t
-                                is ConnectException -> ApiUnknownHostException(t.message)
                                 else -> t
                             }
 

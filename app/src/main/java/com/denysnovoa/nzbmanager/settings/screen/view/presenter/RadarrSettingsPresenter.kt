@@ -27,7 +27,7 @@ class RadarrSettingsPresenter(val view: SettingsView,
                 getRadarrSettingsUseCase.get()
                         .subscribeOn(subscribeOn)
                         .observeOn(observeOn)
-                        .doOnError { errorLog::log }
+                        .doOnError(errorLog::log)
                         .subscribe(
                                 {
                                     radarrSettings ->
@@ -44,9 +44,15 @@ class RadarrSettingsPresenter(val view: SettingsView,
         compositeDisposable.clear()
     }
 
-    fun onHostChange(host: String) {
-        radarrSettings.hostName = host
-        saveRadarrSettings()
+    fun onHostChange(host: String): Boolean {
+        if (!host.isNullOrEmpty()) {
+            radarrSettings.hostName = host
+            saveRadarrSettings()
+            return true
+        } else {
+            view.showHostRadarrSettingsIsRequired()
+            return false
+        }
     }
 
     fun onPortChange(port: Int) {
@@ -64,9 +70,9 @@ class RadarrSettingsPresenter(val view: SettingsView,
                 saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
                         .subscribeOn(subscribeOn)
                         .observeOn(observeOn)
-                        .doOnError { errorLog::log }
+                        .doOnError(errorLog::log)
                         .subscribe {
-                            view.showSettings(this.radarrSettings)
+                            view.showSettings(radarrSettings)
                         }
         )
     }

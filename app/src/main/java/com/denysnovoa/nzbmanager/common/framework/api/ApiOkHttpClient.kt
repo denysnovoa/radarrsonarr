@@ -14,7 +14,7 @@ class ApiOkHttpClient(val authenticationInterceptor: AuthenticationInterceptor,
                       val apiCacheProvider: ApiCacheProvider) {
 
 
-    val connectionTimeOut = 360L
+    val connectionTimeOut = 30L
 
     fun getClient(): OkHttpClient = OkHttpClient.Builder()
             .addInterceptor(authenticationInterceptor)

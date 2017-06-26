@@ -11,6 +11,7 @@
       android:title="@string/tittle_pref_host_address"
       android:key="pref_radarr_host"
       />
+
   <EditTextPreference
       android:title="@string/tittle_pref_host_port"
       android:defaultValue="@string/default_pref_host_port"
