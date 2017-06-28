@@ -40,7 +40,8 @@ class RadarrSettingsPresenterShould {
 
     private val HOST_NAME = "dnovoa20.dnns.net"
     private val PORT = 7878
-    private val EMPTY: String = ""
+    private val EMPTY = ""
+    private val API_KEY = "122222"
 
     @Test
     fun returnFalseWhenHostNameIsEmpty() {
@@ -78,9 +79,27 @@ class RadarrSettingsPresenterShould {
         verify(view, never()).showPortRadarrSettingsIsRequired()
     }
 
+    @Test
+    fun returnFalseWhenApiKeyIsEmpty() {
+        assertFalse(presenter.onApiKeyChange(EMPTY))
+
+        verify(view).showApiKeyRadarrSettingsIsRequired()
+        verifyZeroInteractions(saveRadarrSettingsUseCase)
+    }
+
+    @Test
+    fun returnTrueAndUpdateApiKeyWhenNoEmpty() {
+        val radarrSettingsModel = givenARadarrSettings()
+
+        Assert.assertTrue(presenter.onApiKeyChange(API_KEY))
+
+        verify(saveRadarrSettingsUseCase).save(radarrSettingsModel)
+        verify(view, never()).showApiKeyRadarrSettingsIsRequired()
+    }
+
     private fun givenARadarrSettings(): RadarrSettingsModel {
-        val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, PORT, "1222222")
-        val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, PORT, "1222222")
+        val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, PORT, API_KEY)
+        val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, PORT, API_KEY)
         `when`(radarrSettingsViewMapper.transform(radarrSettingsViewModel)).thenReturn(radarrSettingsModel)
         `when`(saveRadarrSettingsUseCase.save(radarrSettingsModel)).thenReturn(Completable.complete())
 

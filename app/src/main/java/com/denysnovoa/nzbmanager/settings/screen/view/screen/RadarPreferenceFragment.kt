@@ -88,7 +88,6 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
         }
         PREF_RADARR_API_KEY -> {
             presenter.onApiKeyChange(newValue as String)
-            true
         }
         else -> false
     }
@@ -99,6 +98,10 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
 
     override fun showPortRadarrSettingsIsRequired() {
         toast(R.string.requiered_radarr_port)
+    }
+
+    override fun showApiKeyRadarrSettingsIsRequired() {
+        toast(R.string.requiered_radarr_api_key)
     }
 
     //    private fun bindPreferenceSummaryToValue(preference: Preference) {

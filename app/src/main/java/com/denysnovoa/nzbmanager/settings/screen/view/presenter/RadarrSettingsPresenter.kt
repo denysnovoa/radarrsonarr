@@ -45,30 +45,36 @@ class RadarrSettingsPresenter(val view: SettingsView,
     }
 
     fun onHostChange(host: String): Boolean {
-        if (!host.isNullOrEmpty()) {
-            radarrSettings.hostName = host
-            saveRadarrSettings()
-            return true
-        } else {
+        if (host.isNullOrEmpty()) {
             view.showHostRadarrSettingsIsRequired()
             return false
         }
+
+        radarrSettings.hostName = host
+        saveRadarrSettings()
+        return true
     }
 
     fun onPortChange(port: Int): Boolean {
-        if (port > 0) {
-            radarrSettings.port = port
-            saveRadarrSettings()
-            return true
-        } else {
+        if (port <= 0) {
             view.showPortRadarrSettingsIsRequired()
             return false
         }
+
+        radarrSettings.port = port
+        saveRadarrSettings()
+        return true
     }
 
-    fun onApiKeyChange(apiKey: String) {
+    fun onApiKeyChange(apiKey: String): Boolean {
+        if (apiKey.isNullOrEmpty()) {
+            view.showApiKeyRadarrSettingsIsRequired()
+            return false
+        }
+
         radarrSettings.apiKey = apiKey
         saveRadarrSettings()
+        return true
     }
 
     private fun saveRadarrSettings() {

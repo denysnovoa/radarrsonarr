@@ -7,4 +7,5 @@ interface SettingsView {
     fun showSettings(radarrSettings: RadarrSettingsViewModel)
     fun showHostRadarrSettingsIsRequired()
     fun showPortRadarrSettingsIsRequired()
+    fun showApiKeyRadarrSettingsIsRequired()
 }
