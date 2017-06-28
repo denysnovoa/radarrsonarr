@@ -30,9 +30,9 @@ class RadarrSettingsPresenter(val view: SettingsView,
                         .doOnError(errorLog::log)
                         .subscribe(
                                 {
-                                    radarrSettings ->
-                                    this.radarrSettings = radarrSettingsViewMapper.transform(radarrSettings)
-                                    view.showSettings(this.radarrSettings)
+                                    radarrSettingsModel ->
+                                    radarrSettings = radarrSettingsViewMapper.transform(radarrSettingsModel)
+                                    view.showSettings(radarrSettings)
                                 },
                                 {
                                     view.showErrorLoadSettings()

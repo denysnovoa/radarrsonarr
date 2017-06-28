@@ -9,7 +9,6 @@ import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewM
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
 import com.denysnovoa.nzbmanager.settings.screen.view.presenter.RadarrSettingsPresenter
 import io.reactivex.Completable
-import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import org.junit.Assert
 import org.junit.Assert.assertFalse
@@ -82,12 +81,10 @@ class RadarrSettingsPresenterShould {
     private fun givenARadarrSettings(): RadarrSettingsModel {
         val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, PORT, "1222222")
         val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, PORT, "1222222")
-        `when`(getRadarrSettingsUseCase.get()).thenReturn(Single.just(radarrSettingsModel))
-        `when`(radarrSettingsViewMapper.transform(radarrSettingsModel)).thenReturn(radarrSettingsViewModel)
         `when`(radarrSettingsViewMapper.transform(radarrSettingsViewModel)).thenReturn(radarrSettingsModel)
         `when`(saveRadarrSettingsUseCase.save(radarrSettingsModel)).thenReturn(Completable.complete())
 
-        presenter.onResume()
+        presenter.radarrSettings = radarrSettingsViewModel
         return radarrSettingsModel
     }
 
