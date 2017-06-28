@@ -9,8 +9,10 @@ import com.denysnovoa.nzbmanager.settings.screen.view.mapper.RadarrSettingsViewM
 import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewModel
 import com.denysnovoa.nzbmanager.settings.screen.view.presenter.RadarrSettingsPresenter
 import io.reactivex.Completable
+import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Before
 import org.junit.Test
@@ -105,6 +107,20 @@ class RadarrSettingsPresenterShould {
 
         presenter.radarrSettings = radarrSettingsViewModel
         return radarrSettingsModel
+    }
+
+    @Test
+    fun load_radarr_settings_from_storage_when_onResume() {
+        val radarrSettingsModel = RadarrSettingsModel(HOST_NAME, PORT, API_KEY)
+        val radarrSettingsViewModel = RadarrSettingsViewModel(HOST_NAME, PORT, API_KEY)
+
+        `when`(getRadarrSettingsUseCase.get()).thenReturn(Single.just(radarrSettingsModel))
+        `when`(radarrSettingsViewMapper.transform(radarrSettingsModel)).thenReturn(radarrSettingsViewModel)
+
+        presenter.onResume()
+
+        assertEquals(radarrSettingsViewModel, presenter.radarrSettings)
+        verify(getRadarrSettingsUseCase).get()
     }
 
     @Before
