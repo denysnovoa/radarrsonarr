@@ -5,4 +5,7 @@ import com.denysnovoa.nzbmanager.settings.screen.view.model.RadarrSettingsViewMo
 interface SettingsView {
     fun showErrorLoadSettings()
     fun showSettings(radarrSettings: RadarrSettingsViewModel)
+    fun showHostRadarrSettingsIsRequired()
+    fun showPortRadarrSettingsIsRequired()
+    fun showApiKeyRadarrSettingsIsRequired()
 }

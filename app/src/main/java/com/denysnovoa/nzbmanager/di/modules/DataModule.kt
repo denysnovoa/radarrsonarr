@@ -12,12 +12,10 @@ import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJson
 import com.denysnovoa.nzbmanager.common.framework.api.offline.OfflineJsonProvider
 import com.denysnovoa.nzbmanager.common.framework.api.provider.ApiRestProvider
 import com.denysnovoa.nzbmanager.di.qualifier.ApiCacheKey
-import com.denysnovoa.nzbmanager.di.qualifier.ApiKey
-import com.denysnovoa.nzbmanager.di.qualifier.ApiUrl
 import com.denysnovoa.nzbmanager.di.qualifier.ApplicationQualifier
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.RadarrMoviesApiRest
 import com.denysnovoa.nzbmanager.radarr.movie.release.repository.api.RadarrMovieReleaseApiRest
-import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsStorage
+import com.denysnovoa.nzbmanager.settings.screen.repository.RadarrSettingsRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -25,13 +23,13 @@ import javax.inject.Singleton
 @Module
 class DataModule {
 
-    @Provides
+    @Provides @Singleton
     fun provideRadarrMoviesApiRest(apiRestProvider: ApiRestProvider) = apiRestProvider.get(RadarrMoviesApiRest::class.java)
 
     @Provides @Singleton
-    fun provideApiRestProvider(@ApiUrl apiUrl: String, apiOkHttpClient: ApiOkHttpClient) = ApiRestProvider(apiUrl, apiOkHttpClient)
+    fun provideApiRestProvider(settingsStorage: RadarrSettingsRepository, apiOkHttpClient: ApiOkHttpClient) = ApiRestProvider(settingsStorage, apiOkHttpClient)
 
-    @Provides
+    @Provides @Singleton
     fun provideRadarrMovieReleaseApiRest(apiRestProvider: ApiRestProvider) = apiRestProvider.get(RadarrMovieReleaseApiRest::class.java)
 
     @Provides @Singleton
@@ -43,14 +41,8 @@ class DataModule {
             = ApiOkHttpClient(authenticatorInterceptor, networkCacheInterceptor, offlineCacheInterceptor, apiCacheProvider)
 
     @Provides @Singleton
-    fun provideAuthenticationInterceptor(@ApiKey apiKey: String) = AuthenticationInterceptor(apiKey)
-
-    @Provides @Singleton @ApiKey
-    fun provideApiKey(@ApplicationQualifier context: Context): String = RadarrSettingsStorage(context).apiKey
-
-    @Provides @Singleton @ApiUrl
-    fun provideApiUrl(@ApplicationQualifier context: Context): String =
-            "http://${RadarrSettingsStorage(context).apiHost}:${RadarrSettingsStorage(context).apiPort}/"
+    fun provideAuthenticationInterceptor(settingsStorage: RadarrSettingsRepository)
+            = AuthenticationInterceptor(settingsStorage)
 
     @Provides @Singleton @ApiCacheKey
     fun provideApiCacheKey(): String = ApiCacheKey

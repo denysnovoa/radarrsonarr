@@ -82,21 +82,29 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     override fun onPreferenceChange(preference: Preference?, newValue: Any?) = when (preference?.key) {
         PREF_RADARR_HOST -> {
             presenter.onHostChange(newValue as String)
-            true
         }
         PREF_RADARR_PORT -> {
             presenter.onPortChange((newValue as String).toInt())
-            true
         }
         PREF_RADARR_API_KEY -> {
             presenter.onApiKeyChange(newValue as String)
-            true
         }
         else -> false
     }
 
+    override fun showHostRadarrSettingsIsRequired() {
+        toast(R.string.requiered_radarr_host)
+    }
 
-//    private fun bindPreferenceSummaryToValue(preference: Preference) {
+    override fun showPortRadarrSettingsIsRequired() {
+        toast(R.string.requiered_radarr_port)
+    }
+
+    override fun showApiKeyRadarrSettingsIsRequired() {
+        toast(R.string.requiered_radarr_api_key)
+    }
+
+    //    private fun bindPreferenceSummaryToValue(preference: Preference) {
 //        // Set the listener to watch for value changes.
 //        preference.onPreferenceChangeListener = sBindPreferenceSummaryToValueListener
 //

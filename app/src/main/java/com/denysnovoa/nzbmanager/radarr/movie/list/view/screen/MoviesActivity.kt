@@ -101,12 +101,14 @@ class MoviesActivity : BaseActivity(), MoviesView {
     }
 
     override fun showConfigureApi() {
-        Snackbar.make(moviesLayout, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        Snackbar.make(moviesLayout, getString(R.string.text_configure_api), Snackbar.LENGTH_INDEFINITE)
+                .setAction(getString(R.string.tittle_pref_radarr), { startActivity<SettingsActivity>() })
+                .show()
     }
 
     override fun showErrorLoadApiSettings() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast(getString(R.string.error_load_api_settings))
+
     }
 
 }

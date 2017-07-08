@@ -27,12 +27,12 @@ class RadarrSettingsPresenter(val view: SettingsView,
                 getRadarrSettingsUseCase.get()
                         .subscribeOn(subscribeOn)
                         .observeOn(observeOn)
-                        .doOnError { errorLog::log }
+                        .doOnError(errorLog::log)
                         .subscribe(
                                 {
-                                    radarrSettings ->
-                                    this.radarrSettings = radarrSettingsViewMapper.transform(radarrSettings)
-                                    view.showSettings(this.radarrSettings)
+                                    radarrSettingsModel ->
+                                    radarrSettings = radarrSettingsViewMapper.transform(radarrSettingsModel)
+                                    view.showSettings(radarrSettings)
                                 },
                                 {
                                     view.showErrorLoadSettings()
@@ -44,19 +44,37 @@ class RadarrSettingsPresenter(val view: SettingsView,
         compositeDisposable.clear()
     }
 
-    fun onHostChange(host: String) {
+    fun onHostChange(host: String): Boolean {
+        if (host.isNullOrEmpty()) {
+            view.showHostRadarrSettingsIsRequired()
+            return false
+        }
+
         radarrSettings.hostName = host
         saveRadarrSettings()
+        return true
     }
 
-    fun onPortChange(port: Int) {
+    fun onPortChange(port: Int): Boolean {
+        if (port <= 0) {
+            view.showPortRadarrSettingsIsRequired()
+            return false
+        }
+
         radarrSettings.port = port
         saveRadarrSettings()
+        return true
     }
 
-    fun onApiKeyChange(apiKey: String) {
+    fun onApiKeyChange(apiKey: String): Boolean {
+        if (apiKey.isNullOrEmpty()) {
+            view.showApiKeyRadarrSettingsIsRequired()
+            return false
+        }
+
         radarrSettings.apiKey = apiKey
         saveRadarrSettings()
+        return true
     }
 
     private fun saveRadarrSettings() {
@@ -64,9 +82,9 @@ class RadarrSettingsPresenter(val view: SettingsView,
                 saveRadarrSettingsUseCase.save(radarrSettingsViewMapper.transform(radarrSettings))
                         .subscribeOn(subscribeOn)
                         .observeOn(observeOn)
-                        .doOnError { errorLog::log }
+                        .doOnError(errorLog::log)
                         .subscribe {
-                            view.showSettings(this.radarrSettings)
+                            view.showSettings(radarrSettings)
                         }
         )
     }

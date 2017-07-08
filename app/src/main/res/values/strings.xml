@@ -35,4 +35,9 @@
   <string name="settings_summary_port_radarr">Especifique el puerto, por defecto 7878</string>
   <string name="settings_summary_api_key_radarr">Especifique la api key</string>
   <string name="error_save_type_sharedPreference">This type can be saved into Preference</string>
+    <string name="error_load_api_settings">No se ha podido obtener los datos de configuración</string>
+  <string name="text_configure_api">Añada la configuración</string>
+    <string name="requiered_radarr_host">El nombre del host es requerido</string>
+    <string name="requiered_radarr_port">El puerto es requerido</string>
+    <string name="requiered_radarr_api_key">El Api key es requerido</string>
 </resources>
