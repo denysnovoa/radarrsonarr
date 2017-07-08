@@ -43,9 +43,15 @@ class MovieDetailPresenter(val view: MovieDetailView,
                         .subscribeOn(subscribeOn)
                         .observeOn(observerOn)
                         .doOnError(errorLog::log)
-                        .subscribe {
-                            view.returnToMoviesView()
-                        }
+                        .subscribe(
+                                {
+                                    view.returnToMoviesView()
+                                },
+                                {
+                                    view.showErrorDeleteMovie()
+                                }
+                        )
+
         )
     }
 }

@@ -6,4 +6,5 @@ interface MovieDetailView {
     fun showDetail(movie: MovieViewModel)
     fun showErrorLoadMovie()
     fun returnToMoviesView()
+    fun showErrorDeleteMovie()
 }

@@ -53,4 +53,15 @@ class MovieDetailPresenterShould {
         verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES)
         verify(view).returnToMoviesView()
     }
+
+    @Test
+    fun showErrorMessageWhenNoDeleteMovie() {
+        `when`(deleteMovieUseCase.delete(MOVIE_ID, DELETE_FILES)).thenReturn(Completable.error(Exception()))
+
+        presenter.onDeleteMovie(MOVIE_ID, DELETE_FILES)
+
+        verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES)
+        verify(view).showErrorDeleteMovie()
+
+    }
 }

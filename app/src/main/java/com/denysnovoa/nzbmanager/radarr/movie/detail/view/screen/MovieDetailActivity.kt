@@ -119,4 +119,8 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     override fun returnToMoviesView() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    override fun showErrorDeleteMovie() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
