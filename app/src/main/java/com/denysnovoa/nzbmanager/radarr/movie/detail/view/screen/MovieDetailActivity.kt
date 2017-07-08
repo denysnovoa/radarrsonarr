@@ -7,7 +7,7 @@ import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
-import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
+import com.denysnovoa.nzbmanager.di.subcomponent.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -86,7 +86,6 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
         else -> false
     }
 
-
     override fun showDetail(movie: MovieViewModel) {
         with(movie) {
             toolbar_layout_movie.title = title
@@ -115,5 +114,9 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
 
     override fun showErrorLoadMovie() {
         toast(getString(R.string.error_load_movie))
+    }
+
+    override fun returnToMoviesView() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

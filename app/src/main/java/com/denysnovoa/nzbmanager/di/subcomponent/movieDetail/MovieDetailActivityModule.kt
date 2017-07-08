@@ -1,9 +1,10 @@
-package com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail
+package com.denysnovoa.nzbmanager.di.subcomponent.movieDetail
 
 import com.denysnovoa.nzbmanager.common.framework.ErrorLog
 import com.denysnovoa.nzbmanager.di.modules.ActivityModule
 import com.denysnovoa.nzbmanager.di.scope.ActivityScope
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
+import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.DeleteMovieUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.GetMovieDetailUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.screen.MovieDetailActivity
@@ -21,8 +22,9 @@ class MovieDetailActivityModule(activity: MovieDetailActivity) : ActivityModule(
     fun provideMovieDetailPresenter(view: MovieDetailView,
                                     errorLog: ErrorLog,
                                     getMovieDetailUseCase: GetMovieDetailUseCase,
-                                    moviesViewMapper: MoviesViewMapper)
-            = MovieDetailPresenter(view, errorLog, getMovieDetailUseCase, moviesViewMapper)
+                                    moviesViewMapper: MoviesViewMapper,
+                                    deleteMovieUseCase: DeleteMovieUseCase)
+            = MovieDetailPresenter(view, errorLog, getMovieDetailUseCase, moviesViewMapper, deleteMovieUseCase)
 
 }
 
