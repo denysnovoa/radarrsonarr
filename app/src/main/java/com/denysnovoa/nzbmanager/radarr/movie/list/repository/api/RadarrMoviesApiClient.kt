@@ -8,7 +8,6 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.entity.MovieEntity
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.mapper.MoviesMapper
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.model.MovieModel
 import com.google.gson.reflect.TypeToken
-import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single
 import retrofit2.HttpException
@@ -59,10 +58,7 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                         .map(movieMapper::transform)
             }
 
-
-    override fun delete(id: Int, deleteFiles: Boolean): Completable {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun delete(id: Int, deleteFiles: Boolean) = moviesApi.delete(id, deleteFiles, false)
 }
 
 class NetworkConnectionException(messageError: String?) : Throwable(messageError)
