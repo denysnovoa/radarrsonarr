@@ -7,6 +7,7 @@ import io.reactivex.Single
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface RadarrMoviesApiRest {
     @GET("api/movie")
@@ -15,8 +16,8 @@ interface RadarrMoviesApiRest {
     @GET("api/movie/{id}")
     fun getDetail(@Path("id") id: Int): Single<MovieEntity>
 
-    @DELETE("api/movie/{id}?deleteFiles={deleteFiles}&addExclusion={addExclusion}")
+    @DELETE("api/movie/{id}")
     fun delete(@Path("id") id: Int,
-               @Path("deleteFiles") deleteFiles: Boolean,
-               @Path("addExclusion") addExclusion: Boolean): Completable
+               @Query("deleteFiles") deleteFiles: Boolean,
+               @Query("addExclusion") addExclusion: Boolean): Completable
 }

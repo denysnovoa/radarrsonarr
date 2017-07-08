@@ -15,8 +15,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.screen.MovieReleaseAc
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.*
 import javax.inject.Inject
 
 
@@ -80,9 +79,15 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
             startActivity<MovieReleaseActivity>(PARAMETER_MOVIE_ID to movieId)
             true
         }
-        android.R.id.home -> {
-            onBackPressed(); true
+        R.id.action_delete_movie -> {
+            showAlertToConfirmDeleteMovie()
+            true
         }
+        android.R.id.home -> {
+            onBackPressed()
+            true
+        }
+
         else -> false
     }
 
@@ -117,10 +122,41 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     }
 
     override fun returnToMoviesView() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        onBackPressed()
     }
 
     override fun showErrorDeleteMovie() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast(getString(R.string.error_delete_muvie))
+    }
+
+    fun showAlertToConfirmDeleteMovie() {
+
+        alert {
+            customView {
+                verticalLayout {
+                    padding = dip(32)
+
+                    val checkDeleteFiles = checkBox {
+                        text = getString(R.string.chek_delete_all_files)
+                        textSize = 16f
+                        padding = dip(16)
+                    }
+
+                    val checjExcludeImports = checkBox {
+                        text = getString(R.string.check_excludo_auto_import)
+                        textSize = 16f
+                        padding = dip(16)
+                    }
+
+                    positiveButton(getString(R.string.yes)) {
+                        presenter.onDeleteMovie(movieId, checkDeleteFiles.isChecked)
+                    }
+
+                    negativeButton(getString(R.string.no))
+                }
+
+
+            }
+        }.show()
     }
 }
