@@ -35,5 +35,5 @@ class DomainModule {
     fun provideSaveRadarrSettingsUseCase(radarrSettingsRepository: RadarrSettingsRepository) = SaveRadarrSettingsUseCase(radarrSettingsRepository)
 
     @Provides
-    fun provideDeleteMovieUseCase() = DeleteMovieUseCase()
+    fun provideDeleteMovieUseCase(moviesApiClient: MoviesApiClient) = DeleteMovieUseCase(moviesApiClient)
 }
