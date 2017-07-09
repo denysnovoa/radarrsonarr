@@ -130,32 +130,25 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
     }
 
     fun showAlertToConfirmDeleteMovie() {
-
         alert {
             customView {
                 verticalLayout {
                     padding = dip(32)
-
-                    val checkDeleteFiles = checkBox {
+                    val checkDeleteFiles = switch {
                         text = getString(R.string.chek_delete_all_files)
                         textSize = 16f
-                        padding = dip(16)
+                        padding = dip(8)
                     }
-
-                    val checkExcludeImports = checkBox {
+                    val checkExcludeImports = switch {
                         text = getString(R.string.check_excludo_auto_import)
                         textSize = 16f
-                        padding = dip(16)
+                        padding = dip(8)
                     }
-
                     positiveButton(getString(R.string.yes)) {
                         presenter.onDeleteMovie(movieId, checkDeleteFiles.isChecked, checkExcludeImports.isChecked)
                     }
-
                     negativeButton(getString(R.string.no))
                 }
-
-
             }
         }.show()
     }
