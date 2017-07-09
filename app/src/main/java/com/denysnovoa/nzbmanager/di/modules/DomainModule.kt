@@ -1,5 +1,6 @@
 package com.denysnovoa.nzbmanager.di.modules
 
+import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.DeleteMovieUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.detail.domain.GetMovieDetailUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.domain.GetLastMoviesUseCase
 import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.MoviesApiClient
@@ -32,4 +33,7 @@ class DomainModule {
 
     @Provides
     fun provideSaveRadarrSettingsUseCase(radarrSettingsRepository: RadarrSettingsRepository) = SaveRadarrSettingsUseCase(radarrSettingsRepository)
+
+    @Provides
+    fun provideDeleteMovieUseCase(moviesApiClient: MoviesApiClient) = DeleteMovieUseCase(moviesApiClient)
 }

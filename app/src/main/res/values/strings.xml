@@ -40,4 +40,8 @@
     <string name="requiered_radarr_host">El nombre del host es requerido</string>
     <string name="requiered_radarr_port">El puerto es requerido</string>
     <string name="requiered_radarr_api_key">El Api key es requerido</string>
+    <string name="action_delete_movie">Eliminar pélicula</string>
+  <string name="chek_delete_all_files">Eliminar todos los archivos</string>
+  <string name="check_excludo_auto_import">Excluir de auto import list</string>
+  <string name="error_delete_muvie">Error al eliminar la pélicula</string>
 </resources>

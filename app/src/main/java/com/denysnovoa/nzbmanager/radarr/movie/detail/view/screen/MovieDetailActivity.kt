@@ -7,7 +7,7 @@ import android.view.MenuItem
 import com.denysnovoa.nzbmanager.R
 import com.denysnovoa.nzbmanager.common.framework.ui.BaseActivity
 import com.denysnovoa.nzbmanager.di.ApplicationComponent
-import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
+import com.denysnovoa.nzbmanager.di.subcomponent.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.radarr.movie.detail.MovieDetailView
 import com.denysnovoa.nzbmanager.radarr.movie.detail.view.presenter.MovieDetailPresenter
 import com.denysnovoa.nzbmanager.radarr.movie.list.view.model.MovieViewModel
@@ -15,8 +15,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.release.view.screen.MovieReleaseAc
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import kotlinx.android.synthetic.main.content_movie_detail.*
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.*
 import javax.inject.Inject
 
 
@@ -80,12 +79,17 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
             startActivity<MovieReleaseActivity>(PARAMETER_MOVIE_ID to movieId)
             true
         }
-        android.R.id.home -> {
-            onBackPressed(); true
+        R.id.action_delete_movie -> {
+            showAlertToConfirmDeleteMovie()
+            true
         }
+        android.R.id.home -> {
+            onBackPressed()
+            true
+        }
+
         else -> false
     }
-
 
     override fun showDetail(movie: MovieViewModel) {
         with(movie) {
@@ -115,5 +119,37 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
 
     override fun showErrorLoadMovie() {
         toast(getString(R.string.error_load_movie))
+    }
+
+    override fun returnToMoviesView() {
+        onBackPressed()
+    }
+
+    override fun showErrorDeleteMovie() {
+        toast(getString(R.string.error_delete_muvie))
+    }
+
+    fun showAlertToConfirmDeleteMovie() {
+        alert {
+            customView {
+                verticalLayout {
+                    padding = dip(32)
+                    val checkDeleteFiles = switch {
+                        text = getString(R.string.chek_delete_all_files)
+                        textSize = 16f
+                        padding = dip(8)
+                    }
+                    val checkExcludeImports = switch {
+                        text = getString(R.string.check_excludo_auto_import)
+                        textSize = 16f
+                        padding = dip(8)
+                    }
+                    positiveButton(getString(R.string.yes)) {
+                        presenter.onDeleteMovie(movieId, checkDeleteFiles.isChecked, checkExcludeImports.isChecked)
+                    }
+                    negativeButton(getString(R.string.no))
+                }
+            }
+        }.show()
     }
 }

@@ -3,11 +3,11 @@ package com.denysnovoa.nzbmanager.di
 import com.denysnovoa.nzbmanager.common.framework.BaseApplication
 import com.denysnovoa.nzbmanager.di.modules.*
 import com.denysnovoa.nzbmanager.di.subcomponent.movieDetail.MovieDetailActivityComponent
+import com.denysnovoa.nzbmanager.di.subcomponent.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movieRelease.MovieReleaseActivityModule
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.movies.MoviesActivityModule
-import com.denysnovoa.nzbmanager.di.subcomponent.movies.movieDetail.MovieDetailActivityModule
 import com.denysnovoa.nzbmanager.di.subcomponent.settings.RadarPreferenceFragmentComponent
 import com.denysnovoa.nzbmanager.di.subcomponent.settings.RadarPreferenceFragmentModule
 import dagger.Component
