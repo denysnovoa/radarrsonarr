@@ -8,5 +8,5 @@ import io.reactivex.Single
 interface MoviesApiClient {
     fun getMovies(): Flowable<List<MovieModel>>
     fun getDetail(id: Int): Single<MovieModel>
-    fun delete(id: Int, deleteFiles: Boolean): Completable
+    fun delete(id: Int, deleteFiles: Boolean, excludeFromImportList: Boolean): Completable
 }

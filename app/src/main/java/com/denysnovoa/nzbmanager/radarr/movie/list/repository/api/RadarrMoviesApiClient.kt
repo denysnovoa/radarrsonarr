@@ -58,7 +58,8 @@ class RadarrMoviesApiClient(val moviesApi: RadarrMoviesApiRest,
                         .map(movieMapper::transform)
             }
 
-    override fun delete(id: Int, deleteFiles: Boolean) = moviesApi.delete(id, deleteFiles, false)
+    override fun delete(id: Int, deleteFiles: Boolean, excludeFromImportList: Boolean) =
+            moviesApi.delete(id, deleteFiles, excludeFromImportList)
 }
 
 class NetworkConnectionException(messageError: String?) : Throwable(messageError)

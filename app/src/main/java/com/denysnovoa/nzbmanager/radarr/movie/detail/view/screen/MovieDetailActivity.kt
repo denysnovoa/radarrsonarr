@@ -142,14 +142,14 @@ class MovieDetailActivity : BaseActivity(), MovieDetailView {
                         padding = dip(16)
                     }
 
-                    val checjExcludeImports = checkBox {
+                    val checkExcludeImports = checkBox {
                         text = getString(R.string.check_excludo_auto_import)
                         textSize = 16f
                         padding = dip(16)
                     }
 
                     positiveButton(getString(R.string.yes)) {
-                        presenter.onDeleteMovie(movieId, checkDeleteFiles.isChecked)
+                        presenter.onDeleteMovie(movieId, checkDeleteFiles.isChecked, checkExcludeImports.isChecked)
                     }
 
                     negativeButton(getString(R.string.no))

@@ -36,6 +36,7 @@ class MovieDetailPresenterShould {
 
     private val DELETE_FILES = false
     private val MOVIE_ID = 12222
+    private val EXCLUDE_IMPORTS = false
 
     @Before
     fun setUp() {
@@ -46,21 +47,21 @@ class MovieDetailPresenterShould {
 
     @Test
     fun returnToMoviesWhenDeleteMovie() {
-        `when`(deleteMovieUseCase.delete(MOVIE_ID, DELETE_FILES)).thenReturn(Completable.complete())
+        `when`(deleteMovieUseCase.delete(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)).thenReturn(Completable.complete())
 
-        presenter.onDeleteMovie(MOVIE_ID, DELETE_FILES)
+        presenter.onDeleteMovie(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)
 
-        verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES)
+        verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)
         verify(view).returnToMoviesView()
     }
 
     @Test
     fun showErrorMessageWhenNoDeleteMovie() {
-        `when`(deleteMovieUseCase.delete(MOVIE_ID, DELETE_FILES)).thenReturn(Completable.error(Exception()))
+        `when`(deleteMovieUseCase.delete(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)).thenReturn(Completable.error(Exception()))
 
-        presenter.onDeleteMovie(MOVIE_ID, DELETE_FILES)
+        presenter.onDeleteMovie(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)
 
-        verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES)
+        verify(deleteMovieUseCase).delete(MOVIE_ID, DELETE_FILES, EXCLUDE_IMPORTS)
         verify(view).showErrorDeleteMovie()
 
     }

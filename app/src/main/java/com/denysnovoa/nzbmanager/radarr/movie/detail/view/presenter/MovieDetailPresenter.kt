@@ -37,9 +37,9 @@ class MovieDetailPresenter(val view: MovieDetailView,
         )
     }
 
-    fun onDeleteMovie(movieId: Int, deleteFile: Boolean) {
+    fun onDeleteMovie(movieId: Int, deleteFile: Boolean, excludeFromImports: Boolean) {
         compositeDisposable.add(
-                deleteMovieUseCase.delete(movieId, deleteFile)
+                deleteMovieUseCase.delete(movieId, deleteFile, excludeFromImports)
                         .subscribeOn(subscribeOn)
                         .observeOn(observerOn)
                         .doOnError(errorLog::log)

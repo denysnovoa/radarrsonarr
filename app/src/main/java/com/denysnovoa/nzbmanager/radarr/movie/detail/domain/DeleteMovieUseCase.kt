@@ -4,7 +4,7 @@ import com.denysnovoa.nzbmanager.radarr.movie.list.repository.api.MoviesApiClien
 import io.reactivex.Completable
 
 class DeleteMovieUseCase(val moviesApiClient: MoviesApiClient) {
-    fun delete(id: Int, deleteFile: Boolean = false): Completable {
-        return moviesApiClient.delete(id, deleteFile)
+    fun delete(id: Int, deleteFile: Boolean, excludeFromImports: Boolean): Completable {
+        return moviesApiClient.delete(id, deleteFile, excludeFromImports)
     }
 }
