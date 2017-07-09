@@ -103,25 +103,4 @@ class RadarPreferenceFragment : BasePreferenceFragment(), SettingsView, Preferen
     override fun showApiKeyRadarrSettingsIsRequired() {
         toast(R.string.requiered_radarr_api_key)
     }
-
-    //    private fun bindPreferenceSummaryToValue(preference: Preference) {
-//        // Set the listener to watch for value changes.
-//        preference.onPreferenceChangeListener = sBindPreferenceSummaryToValueListener
-//
-//        // Trigger the listener immediately with the preference's
-//        // current value.
-//        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-//                PreferenceManager
-//                        .getDefaultSharedPreferences(preference.context)
-//                        .getString(preference.key, ""))
-//    }
-
-//                : Boolean {
-//            val id = item.itemId
-//            if (id == android.R.id.home) {
-//                startActivity(android.content.Intent(activity, SettingsActivity::class.java))
-//                return true
-//            }
-//            return super.onOptionsItemSelected(item)
-//        }
 }
